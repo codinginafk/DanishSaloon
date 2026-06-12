@@ -1,0 +1,49 @@
+  ▲ Next.js 14.2.18
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.5s (1264 modules)
+ GET / 200 in 9169ms
+ GET / 200 in 112ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 769ms (1261 modules)
+ GET /services 200 in 1017ms
+ ✓ Compiled /services/[slug] in 459ms (1255 modules)
+ GET /services/hair-cut 200 in 1060ms
+ GET /services/beard-trim 200 in 69ms
+ GET /services/hair-color 200 in 65ms
+ GET /services/facial 200 in 54ms
+ ✓ Compiled /haircuts in 342ms (1259 modules)
+ GET /haircuts 200 in 529ms
+ ✓ Compiled /gallery in 405ms (1271 modules)
+ GET /gallery 200 in 525ms
+ ✓ Compiled /locations in 371ms (1273 modules)
+ GET /locations 200 in 464ms
+ ○ Compiling /locations/[slug] ...
+ ✓ Compiled /locations/[slug] in 731ms (1276 modules)
+ GET /locations/media-city 200 in 1225ms
+ GET /locations/karama 200 in 66ms
+ GET /locations/ramee-royal-hotel 200 in 55ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 876ms (1283 modules)
+ GET /about 200 in 1001ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 541ms (1299 modules)
+ GET /contact 200 in 644ms
+ ✓ Compiled /privacy-policy in 477ms (1303 modules)
+ GET /privacy-policy 200 in 591ms
+ ✓ Compiled /terms in 433ms (1305 modules)
+ GET /terms 200 in 499ms
+ ✓ Compiled /sitemap.xml in 441ms (723 modules)
+ GET /sitemap.xml 200 in 891ms
+ ✓ Compiled /robots.txt in 369ms (726 modules)
+ GET /robots.txt 200 in 434ms
+ ✓ Compiled /manifest.webmanifest in 249ms (729 modules)
+ GET /manifest.webmanifest 200 in 301ms
+ GET / 200 in 205ms
+ GET / 200 in 134ms
+ GET / 200 in 194ms
+ GET /manifest.webmanifest 200 in 12ms
+ ✓ Compiled in 6s (1273 modules)
