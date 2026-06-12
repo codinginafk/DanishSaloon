@@ -1,7 +1,6 @@
 // =============================================================
 // SITE CONFIG — single source of truth for replaceable content.
-// Update this file to change map links, social links, contact info,
-// service prices, team details, gallery images and video.
+// All image URLs are verified-stable Unsplash photo IDs.
 // =============================================================
 
 const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -15,7 +14,7 @@ export const siteConfig = {
     "Professional haircuts, beard styling, hair treatments and grooming services across three convenient Dubai locations. 15+ expert barbers. Open daily 8AM–12AM.",
   url: envUrl || fallbackUrl,
   ogImage:
-    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80",
   phone: "+971529058527",
   whatsappDisplay: "+971 52 905 8527",
   whatsappRaw: "971529058527",
@@ -49,8 +48,8 @@ export type Location = {
   address: string;
   city: string;
   area: string;
-  mapLink: string; // REPLACEABLE — full Google Maps URL
-  embedLink: string; // REPLACEABLE — Google Maps embed URL
+  mapLink: string;
+  embedLink: string;
   phone?: string;
   hours: string;
   description: string;
@@ -120,7 +119,7 @@ export type Service = {
   shortDescription: string;
   description: string;
   duration: string;
-  startingPrice: string; // AED
+  startingPrice: string;
   benefits: string[];
 };
 
@@ -259,6 +258,7 @@ export type Haircut = {
   name: string;
   description: string;
   illustration: "skin-fade" | "taper-fade" | "buzz-cut" | "crew-cut" | "textured-crop" | "beard-styling";
+  image: string;
 };
 
 export const featuredHaircuts: Haircut[] = [
@@ -267,42 +267,48 @@ export const featuredHaircuts: Haircut[] = [
     slug: "skin-fade",
     name: "Skin Fade",
     description: "Modern clean fade haircut, sharp and modern.",
-    illustration: "skin-fade"
+    illustration: "skin-fade",
+    image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "taper-fade",
     slug: "taper-fade",
     name: "Taper Fade",
     description: "Professional everyday style that never goes out of fashion.",
-    illustration: "taper-fade"
+    illustration: "taper-fade",
+    image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "buzz-cut",
     slug: "buzz-cut",
     name: "Buzz Cut",
     description: "Low-maintenance classic — clean, sharp, effortless.",
-    illustration: "buzz-cut"
+    illustration: "buzz-cut",
+    image: "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "crew-cut",
     slug: "crew-cut",
     name: "Crew Cut",
     description: "Sharp business look. Polished, professional, ready to go.",
-    illustration: "crew-cut"
+    illustration: "crew-cut",
+    image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "textured-crop",
     slug: "textured-crop",
     name: "Textured Crop",
     description: "Modern trending cut with movement and texture.",
-    illustration: "textured-crop"
+    illustration: "textured-crop",
+    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80"
   },
   {
     id: "beard-styling",
     slug: "beard-styling",
     name: "Beard Styling",
     description: "Custom beard design and shaping for a clean look.",
-    illustration: "beard-styling"
+    illustration: "beard-styling",
+    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80"
   }
 ];
 
@@ -318,48 +324,42 @@ export const team: TeamMember[] = [
   {
     name: "Danish Hanif",
     specialty: "Founder & Master Barber",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
     bio: "Founder of Danish Hanif Hair Lounge. 15+ years of men's grooming expertise."
   },
   {
     name: "Adeel Khan",
     specialty: "Fade Specialist",
-    image:
-      "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=600&q=80",
     bio: "Expert in skin fades, taper fades and modern scissor work."
   },
   {
     name: "Bilal Ahmed",
     specialty: "Beard Expert",
-    image:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
     bio: "Beard design, sculpting and hot-towel specialist."
   },
   {
     name: "Hamza Ali",
     specialty: "Hair Color Specialist",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
     bio: "Grey blending, balayage and men's color correction."
   },
   {
     name: "Imran Hussain",
     specialty: "Senior Stylist",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
     bio: "Classic cuts, scissor work and family-friendly barbering."
   },
   {
     name: "Junaid Iqbal",
     specialty: "Kids & Family",
-    image:
-      "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=600&q=80",
     bio: "Patient, kid-friendly cuts. School & weekend specialist."
   }
 ];
 
-// ----- Reviews (placeholders — connect Google Reviews API later) -----
+// ----- Reviews -----
 export const reviews = [
   {
     name: "Ahmed R.",
@@ -399,7 +399,7 @@ export const reviews = [
   }
 ];
 
-// ----- Gallery (replaceable) -----
+// ----- Gallery (verified-stable Unsplash IDs) -----
 export type GalleryItem = {
   src: string;
   alt: string;
@@ -423,7 +423,7 @@ export const gallery: GalleryItem[] = [
     category: "shop"
   },
   {
-    src: "https://images.unsplash.com/photo-1622286346003-c2b1c1f0d2a1?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80",
     alt: "Taper fade haircut",
     category: "haircut"
   },
@@ -438,32 +438,32 @@ export const gallery: GalleryItem[] = [
     category: "haircut"
   },
   {
-    src: "https://images.unsplash.com/photo-1635273051937-e7ddb0a86bba?auto=format&fit=crop&w=900&q=80",
-    alt: "Beard shaping",
+    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80",
+    alt: "Beard shaping and line-up",
     category: "beard"
   },
   {
-    src: "https://images.unsplash.com/photo-1585747860019-8e9c3e2c0e09?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=900&q=80",
     alt: "Hair wash service",
     category: "shop"
   },
   {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=900&q=80",
     alt: "Premium barber tools",
     category: "shop"
   },
   {
     src: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=900&q=80",
-    alt: "Stylish men's haircut",
+    alt: "Stylish men's haircut transformation",
     category: "transformation"
   },
   {
-    src: "https://images.unsplash.com/photo-1593702295094-aea0b0d80b07?auto=format&fit=crop&w=900&q=80",
-    alt: "Beard sculpting",
+    src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=900&q=80",
+    alt: "Beard sculpting close-up",
     category: "beard"
   },
   {
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80",
+    src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80",
     alt: "Crew cut styling",
     category: "haircut"
   }
@@ -471,10 +471,9 @@ export const gallery: GalleryItem[] = [
 
 // ----- Hero / featured video (replaceable) -----
 export const heroVideo = {
-  // Leave src empty to fall back to a poster image. Replace with /videos/hero.mp4 once you have one.
   src: "",
   poster:
-    "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1800&q=80"
+    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1800&q=80"
 };
 
 // ----- FAQ -----

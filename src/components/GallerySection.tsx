@@ -2,6 +2,9 @@ import Link from "next/link";
 import { gallery } from "@/lib/siteConfig";
 import { SectionReveal } from "./Motion";
 import { ArrowRight } from "lucide-react";
+import { SmartImage } from "./SmartImage";
+
+const FALLBACK = "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80";
 
 export function GallerySection() {
   return (
@@ -12,7 +15,7 @@ export function GallerySection() {
             <div>
               <p className="eyebrow">Gallery</p>
               <h2 className="heading-lg mt-2">A glimpse of our work.</h2>
-              <p className="mt-3 max-w-2xl text-white/65">
+              <p className="mt-3 max-w-2xl text-ink-600 dark:text-white/65">
                 Real cuts, real beards, real customers. Replace these placeholders with
                 your own before & after shots and transformations.
               </p>
@@ -26,13 +29,12 @@ export function GallerySection() {
         <div className="mt-12 columns-2 gap-4 sm:columns-3 lg:columns-4">
           {gallery.slice(0, 12).map((img, i) => (
             <SectionReveal key={i} delay={(i % 4) * 0.05}>
-              <div className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-white/5 bg-charcoal-800/40">
+              <div className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card dark:border-white/10 dark:bg-charcoal-800/40 dark:shadow-none">
                 <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
-                  <img
+                  <SmartImage
                     src={img.src}
                     alt={img.alt}
-                    loading="lazy"
-                    decoding="async"
+                    fallbackSrc={FALLBACK}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

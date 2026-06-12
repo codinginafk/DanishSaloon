@@ -6,18 +6,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        paper: {
+          DEFAULT: "#ffffff",
+          50: "#fbfbfa",
+          100: "#f5f5f3",
+          200: "#ececea",
+          300: "#dededb",
+          400: "#c2c2bf"
+        },
         ink: {
-          950: "#050505",
-          900: "#0a0a0a",
-          800: "#111111",
+          DEFAULT: "#0b0b0c",
+          50: "#f6f6f6",
+          100: "#e7e7e7",
+          200: "#c9c9c9",
+          300: "#9a9a9a",
+          400: "#5d5d5d",
+          500: "#3a3a3a",
+          600: "#262626",
           700: "#1a1a1a",
-          600: "#222222"
+          800: "#111111",
+          900: "#0b0b0c",
+          950: "#050506"
         },
         charcoal: {
-          900: "#0f0f10",
-          800: "#15161a",
-          700: "#1c1d22",
-          600: "#26272d"
+          50: "#f4f4f5",
+          100: "#e4e4e6",
+          200: "#c7c7cb",
+          300: "#9c9ca3",
+          400: "#6e6e76",
+          500: "#4a4a51",
+          600: "#33333a",
+          700: "#23232a",
+          800: "#15151a",
+          900: "#0a0a0d",
+          950: "#040406"
         },
         emerald: {
           DEFAULT: "#10b981",
@@ -31,6 +53,9 @@ const config: Config = {
           700: "#047857",
           800: "#065f46"
         }
+      },
+      borderOpacity: {
+        DEFAULT: "1"
       },
       fontFamily: {
         sans: [
@@ -47,12 +72,12 @@ const config: Config = {
         display: ["Inter", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 10px 40px -10px rgba(16, 185, 129, 0.45)",
-        soft: "0 8px 30px rgba(0, 0, 0, 0.5)"
+        glow: "0 10px 40px -10px rgba(16, 185, 129, 0.30)",
+        soft: "0 8px 30px rgba(11, 11, 12, 0.08)",
+        card: "0 1px 2px rgba(11, 11, 12, 0.04), 0 8px 24px rgba(11, 11, 12, 0.06)"
       },
       backgroundImage: {
-        "grid-fade":
-          "radial-gradient(circle at 50% 0%, rgba(16,185,129,0.08), transparent 60%)"
+        "grid-fade": "radial-gradient(circle at 50% 0%, rgba(16,185,129,0.10), transparent 60%)"
       },
       keyframes: {
         float: {
@@ -66,12 +91,17 @@ const config: Config = {
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" }
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
         }
       },
       animation: {
         float: "float 4s ease-in-out infinite",
         marquee: "marquee 30s linear infinite",
-        shimmer: "shimmer 2.4s linear infinite"
+        shimmer: "shimmer 2.4s linear infinite",
+        "fade-in": "fade-in 0.4s ease-out both"
       }
     }
   },

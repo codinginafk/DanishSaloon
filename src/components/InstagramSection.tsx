@@ -31,30 +31,28 @@ export function InstagramSection() {
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-              {Array.from({ length: 6 }).map((_, i) => (
+              {[
+                "1599351431202-1e0f0137899a",
+                "1622286342621-4bd786c2447c",
+                "1503951914875-452162b0f3f1",
+                "1521590832167-7bcbfaa6381f",
+                "1605497788044-5a32c7078486",
+                "1521119989659-a83eee488004"
+              ].map((id) => (
                 <a
-                  key={i}
+                  key={id}
                   href={social.instagram.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative aspect-square overflow-hidden rounded-2xl border border-white/5 bg-charcoal-800"
+                  className="group relative aspect-square overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 dark:border-white/10 dark:bg-charcoal-800"
                 >
                   <img
-                    src={`https://images.unsplash.com/photo-${
-                      [
-                        "1599351431202-1e0f0137899a",
-                        "1622286342621-4bd786c2447c",
-                        "1503951914875-452162b0f3f1",
-                        "1521590832167-7bcbfaa6381f",
-                        "1605497788044-5a32c7078486",
-                        "1585747860019-8e9c3e2c0e09"
-                      ][i]
-                    }?auto=format&fit=crop&w=400&q=80`}
-                    alt={`Instagram post ${i + 1}`}
+                    src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=400&q=80`}
+                    alt="Danish Hanif Hair Lounge Instagram post"
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/30" />
+                  <div className="absolute inset-0 bg-ink-900/0 transition-colors duration-300 group-hover:bg-ink-900/30" />
                   <Instagram className="absolute bottom-3 right-3 h-4 w-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </a>
               ))}

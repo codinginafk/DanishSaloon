@@ -2,72 +2,35 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Scissors, MapPin, MessageCircle, Star, Sparkles, ArrowRight } from "lucide-react";
+import { Scissors, MapPin, MessageCircle, Star, Sparkles, ArrowRight, Check } from "lucide-react";
 import { siteConfig, social, heroVideo } from "@/lib/siteConfig";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-28 sm:pt-32 lg:pt-40">
-      {/* Background image / video */}
+    <section className="relative isolate overflow-hidden bg-paper pt-28 dark:bg-ink-900 sm:pt-32 lg:pt-40">
+      {/* Background image */}
       <div className="absolute inset-0 -z-20">
-        {heroVideo.src ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={heroVideo.poster}
-            className="h-full w-full object-cover"
-          >
-            <source src={heroVideo.src} type="video/mp4" />
-          </video>
-        ) : (
-          <img
-            src={heroVideo.poster}
-            alt=""
-            aria-hidden
-            className="h-full w-full object-cover"
-          />
-        )}
+        <img
+          src={heroVideo.poster}
+          alt=""
+          aria-hidden
+          className="h-full w-full object-cover opacity-[0.06] dark:opacity-30"
+        />
         <div
-          className="absolute inset-0 bg-gradient-to-b from-ink-950/85 via-ink-950/75 to-ink-950"
+          className="absolute inset-0 bg-gradient-to-b from-paper via-paper/95 to-paper dark:from-ink-900/90 dark:via-ink-900/85 dark:to-ink-900"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-grid-fade opacity-70"
+          className="absolute inset-0 bg-grid-fade opacity-60 dark:opacity-70"
           aria-hidden
         />
       </div>
 
-      {/* Floating chips */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="absolute right-6 top-32 hidden sm:block"
-        >
-          <div className="rounded-2xl border border-white/10 bg-ink-900/60 px-3 py-2 backdrop-blur animate-float">
-            <div className="flex items-center gap-2 text-xs">
-              <Star className="h-3.5 w-3.5 fill-emerald-400 text-emerald-400" />
-              <span className="text-white/85">4.9 · 500+ reviews</span>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="absolute left-6 top-44 hidden md:block"
-        >
-          <div className="rounded-2xl border border-white/10 bg-ink-900/60 px-3 py-2 backdrop-blur animate-float [animation-delay:0.5s]">
-            <div className="flex items-center gap-2 text-xs">
-              <Scissors className="h-3.5 w-3.5 text-emerald-400" />
-              <span className="text-white/85">Cuts from AED 5</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+      {/* Decorative SVG accent (light only) */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl dark:hidden"
+      />
 
       <div className="container-x">
         <div className="mx-auto max-w-4xl text-center">
@@ -75,10 +38,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mx-auto inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5"
+            className="mx-auto inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 dark:border-emerald-500/30 dark:bg-emerald-500/10"
           >
-            <Sparkles className="h-3.5 w-3.5 text-emerald-300" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-200">
+            <Sparkles className="h-3.5 w-3.5 text-emerald-700 dark:text-emerald-300" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-800 dark:text-emerald-200">
               {siteConfig.hours} · 3 Dubai Locations
             </span>
           </motion.div>
@@ -97,7 +60,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-base text-white/75 sm:text-lg"
+            className="mx-auto mt-6 max-w-2xl text-base text-ink-600 sm:text-lg dark:text-white/75"
           >
             Professional haircuts, beard styling, hair treatments and grooming
             services across three convenient Dubai locations. 15+ expert barbers.
@@ -135,39 +98,46 @@ export function Hero() {
             {[
               { label: "15+ Expert Barbers", icon: Scissors },
               { label: "3 Dubai Locations", icon: MapPin },
-              { label: "Open Daily 8AM–12AM", icon: Star },
-              { label: "Affordable Prices", icon: Sparkles }
+              { label: "4.9★ from 500+", icon: Star },
+              { label: "From AED 5", icon: Sparkles }
             ].map((t) => (
               <div
                 key={t.label}
-                className="rounded-2xl border border-white/5 bg-ink-900/50 p-4 backdrop-blur"
+                className="rounded-2xl border border-ink-900/8 bg-white p-4 shadow-card dark:border-white/5 dark:bg-white/5 dark:shadow-none"
               >
-                <t.icon className="mx-auto h-5 w-5 text-emerald-300" />
-                <p className="mt-2 text-sm font-semibold text-white">{t.label}</p>
+                <t.icon className="mx-auto h-5 w-5 text-emerald-600 dark:text-emerald-300" />
+                <p className="mt-2 text-sm font-semibold text-ink-900 dark:text-white">{t.label}</p>
               </div>
             ))}
           </motion.div>
 
-          <motion.p
+          {/* Inline value props for snippet/AI search */}
+          <motion.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="mt-8 text-xs text-white/45"
+            className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-500 dark:text-white/45"
           >
-            Followed by thousands on{" "}
-            <a
-              href={social.instagram.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-emerald-300"
-            >
-              {social.instagram.handle}
-            </a>
-          </motion.p>
+            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Walk-ins welcome</li>
+            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Open daily 8AM–12AM</li>
+            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 15+ expert barbers</li>
+            <li className="flex items-center gap-1.5">
+              <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+              Followed by{" "}
+              <a
+                href={social.instagram.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-700 hover:text-emerald-700 dark:text-white/70 dark:hover:text-emerald-300"
+              >
+                {social.instagram.handle}
+              </a>
+            </li>
+          </motion.ul>
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-ink-950" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-paper dark:to-ink-900" />
     </section>
   );
 }
