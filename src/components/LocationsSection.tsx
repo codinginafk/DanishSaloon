@@ -11,7 +11,7 @@ export function LocationsSection() {
           <div className="text-center">
             <p className="eyebrow">Locations</p>
             <h2 className="heading-lg mt-2">Three branches across Dubai.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-white/65">
+            <p className="mx-auto mt-3 max-w-2xl text-ink-500 dark:text-white/65">
               Same pricing, same barbers, same quality — wherever you are in Dubai.
             </p>
           </div>
@@ -26,13 +26,13 @@ export function LocationsSection() {
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">{l.name}</h3>
-                    <p className="text-sm text-white/55">{l.landmark}</p>
+                    <h3 className="text-lg font-bold text-ink-900 dark:text-white">{l.name}</h3>
+                    <p className="text-sm text-ink-400 dark:text-white/55">{l.landmark}</p>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-white/70">{l.description}</p>
+                <p className="mt-4 text-sm text-ink-600 dark:text-white/70">{l.description}</p>
 
-                <div className="mt-5 space-y-2 text-sm text-white/75">
+                <div className="mt-5 space-y-2 text-sm text-ink-600 dark:text-white/75">
                   <p className="flex items-center gap-2">
                     <Clock className="h-4 w-4 text-emerald-400" /> {l.hours}
                   </p>

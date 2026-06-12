@@ -7,13 +7,13 @@ export function InstagramSection() {
     <section id="instagram" className="section">
       <div className="container-x">
         <SectionReveal>
-          <div className="overflow-hidden rounded-3xl border border-white/5 bg-gradient-to-br from-charcoal-800/60 via-ink-950 to-charcoal-900/60 p-8 sm:p-12">
+          <div className="overflow-hidden rounded-3xl border border-ink-900/10 bg-gradient-to-br from-emerald-50 via-paper to-white p-8 shadow-card sm:p-12 dark:border-white/5 dark:bg-gradient-to-br dark:from-charcoal-800/60 dark:via-ink-950 dark:to-charcoal-900/60 dark:shadow-none">
             <div className="flex flex-col items-center text-center">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 via-fuchsia-500 to-amber-400 text-white shadow-glow">
                 <Instagram className="h-6 w-6" />
               </div>
               <h2 className="heading-lg mt-5">Follow our latest transformations.</h2>
-              <p className="mt-3 max-w-2xl text-white/65">
+              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
                 New cuts, beard designs, hair color and behind-the-chair moments
                 — updated daily on our Instagram.
               </p>
@@ -25,7 +25,7 @@ export function InstagramSection() {
               >
                 {social.instagram.handle} <ArrowRight className="h-4 w-4" />
               </a>
-              <p className="mt-3 text-xs text-white/50">
+              <p className="mt-3 text-xs text-ink-400 dark:text-white/50">
                 Bookings: {siteConfig.whatsappDisplay} · {siteConfig.hours}
               </p>
             </div>

@@ -15,7 +15,7 @@ export function GallerySection() {
             <div>
               <p className="eyebrow">Gallery</p>
               <h2 className="heading-lg mt-2">A glimpse of our work.</h2>
-              <p className="mt-3 max-w-2xl text-ink-600 dark:text-white/65">
+              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
                 Real cuts, real beards, real customers. Replace these placeholders with
                 your own before & after shots and transformations.
               </p>

@@ -10,7 +10,7 @@ export function TeamSection() {
             <div>
               <p className="eyebrow">Meet the team</p>
               <h2 className="heading-lg mt-2">15+ barbers. One obsession.</h2>
-              <p className="mt-3 max-w-2xl text-white/65">
+              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
                 Our team is the reason customers come back. Trained in modern fades,
                 classic cuts, beard sculpting and men's color. Patient with kids.
                 Friendly to walk-ins.
@@ -36,8 +36,8 @@ export function TeamSection() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((m, i) => (
             <SectionReveal key={m.name} delay={i * 0.05}>
-              <article className="group relative overflow-hidden rounded-3xl border border-white/5 bg-charcoal-800/40">
-                <div className="aspect-[4/5] overflow-hidden bg-gradient-to-br from-ink-900 to-charcoal-900">
+              <article className="group relative overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-card dark:border-white/5 dark:bg-charcoal-800/40 dark:shadow-none">
+                <div className="aspect-[4/5] overflow-hidden bg-gradient-to-br from-paper-100 to-paper-50 dark:from-ink-900 dark:to-charcoal-900">
                   <img
                     src={m.image}
                     alt={m.name}

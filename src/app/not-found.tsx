@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="container-x text-center">
         <p className="eyebrow">404</p>
         <h1 className="heading-lg mt-2">Page not found.</h1>
-        <p className="mt-3 text-white/65">
+        <p className="mt-3 text-ink-500 dark:text-white/65">
           The page you're looking for doesn't exist. Let's get you back to grooming.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

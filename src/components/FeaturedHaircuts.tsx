@@ -14,7 +14,7 @@ export function FeaturedHaircuts() {
             <div>
               <p className="eyebrow">Featured Haircuts</p>
               <h2 className="heading-lg mt-2">Styles that travel well.</h2>
-              <p className="mt-3 max-w-2xl text-ink-600 dark:text-white/65">
+              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
                 The cuts our barbers are best known for — classic, modern, and trending.
                 Tell us your face shape; we'll tell you which works.
               </p>

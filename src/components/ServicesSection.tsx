@@ -51,11 +51,11 @@ export function ServicesSection() {
             const meta = categoryMeta[cat];
             return (
               <SectionReveal key={cat}>
-                <div className={`rounded-3xl border border-ink-900/10 bg-gradient-to-br ${meta.tone} to-transparent p-6 shadow-card sm:p-8 dark:border-white/10 dark:shadow-none`}>
+                <div className={`rounded-3xl border border-ink-900/10 bg-gradient-to-br ${meta.tone} to-white p-6 shadow-card sm:p-8 dark:border-white/10 dark:bg-none dark:shadow-none`}>
                   <div className="mb-6 flex items-end justify-between">
                     <div>
                       <h3 className="heading-md">{meta.title}</h3>
-                      <p className="text-sm text-ink-500 dark:text-white/55">{meta.subtitle}</p>
+                      <p className="text-sm text-ink-400 dark:text-white/55">{meta.subtitle}</p>
                     </div>
                   </div>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -16,7 +16,7 @@ export function FaqSection() {
             <div>
               <p className="eyebrow">FAQ</p>
               <h2 className="heading-lg mt-2">Got questions?</h2>
-              <p className="mt-3 text-white/65">
+              <p className="mt-3 text-ink-500 dark:text-white/65">
                 The things Dubai men ask us most. If we've missed something,
                 WhatsApp us — we usually reply in under 10 minutes.
               </p>
@@ -29,8 +29,8 @@ export function FaqSection() {
                     key={i}
                     className={`overflow-hidden rounded-2xl border transition-colors ${
                       isOpen
-                        ? "border-emerald-500/40 bg-charcoal-800/70"
-                        : "border-white/5 bg-charcoal-800/40 hover:border-white/10"
+                        ? "border-emerald-500/40 bg-emerald-50 dark:bg-charcoal-800/70"
+                        : "border-ink-900/10 bg-white shadow-card hover:border-ink-900/20 dark:border-white/5 dark:bg-charcoal-800/40 dark:shadow-none dark:hover:border-white/10"
                     }`}
                   >
                     <button
@@ -38,14 +38,14 @@ export function FaqSection() {
                       className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="text-base font-semibold text-white">
+                      <span className="text-base font-semibold text-ink-900 dark:text-white">
                         {item.q}
                       </span>
                       <span
                         className={`flex h-8 w-8 flex-none items-center justify-center rounded-full border transition-colors ${
                           isOpen
                             ? "border-emerald-500 bg-emerald-500 text-ink-950"
-                            : "border-white/15 text-white/70"
+                            : "border-ink-900/20 text-ink-500 dark:border-white/15 dark:text-white/70"
                         }`}
                       >
                         {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
@@ -60,7 +60,7 @@ export function FaqSection() {
                           transition={{ duration: 0.25, ease: "easeOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="px-5 pb-5 text-sm leading-relaxed text-white/70">
+                          <div className="px-5 pb-5 text-sm leading-relaxed text-ink-600 dark:text-white/70">
                             {item.a}
                           </div>
                         </motion.div>

@@ -4,13 +4,13 @@ import { Star, Quote } from "lucide-react";
 
 export function ReviewsSection() {
   return (
-    <section id="reviews" className="section bg-gradient-to-b from-ink-950 via-charcoal-900/40 to-ink-950">
+    <section id="reviews" className="section bg-paper-50 dark:bg-gradient-to-b dark:from-ink-950 dark:via-charcoal-900/40 dark:to-ink-950">
       <div className="container-x">
         <SectionReveal>
           <div className="text-center">
             <p className="eyebrow">Reviews</p>
             <h2 className="heading-lg mt-2">What our customers say.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-white/65">
+            <p className="mx-auto mt-3 max-w-2xl text-ink-500 dark:text-white/65">
               Hundreds of 5-star reviews across Google, Instagram and word of mouth.
               Real Dubai customers. Real cuts.
             </p>
@@ -20,8 +20,8 @@ export function ReviewsSection() {
                   <Star key={i} className="h-4 w-4 fill-emerald-400 text-emerald-400" />
                 ))}
               </div>
-              <span className="text-sm font-semibold text-white">4.9 / 5</span>
-              <span className="text-xs text-white/55">across 500+ reviews</span>
+              <span className="text-sm font-semibold text-ink-900 dark:text-white">4.9 / 5</span>
+              <span className="text-xs text-ink-400 dark:text-white/55">across 500+ reviews</span>
             </div>
           </div>
         </SectionReveal>
@@ -36,13 +36,13 @@ export function ReviewsSection() {
                     <Star key={j} className="h-4 w-4 fill-emerald-400 text-emerald-400" />
                   ))}
                 </div>
-                <p className="mt-4 text-base leading-relaxed text-white/85">"{r.text}"</p>
-                <div className="mt-5 flex items-center justify-between border-t border-white/5 pt-4">
+                <p className="mt-4 text-base leading-relaxed text-ink-700 dark:text-white/85">"{r.text}"</p>
+                <div className="mt-5 flex items-center justify-between border-t border-ink-900/10 pt-4 dark:border-white/5">
                   <div>
-                    <p className="text-sm font-semibold text-white">{r.name}</p>
-                    <p className="text-xs text-white/50">{r.location}</p>
+                    <p className="text-sm font-semibold text-ink-900 dark:text-white">{r.name}</p>
+                    <p className="text-xs text-ink-400 dark:text-white/50">{r.location}</p>
                   </div>
-                  <span className="rounded-full bg-white/5 px-2.5 py-1 text-xs text-white/60">
+                  <span className="rounded-full bg-ink-900/5 px-2.5 py-1 text-xs text-ink-500 dark:bg-white/5 dark:text-white/60">
                     Verified
                   </span>
                 </div>
