@@ -5,7 +5,6 @@ import { gallery } from "@/lib/siteConfig";
 import { SectionReveal } from "@/components/Motion";
 import { WhatsAppCta } from "@/components/WhatsAppCta";
 import { X } from "lucide-react";
-import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
 
 const categories = ["all", "haircut", "beard", "shop", "team", "transformation"] as const;
@@ -28,7 +27,7 @@ export default function GalleryPage() {
           <SectionReveal>
             <p className="eyebrow">Gallery</p>
             <h1 className="heading-lg mt-2">Haircuts, beards & the shop.</h1>
-            <p className="mt-4 max-w-2xl text-white/70">
+            <p className="mt-4 max-w-2xl text-ink-500 dark:text-white/70">
               A growing collection of our work. Replace these placeholders with your
               own before & after shots and customer transformations.
             </p>
@@ -45,8 +44,8 @@ export default function GalleryPage() {
                 onClick={() => setFilter(c)}
                 className={`rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                   filter === c
-                    ? "border-emerald-400 bg-emerald-500/15 text-emerald-200"
-                    : "border-white/10 text-white/60 hover:border-white/20 hover:text-white"
+                    ? "border-emerald-400 bg-emerald-500/15 text-emerald-600 dark:text-emerald-200"
+                    : "border-ink-900/20 text-ink-500 hover:border-ink-900/40 hover:text-ink-700 dark:border-white/10 dark:text-white/60 dark:hover:border-white/20 dark:hover:text-white"
                 }`}
               >
                 {c}
@@ -54,19 +53,23 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <div className="columns-2 gap-4 sm:columns-3 lg:columns-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {items.map((img, i) => (
               <button
                 key={`${img.src}-${i}`}
                 onClick={() => setLightbox(i)}
-                className="group mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-white/5 bg-charcoal-800/40 text-left"
+                className={`group overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card text-left dark:border-white/5 dark:bg-charcoal-800/40 dark:shadow-none ${
+                  i % 5 === 0 ? "row-span-2" : ""
+                }`}
               >
                 <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                      i % 5 === 0 ? "sm:absolute sm:inset-0" : ""
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">

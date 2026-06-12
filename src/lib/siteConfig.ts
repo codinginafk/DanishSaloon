@@ -1,6 +1,6 @@
 // =============================================================
 // SITE CONFIG — single source of truth for replaceable content.
-// All image URLs are verified-stable Unsplash photo IDs.
+// Images stored locally in /public/images/ for fast loading.
 // =============================================================
 
 const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -13,8 +13,7 @@ export const siteConfig = {
   description:
     "Professional haircuts, beard styling, hair treatments and grooming services across three convenient Dubai locations. 15+ expert barbers. Open daily 8AM–12AM.",
   url: envUrl || fallbackUrl,
-  ogImage:
-    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80",
+  ogImage: "/images/hero-bg.jpg",
   phone: "+971529058527",
   whatsappDisplay: "+971 52 905 8527",
   whatsappRaw: "971529058527",
@@ -121,6 +120,7 @@ export type Service = {
   duration: string;
   startingPrice: string;
   benefits: string[];
+  image: string;
 };
 
 export const services: Service[] = [
@@ -134,6 +134,7 @@ export const services: Service[] = [
       "A precision haircut from one of our 15+ expert barbers. We consult on your face shape, lifestyle and preferences before cutting — fades, tapers, scissor cuts, scissor-over-comb, clippers only — whatever fits.",
     duration: "30–45 min",
     startingPrice: "AED 5",
+    image: "/images/haircut-1.jpg",
     benefits: [
       "Consultation included",
       "Wash and towel dry",
@@ -151,6 +152,7 @@ export const services: Service[] = [
       "Patient barbers who know how to keep kids comfortable. Clean, stylish cuts for school, weekends and special occasions. Walk-ins welcome.",
     duration: "20–30 min",
     startingPrice: "AED 25",
+    image: "/images/kids-haircut.jpg",
     benefits: ["Patient barbers", "Calm environment", "Walk-ins welcome"]
   },
   {
@@ -163,6 +165,7 @@ export const services: Service[] = [
       "Precision beard trim with hot towel prep, sharp line-up and beard oil finish. We shape to your facial structure and growth pattern.",
     duration: "15–20 min",
     startingPrice: "AED 20",
+    image: "/images/beard-1.jpg",
     benefits: ["Hot towel prep", "Sharp line-up", "Beard oil finish"]
   },
   {
@@ -175,6 +178,7 @@ export const services: Service[] = [
       "Custom beard design — from corporate sharp to modern sculpted looks. We design a beard that fits your face and lifestyle.",
     duration: "25–35 min",
     startingPrice: "AED 35",
+    image: "/images/beard-2.jpg",
     benefits: ["Custom design", "Trim & sculpt", "Product finish"]
   },
   {
@@ -187,6 +191,7 @@ export const services: Service[] = [
       "Refreshing wash with quality shampoo, light scalp massage and clean towel finish. Pairs perfectly with any cut.",
     duration: "15 min",
     startingPrice: "AED 15",
+    image: "/images/hair-wash.jpg",
     benefits: ["Quality shampoo", "Scalp massage", "Towel finish"]
   },
   {
@@ -199,6 +204,7 @@ export const services: Service[] = [
       "Deep cleansing facial designed for men's skin. Removes impurities, unclogs pores, and leaves skin refreshed.",
     duration: "30 min",
     startingPrice: "AED 75",
+    image: "/images/facial.jpg",
     benefits: ["Deep cleansing", "Exfoliation", "Hydration"]
   },
   {
@@ -211,6 +217,7 @@ export const services: Service[] = [
       "Precise threading for eyebrows, facial hair and clean lines. Quick, hygienic and sharp.",
     duration: "10–15 min",
     startingPrice: "AED 15",
+    image: "/images/threading.jpg",
     benefits: ["Precise shaping", "Quick service", "Hygienic"]
   },
   {
@@ -223,6 +230,7 @@ export const services: Service[] = [
       "Professional men's hair coloring — grey blending, full color, highlights and fashion tones. Premium products, expert application.",
     duration: "60–90 min",
     startingPrice: "AED 100",
+    image: "/images/hair-color.jpg",
     benefits: ["Grey blending", "Full color", "Premium products"]
   },
   {
@@ -235,6 +243,7 @@ export const services: Service[] = [
       "Reconstructive protein treatment that strengthens damaged hair, reduces breakage and adds shine. Recommended after color or chemical services.",
     duration: "45 min",
     startingPrice: "AED 150",
+    image: "/images/protein.jpg",
     benefits: ["Strengthens hair", "Reduces breakage", "Adds shine"]
   },
   {
@@ -247,6 +256,7 @@ export const services: Service[] = [
       "Smoothing keratin treatment that tames frizz, adds shine and makes hair easier to style. Lasts weeks.",
     duration: "90–120 min",
     startingPrice: "AED 250",
+    image: "/images/keratin.jpg",
     benefits: ["Frizz control", "Long-lasting smoothness", "Easier styling"]
   }
 ];
@@ -268,7 +278,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Skin Fade",
     description: "Modern clean fade haircut, sharp and modern.",
     illustration: "skin-fade",
-    image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80"
+    image: "/images/haircut-1.jpg"
   },
   {
     id: "taper-fade",
@@ -276,7 +286,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Taper Fade",
     description: "Professional everyday style that never goes out of fashion.",
     illustration: "taper-fade",
-    image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80"
+    image: "/images/haircut-4.jpg"
   },
   {
     id: "buzz-cut",
@@ -284,7 +294,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Buzz Cut",
     description: "Low-maintenance classic — clean, sharp, effortless.",
     illustration: "buzz-cut",
-    image: "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=900&q=80"
+    image: "/images/haircut-2.jpg"
   },
   {
     id: "crew-cut",
@@ -292,7 +302,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Crew Cut",
     description: "Sharp business look. Polished, professional, ready to go.",
     illustration: "crew-cut",
-    image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
+    image: "/images/haircut-3.jpg"
   },
   {
     id: "textured-crop",
@@ -300,7 +310,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Textured Crop",
     description: "Modern trending cut with movement and texture.",
     illustration: "textured-crop",
-    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80"
+    image: "/images/beard-1.jpg"
   },
   {
     id: "beard-styling",
@@ -308,7 +318,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Beard Styling",
     description: "Custom beard design and shaping for a clean look.",
     illustration: "beard-styling",
-    image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80"
+    image: "/images/beard-2.jpg"
   }
 ];
 
@@ -324,37 +334,37 @@ export const team: TeamMember[] = [
   {
     name: "Danish Hanif",
     specialty: "Founder & Master Barber",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-1.jpg",
     bio: "Founder of Danish Hanif Hair Lounge. 15+ years of men's grooming expertise."
   },
   {
     name: "Adeel Khan",
     specialty: "Fade Specialist",
-    image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-2.jpg",
     bio: "Expert in skin fades, taper fades and modern scissor work."
   },
   {
     name: "Bilal Ahmed",
     specialty: "Beard Expert",
-    image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-3.jpg",
     bio: "Beard design, sculpting and hot-towel specialist."
   },
   {
     name: "Hamza Ali",
     specialty: "Hair Color Specialist",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-4.jpg",
     bio: "Grey blending, balayage and men's color correction."
   },
   {
     name: "Imran Hussain",
     specialty: "Senior Stylist",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-5.jpg",
     bio: "Classic cuts, scissor work and family-friendly barbering."
   },
   {
     name: "Junaid Iqbal",
     specialty: "Kids & Family",
-    image: "https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=600&q=80",
+    image: "/images/team-6.jpg",
     bio: "Patient, kid-friendly cuts. School & weekend specialist."
   }
 ];
@@ -408,62 +418,62 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   {
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-1.jpg",
     alt: "Skin fade haircut at Danish Hanif Hair Lounge",
     category: "haircut"
   },
   {
-    src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-2.jpg",
     alt: "Beard trim and styling",
     category: "beard"
   },
   {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-3.jpg",
     alt: "Barber shop interior Dubai",
     category: "shop"
   },
   {
-    src: "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-4.jpg",
     alt: "Taper fade haircut",
     category: "haircut"
   },
   {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-5.jpg",
     alt: "Classic men's haircut",
     category: "haircut"
   },
   {
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-6.jpg",
     alt: "Modern men's haircut",
     category: "haircut"
   },
   {
-    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-7.jpg",
     alt: "Beard shaping and line-up",
     category: "beard"
   },
   {
-    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-8.jpg",
     alt: "Hair wash service",
     category: "shop"
   },
   {
-    src: "https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-9.jpg",
     alt: "Premium barber tools",
     category: "shop"
   },
   {
-    src: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-10.jpg",
     alt: "Stylish men's haircut transformation",
     category: "transformation"
   },
   {
-    src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-11.jpg",
     alt: "Beard sculpting close-up",
     category: "beard"
   },
   {
-    src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80",
+    src: "/images/gallery-12.jpg",
     alt: "Crew cut styling",
     category: "haircut"
   }
@@ -472,8 +482,7 @@ export const gallery: GalleryItem[] = [
 // ----- Hero / featured video (replaceable) -----
 export const heroVideo = {
   src: "",
-  poster:
-    "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1800&q=80"
+  poster: "/images/hero-bg.jpg"
 };
 
 // ----- FAQ -----

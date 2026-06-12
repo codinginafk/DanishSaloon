@@ -26,16 +26,22 @@ export function GallerySection() {
           </div>
         </SectionReveal>
 
-        <div className="mt-12 columns-2 gap-4 sm:columns-3 lg:columns-4">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {gallery.slice(0, 12).map((img, i) => (
             <SectionReveal key={i} delay={(i % 4) * 0.05}>
-              <div className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card dark:border-white/10 dark:bg-charcoal-800/40 dark:shadow-none">
+              <div
+                className={`group overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card dark:border-white/10 dark:bg-charcoal-800/40 dark:shadow-none ${
+                  i % 5 === 0 ? "row-span-2" : ""
+                }`}
+              >
                 <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
                   <SmartImage
                     src={img.src}
                     alt={img.alt}
                     fallbackSrc={FALLBACK}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                      i % 5 === 0 ? "sm:absolute sm:inset-0" : ""
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">

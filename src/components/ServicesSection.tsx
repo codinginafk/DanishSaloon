@@ -63,8 +63,17 @@ export function ServicesSection() {
                       <Link
                         key={s.id}
                         href={`/services/${s.slug}`}
-                        className="card card-hover group"
+                        className="card card-hover group overflow-hidden"
                       >
+                        <div className="relative -mx-6 -mt-6 mb-4 aspect-[16/9] overflow-hidden">
+                          <img
+                            src={s.image}
+                            alt={s.name}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        </div>
                         <div className="flex items-start justify-between gap-3">
                           <h4 className="text-lg font-semibold text-ink-900 dark:text-white">{s.name}</h4>
                           <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
