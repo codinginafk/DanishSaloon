@@ -14,10 +14,10 @@ export function WhatsAppCta() {
             <div className="relative flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
               <div>
                 <p className="eyebrow">Ready when you are</p>
-                <h2 className="heading-lg mt-2 text-ink-900 dark:text-white">Ready for your next haircut?</h2>
+                <h2 className="heading-lg mt-2 text-ink-900 dark:text-white">Need a cut? We&apos;re here.</h2>
                 <p className="mt-3 max-w-xl text-ink-600 dark:text-white/70">
-                  Skip the queue. Message us on WhatsApp and lock your slot at any of
-                  our three Dubai branches. Walk-ins welcome too.
+                  Tap the button below and say hi on WhatsApp. Tell us what you need,
+                  we&apos;ll get you sorted — Media City, Karama, or Ramee Royal.
                 </p>
                 <p className="mt-3 text-sm text-ink-400 dark:text-white/55">
                   {siteConfig.hours} · {siteConfig.whatsappDisplay}

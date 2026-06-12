@@ -21,7 +21,9 @@ export const siteConfig = {
   email: "info@danishhanifhairlounge.com",
   hours: "Daily 8AM – 12AM",
   founded: 2014,
-  bookingNote: "Walk-ins welcome. Appointments recommended for evenings & weekends."
+  bookingNote: "Walk-ins welcome. Appointments recommended for evenings & weekends.",
+  indexnowKey: "7d6e40cb593a8f12",
+  gscId: "google.com,   pub-0000000000000000" // Replace with your Google Search Console verification ID
 };
 
 // ----- Social (replaceable) -----

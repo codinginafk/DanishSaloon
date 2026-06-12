@@ -10,10 +10,10 @@ export function ReviewsSection() {
           <div className="text-center">
             <p className="eyebrow">Reviews</p>
             <h2 className="heading-lg mt-2">What our customers say.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-ink-500 dark:text-white/65">
-              Hundreds of 5-star reviews across Google, Instagram and word of mouth.
-              Real Dubai customers. Real cuts.
-            </p>
+              <p className="mx-auto mt-3 max-w-2xl text-ink-500 dark:text-white/65">
+                Here&apos;s what real Dubai guys say about us — no filters, no fake reviews.
+                Just consistent cuts and honest pricing.
+              </p>
             <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-4 py-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (

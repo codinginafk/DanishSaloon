@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { BackToTop } from "@/components/BackToTop";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AEO } from "@/components/AEO";
@@ -74,6 +75,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg"
+  },
+  verification: {
+    google: siteConfig.gscId,
+    yandex: siteConfig.indexnowKey,
+    yahoo: siteConfig.indexnowKey
+  },
+  other: {
+    "yandex-verification": siteConfig.indexnowKey,
+    "msvalidate.01": siteConfig.indexnowKey
   }
 };
 
@@ -87,6 +97,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){try{var t=localStorage.getItem('dh-theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);}catch(e){}})()`
           }}
         />
+        {/* IndexNow verification */}
+        <link rel="indexnow" href={`${siteConfig.url}/${siteConfig.indexnowKey}.txt`} />
+        {/* Preconnect to Google Fonts & Analytics */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for third-party services */}
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        <link rel="dns-prefetch" href="//www.google.com" />
+        {/* Google Analytics (uncomment and add GA ID when ready) */}
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
+        <script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');`
+        }} /> */}
       </head>
       <body className="min-h-screen bg-paper text-ink-900 antialiased dark:bg-ink-900 dark:text-white">
         <ThemeProvider>
@@ -102,6 +125,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main">{children}</main>
           <Footer />
           <WhatsAppFloat />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

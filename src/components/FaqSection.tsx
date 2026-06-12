@@ -17,8 +17,8 @@ export function FaqSection() {
               <p className="eyebrow">FAQ</p>
               <h2 className="heading-lg mt-2">Got questions?</h2>
               <p className="mt-3 text-ink-500 dark:text-white/65">
-                The things Dubai men ask us most. If we've missed something,
-                WhatsApp us — we usually reply in under 10 minutes.
+                The things guys ask us most. Missed something? Hit us on WhatsApp
+                — we reply fast.
               </p>
             </div>
             <div className="space-y-3">

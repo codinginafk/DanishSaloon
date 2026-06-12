@@ -53,7 +53,7 @@ export function Hero() {
             className="mt-6 heading-xl"
           >
             {siteConfig.tagline}
-            <span className="block gradient-text">at honest Dubai prices.</span>
+            <span className="block gradient-text">starting from AED 5.</span>
           </motion.h1>
 
           <motion.p
@@ -62,9 +62,8 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-base text-ink-600 sm:text-lg dark:text-white/75"
           >
-            Professional haircuts, beard styling, hair treatments and grooming
-            services across three convenient Dubai locations. 15+ expert barbers.
-            Walk-ins welcome.
+            Walk in for a AED 5 haircut or book a full keratin treatment — same
+            quality, same smile, across three Dubai branches.
           </motion.p>
 
           <motion.div
@@ -118,12 +117,12 @@ export function Hero() {
             transition={{ delay: 0.6 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-500 dark:text-white/45"
           >
-            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Walk-ins welcome</li>
+            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Walk-ins welcome, no appointment needed</li>
             <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> Open daily 8AM–12AM</li>
-            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 15+ expert barbers</li>
+            <li className="flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 15+ barbers, trained & friendly</li>
             <li className="flex items-center gap-1.5">
               <Check className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
-              Followed by{" "}
+              Follow{" "}
               <a
                 href={social.instagram.url}
                 target="_blank"
@@ -132,6 +131,7 @@ export function Hero() {
               >
                 {social.instagram.handle}
               </a>
+              {" "}for daily cuts
             </li>
           </motion.ul>
         </div>

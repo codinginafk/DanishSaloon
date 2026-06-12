@@ -34,8 +34,8 @@ export function ServicesSection() {
               <p className="eyebrow">Services</p>
               <h2 className="heading-lg mt-2">Everything your hair needs.</h2>
               <p className="mt-3 max-w-2xl text-ink-600 dark:text-white/65">
-                From a quick AED 5 cut to full keratin treatments — every service
-                is delivered by trained, experienced barbers using clean, professional tools.
+                AED 5 haircut or AED 250 keratin — no hidden fees, no upsells, no attitude.
+                Just good work by barbers who actually listen.
               </p>
             </div>
             <Link href="/services" className="btn-outline whitespace-nowrap">
