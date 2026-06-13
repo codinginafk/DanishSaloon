@@ -136,7 +136,7 @@ export const services: Service[] = [
       "A precision haircut by our experienced barbers. We start with a consultation — face shape, lifestyle, how much time you want to spend styling — then cut accordingly. Fades, tapers, scissor-over-comb, clipper work. Finished with a hot towel and style guidance.",
     duration: "30–45 min",
     startingPrice: "AED 5",
-    image: "/images/haircut-1.jpg",
+    image: "/images/side-profile-fade.jpg",
     benefits: [
       "Full consultation included",
       "Precision cut — fades, tapers, scissor work",
@@ -168,7 +168,7 @@ export const services: Service[] = [
       "A precision beard trim with hot towel prep, crisp line-up and beard oil finish. We shape to your facial structure and growth pattern — whether you're growing it out or keeping it short.",
     duration: "15–20 min",
     startingPrice: "AED 20",
-    image: "/images/beard-1.jpg",
+    image: "/images/razor-lineup.jpg",
     benefits: ["Hot towel preparation", "Sharp, clean line-up", "Beard oil finish", "Shape matched to your face"]
   },
   {
@@ -181,7 +181,7 @@ export const services: Service[] = [
       "From corporate sharp to modern sculpted — we design a beard that fits your face and lifestyle. Shaping, trimming, sculpting and product styling for the complete look.",
     duration: "25–35 min",
     startingPrice: "AED 35",
-    image: "/images/beard-2.jpg",
+    image: "/images/beard-scissor-trim.jpg",
     benefits: ["Custom design consultation", "Precision sculpting & trimming", "Product application & finish", "Maintenance tips"]
   },
   {

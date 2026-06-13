@@ -57,7 +57,7 @@ export default function GalleryPage() {
               <button
                 key={`${img.src}-${i}`}
                 onClick={() => setLightbox(i)}
-                className="group mb-3 w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 transition-shadow hover:shadow-md dark:ring-white/10 dark:hover:shadow-glow"
+                className="group relative mb-3 w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 transition-shadow hover:shadow-md dark:ring-white/10 dark:hover:shadow-glow"
               >
                 <img
                   src={img.src}
@@ -66,11 +66,9 @@ export default function GalleryPage() {
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{ minHeight: "200px" }}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 p-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300">{img.category}</p>
-                  <p className="text-xs text-white/90">{img.alt}</p>
-                  {img.credits && <p className="mt-0.5 text-[9px] text-white/60">{img.credits}</p>}
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 p-2.5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  {img.credits && <p className="text-[9px] text-white/60">{img.credits}</p>}
                 </div>
               </button>
             ))}
