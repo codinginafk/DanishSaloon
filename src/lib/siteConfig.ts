@@ -4,40 +4,40 @@
 // =============================================================
 
 const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
-const fallbackUrl = "https://www.danishhanifhairlounge.com";
+const fallbackUrl = "https://www.kopilagentssalon.com";
 
 export const siteConfig = {
-  name: "Danish Hanif Hair Lounge",
-  shortName: "Danish Hanif",
-  tagline: "Dubai's Trusted Men's Grooming Destination",
+  name: "Kopila Gents Salon",
+  shortName: "Kopila",
+  tagline: "Dubai's Premium Men's Grooming Destination",
   description:
-    "Professional haircuts, beard styling, hair treatments and grooming services across three convenient Dubai locations. 15+ expert barbers. Open daily 8AM–12AM.",
+    "Expert haircuts, beard trimming, facials and hair treatments for men across three Dubai locations. Open daily 8AM–12AM. Walk-ins welcome.",
   url: envUrl || fallbackUrl,
   ogImage: "/images/hero-bg.jpg",
   phone: "+971529058527",
   whatsappDisplay: "+971 52 905 8527",
   whatsappRaw: "971529058527",
   whatsappLink: "https://wa.me/971529058527",
-  email: "info@danishhanifhairlounge.com",
+  email: "info@kopilagentssalon.com",
   hours: "Daily 8AM – 12AM",
   founded: 2014,
-  bookingNote: "Walk-ins welcome. Appointments recommended for evenings & weekends.",
+  bookingNote: "Walk-ins always welcome. WhatsApp for appointments during peak hours.",
   indexnowKey: "7d6e40cb593a8f12",
-  gscId: "google.com,   pub-0000000000000000" // Replace with your Google Search Console verification ID
+  gscId: "google.com, pub-0000000000000000"
 };
 
 // ----- Social (replaceable) -----
 export const social = {
   instagram: {
-    handle: "@danishhanifhairlounge",
-    url: "https://www.instagram.com/danishhanifhairlounge/",
-    embed: "https://www.instagram.com/danishhanifhairlounge/"
+    handle: "@kopilagentssalon",
+    url: "https://www.instagram.com/kopilagentssalon/",
+    embed: "https://www.instagram.com/kopilagentssalon/"
   },
   facebook: {
-    url: "https://www.facebook.com/danishhanifhairlounge"
+    url: "https://www.facebook.com/kopilagentssalon"
   },
   tiktok: {
-    url: "https://www.tiktok.com/@danishhanifhairlounge"
+    url: "https://www.tiktok.com/@kopilagentssalon"
   }
 };
 
@@ -66,13 +66,13 @@ export const locations: Location[] = [
     city: "Dubai",
     area: "Media City",
     mapLink:
-      "https://www.google.com/maps/search/?api=1&query=Danish+Hanif+Hair+Lounge+Media+City+Dubai",
+      "https://www.google.com/maps/search/?api=1&query=Kopila+Gents+Salon+Media+City+Dubai",
     embedLink:
-      "https://www.google.com/maps?q=Danish+Hanif+Hair+Lounge+Media+City+Dubai&output=embed",
+      "https://www.google.com/maps?q=Kopila+Gents+Salon+Media+City+Dubai&output=embed",
     phone: "+971529058527",
     hours: "Daily 8AM – 12AM",
     description:
-      "Our Media City branch serves professionals working in Dubai's media and tech hub. Quick cuts between meetings, beard trims after work, and premium grooming for the modern Dubai professional.",
+      "Our Media City branch is built for the modern professional. Quick cuts between meetings, precision beard trims after work, and a full menu of grooming services — all within walking distance of Dubai's media hub.",
     landmark: "Near Dubai Media City Gate"
   },
   {
@@ -83,13 +83,13 @@ export const locations: Location[] = [
     city: "Dubai",
     area: "Karama",
     mapLink:
-      "https://www.google.com/maps/search/?api=1&query=Danish+Hanif+Hair+Lounge+Karama+Dubai",
+      "https://www.google.com/maps/search/?api=1&query=Kopila+Gents+Salon+Karama+Dubai",
     embedLink:
-      "https://www.google.com/maps?q=Danish+Hanif+Hair+Lounge+Karama+Dubai&output=embed",
+      "https://www.google.com/maps?q=Kopila+Gents+Salon+Karama+Dubai&output=embed",
     phone: "+971529058527",
     hours: "Daily 8AM – 12AM",
     description:
-      "Our flagship Karama branch is the home of affordable men's grooming in Dubai. Trusted by residents and visitors for consistent, quality haircuts at honest prices.",
+      "Our flagship Karama branch is where Kopila built its name. Trusted by the community for consistent, quality haircuts, beard work and men's grooming at honest prices — no gimmicks, just good work.",
     landmark: "Karama district, central Dubai"
   },
   {
@@ -100,13 +100,13 @@ export const locations: Location[] = [
     city: "Dubai",
     area: "Bur Dubai",
     mapLink:
-      "https://www.google.com/maps/search/?api=1&query=Danish+Hanif+Hair+Lounge+Ramee+Royal+Hotel+Dubai",
+      "https://www.google.com/maps/search/?api=1&query=Kopila+Gents+Salon+Ramee+Royal+Hotel+Dubai",
     embedLink:
-      "https://www.google.com/maps?q=Danish+Hanif+Hair+Lounge+Ramee+Royal+Hotel+Dubai&output=embed",
+      "https://www.google.com/maps?q=Kopila+Gents+Salon+Ramee+Royal+Hotel+Dubai&output=embed",
     phone: "+971529058527",
     hours: "Daily 8AM – 12AM",
     description:
-      "Conveniently located inside Ramee Royal Hotel, our Bur Dubai branch caters to hotel guests, residents, and walk-ins. Premium grooming in a welcoming environment.",
+      "Located inside Ramee Royal Hotel, our Bur Dubai branch serves hotel guests, residents and walk-ins alike. Same quality, same team, same honest pricing — in a comfortable, welcoming setting.",
     landmark: "Ramee Royal Hotel, Bur Dubai"
   }
 ];
@@ -131,17 +131,18 @@ export const services: Service[] = [
     slug: "hair-cut",
     name: "Hair Cut",
     category: "hair",
-    shortDescription: "Classic and modern cuts tailored to your face shape.",
+    shortDescription: "Classic & modern cuts tailored to your face shape.",
     description:
-      "A precision haircut from one of our 15+ expert barbers. We consult on your face shape, lifestyle and preferences before cutting — fades, tapers, scissor cuts, scissor-over-comb, clippers only — whatever fits.",
+      "A precision haircut by our experienced barbers. We start with a consultation — face shape, lifestyle, how much time you want to spend styling — then cut accordingly. Fades, tapers, scissor-over-comb, clipper work. Finished with a hot towel and style guidance.",
     duration: "30–45 min",
     startingPrice: "AED 5",
     image: "/images/haircut-1.jpg",
     benefits: [
-      "Consultation included",
-      "Wash and towel dry",
+      "Full consultation included",
+      "Precision cut — fades, tapers, scissor work",
       "Hot towel finish",
-      "Style guidance"
+      "Wash & blow-dry",
+      "Style tips for home"
     ]
   },
   {
@@ -149,13 +150,13 @@ export const services: Service[] = [
     slug: "kids-hair-cut",
     name: "Kids Hair Cut",
     category: "kids",
-    shortDescription: "Quick, friendly service for boys of all ages.",
+    shortDescription: "Patient, friendly cuts for boys of all ages.",
     description:
-      "Patient barbers who know how to keep kids comfortable. Clean, stylish cuts for school, weekends and special occasions. Walk-ins welcome.",
+      "We know kids can be nervous. Our barbers are patient, gentle and fast. School cuts, weekend styles, first haircuts — we handle them all with a calm approach and a smile.",
     duration: "20–30 min",
     startingPrice: "AED 25",
     image: "/images/kids-haircut.jpg",
-    benefits: ["Patient barbers", "Calm environment", "Walk-ins welcome"]
+    benefits: ["Patient, kid-friendly barbers", "Calm, welcoming environment", "Quick service", "Walk-ins welcome"]
   },
   {
     id: "beard-trim",
@@ -164,11 +165,11 @@ export const services: Service[] = [
     category: "beard",
     shortDescription: "Clean shaping to keep your beard sharp and tidy.",
     description:
-      "Precision beard trim with hot towel prep, sharp line-up and beard oil finish. We shape to your facial structure and growth pattern.",
+      "A precision beard trim with hot towel prep, crisp line-up and beard oil finish. We shape to your facial structure and growth pattern — whether you're growing it out or keeping it short.",
     duration: "15–20 min",
     startingPrice: "AED 20",
     image: "/images/beard-1.jpg",
-    benefits: ["Hot towel prep", "Sharp line-up", "Beard oil finish"]
+    benefits: ["Hot towel preparation", "Sharp, clean line-up", "Beard oil finish", "Shape matched to your face"]
   },
   {
     id: "beard-styling",
@@ -177,89 +178,89 @@ export const services: Service[] = [
     category: "beard",
     shortDescription: "Custom beard design and sculpting.",
     description:
-      "Custom beard design — from corporate sharp to modern sculpted looks. We design a beard that fits your face and lifestyle.",
+      "From corporate sharp to modern sculpted — we design a beard that fits your face and lifestyle. Shaping, trimming, sculpting and product styling for the complete look.",
     duration: "25–35 min",
     startingPrice: "AED 35",
     image: "/images/beard-2.jpg",
-    benefits: ["Custom design", "Trim & sculpt", "Product finish"]
+    benefits: ["Custom design consultation", "Precision sculpting & trimming", "Product application & finish", "Maintenance tips"]
   },
   {
     id: "hair-wash",
     slug: "hair-wash",
     name: "Hair Wash",
     category: "hair",
-    shortDescription: "Clean, refreshing wash & scalp massage.",
+    shortDescription: "Refreshing wash with scalp massage.",
     description:
-      "Refreshing wash with quality shampoo, light scalp massage and clean towel finish. Pairs perfectly with any cut.",
+      "A thorough hair wash using quality shampoo, paired with a relaxing scalp massage. Clean towel finish. The perfect add-on to any cut or a quick refresh on its own.",
     duration: "15 min",
     startingPrice: "AED 15",
     image: "/images/hair-wash.jpg",
-    benefits: ["Quality shampoo", "Scalp massage", "Towel finish"]
+    benefits: ["Quality shampoo & conditioner", "Soothing scalp massage", "Clean towel finish"]
   },
   {
     id: "facial",
     slug: "facial",
     name: "Facial",
     category: "face",
-    shortDescription: "Deep cleansing men's facial.",
+    shortDescription: "Deep cleansing facial designed for men's skin.",
     description:
-      "Deep cleansing facial designed for men's skin. Removes impurities, unclogs pores, and leaves skin refreshed.",
+      "A deep-cleansing men's facial that removes impurities, unclogs pores and refreshes your skin. Steam, exfoliation, mask and moisturizer — tailored to men's thicker skin and common concerns.",
     duration: "30 min",
     startingPrice: "AED 75",
     image: "/images/facial.jpg",
-    benefits: ["Deep cleansing", "Exfoliation", "Hydration"]
+    benefits: ["Deep pore cleansing", "Gentle exfoliation", "Hydrating mask", "Relaxing steam treatment"]
   },
   {
     id: "threading",
     slug: "threading",
     name: "Threading",
     category: "face",
-    shortDescription: "Precision threading for clean lines.",
+    shortDescription: "Precision threading for clean, sharp lines.",
     description:
-      "Precise threading for eyebrows, facial hair and clean lines. Quick, hygienic and sharp.",
+      "Quick, precise threading for eyebrows, upper lip and facial hair. Clean lines, sharp definition — done hygienically in minutes.",
     duration: "10–15 min",
     startingPrice: "AED 15",
     image: "/images/threading.jpg",
-    benefits: ["Precise shaping", "Quick service", "Hygienic"]
+    benefits: ["Precise shaping", "Quick & hygienic", "Clean results"]
   },
   {
     id: "hair-color",
     slug: "hair-color",
     name: "Hair Color",
     category: "hair",
-    shortDescription: "Professional hair coloring for men.",
+    shortDescription: "Professional men's hair coloring services.",
     description:
-      "Professional men's hair coloring — grey blending, full color, highlights and fashion tones. Premium products, expert application.",
+      "Grey blending, full color, highlights and fashion tones — all using premium products. Our color specialists will match the right shade and technique for your look. Discreet, natural results.",
     duration: "60–90 min",
     startingPrice: "AED 100",
     image: "/images/hair-color.jpg",
-    benefits: ["Grey blending", "Full color", "Premium products"]
+    benefits: ["Grey blending & coverage", "Full color & highlights", "Premium ammonia-free products", "Expert color matching"]
   },
   {
     id: "protein-treatment",
     slug: "protein-treatment",
     name: "Protein Treatment",
     category: "treatment",
-    shortDescription: "Strengthening protein treatment for healthier hair.",
+    shortDescription: "Strengthening treatment for healthier hair.",
     description:
-      "Reconstructive protein treatment that strengthens damaged hair, reduces breakage and adds shine. Recommended after color or chemical services.",
+      "A reconstructive protein treatment that strengthens damaged hair, reduces breakage and restores natural shine. Ideal after coloring, heat styling or chemical treatments.",
     duration: "45 min",
     startingPrice: "AED 150",
     image: "/images/protein.jpg",
-    benefits: ["Strengthens hair", "Reduces breakage", "Adds shine"]
+    benefits: ["Strengthens hair structure", "Reduces breakage & split ends", "Restores natural shine", "Recommended after color services"]
   },
   {
     id: "keratin-treatment",
     slug: "keratin-treatment",
     name: "Keratin Treatment",
     category: "treatment",
-    shortDescription: "Smooth, frizz-free and healthy hair.",
+    shortDescription: "Smooth, frizz-free, healthier-looking hair.",
     description:
-      "Smoothing keratin treatment that tames frizz, adds shine and makes hair easier to style. Lasts weeks.",
+      "A smoothing keratin treatment that eliminates frizz, adds brilliant shine and makes hair easier to style. Results last weeks. Perfect for Dubai's humidity.",
     duration: "90–120 min",
     startingPrice: "AED 250",
     image: "/images/keratin.jpg",
-    benefits: ["Frizz control", "Long-lasting smoothness", "Easier styling"]
+    benefits: ["Frizz elimination", "Long-lasting smoothness", "Enhanced shine & softness", "Easier daily styling"]
   }
 ];
 
@@ -278,7 +279,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "skin-fade",
     slug: "skin-fade",
     name: "Skin Fade",
-    description: "Modern clean fade haircut, sharp and modern.",
+    description: "Modern, sharp — the fade that starts every conversation.",
     illustration: "skin-fade",
     image: "/images/haircut-1.jpg"
   },
@@ -286,7 +287,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "taper-fade",
     slug: "taper-fade",
     name: "Taper Fade",
-    description: "Professional everyday style that never goes out of fashion.",
+    description: "Professional, timeless. Works with every style.",
     illustration: "taper-fade",
     image: "/images/haircut-4.jpg"
   },
@@ -294,7 +295,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "buzz-cut",
     slug: "buzz-cut",
     name: "Buzz Cut",
-    description: "Low-maintenance classic — clean, sharp, effortless.",
+    description: "Low maintenance, high impact. Clean and effortless.",
     illustration: "buzz-cut",
     image: "/images/haircut-2.jpg"
   },
@@ -302,7 +303,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "crew-cut",
     slug: "crew-cut",
     name: "Crew Cut",
-    description: "Sharp business look. Polished, professional, ready to go.",
+    description: "The business meeting standard. Polished and sharp.",
     illustration: "crew-cut",
     image: "/images/haircut-3.jpg"
   },
@@ -310,7 +311,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "textured-crop",
     slug: "textured-crop",
     name: "Textured Crop",
-    description: "Modern trending cut with movement and texture.",
+    description: "Modern, messy, full of movement. Trending for a reason.",
     illustration: "textured-crop",
     image: "/images/beard-1.jpg"
   },
@@ -318,7 +319,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "beard-styling",
     slug: "beard-styling",
     name: "Beard Styling",
-    description: "Custom beard design and shaping for a clean look.",
+    description: "Custom beard design — shaped, sculpted, perfected.",
     illustration: "beard-styling",
     image: "/images/beard-2.jpg"
   }
@@ -334,40 +335,40 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Danish Hanif",
+    name: "Kopila",
     specialty: "Founder & Master Barber",
     image: "/images/team-1.jpg",
-    bio: "Founder of Danish Hanif Hair Lounge. 15+ years of men's grooming expertise."
+    bio: "Founder of Kopila Gents Salon. 15+ years mastering the craft of men's grooming across Dubai."
   },
   {
-    name: "Adeel Khan",
+    name: "Rajan",
     specialty: "Fade Specialist",
     image: "/images/team-2.jpg",
-    bio: "Expert in skin fades, taper fades and modern scissor work."
+    bio: "Skin fades, taper fades, scissor work — precision is his signature."
   },
   {
-    name: "Bilal Ahmed",
+    name: "Suresh",
     specialty: "Beard Expert",
     image: "/images/team-3.jpg",
-    bio: "Beard design, sculpting and hot-towel specialist."
+    bio: "Beard sculpting, hot-towel shaves and line-up artistry."
   },
   {
-    name: "Hamza Ali",
+    name: "Vikram",
     specialty: "Hair Color Specialist",
     image: "/images/team-4.jpg",
-    bio: "Grey blending, balayage and men's color correction."
+    bio: "Grey blending, balayage and men's color correction — natural results only."
   },
   {
-    name: "Imran Hussain",
+    name: "Deepak",
     specialty: "Senior Stylist",
     image: "/images/team-5.jpg",
-    bio: "Classic cuts, scissor work and family-friendly barbering."
+    bio: "Classic cuts, scissor-over-comb, family-friendly barbering."
   },
   {
-    name: "Junaid Iqbal",
+    name: "Arjun",
     specialty: "Kids & Family",
     image: "/images/team-6.jpg",
-    bio: "Patient, kid-friendly cuts. School & weekend specialist."
+    bio: "Patient, kid-friendly cuts. First haircuts, school styles and weekends."
   }
 ];
 
@@ -376,42 +377,42 @@ export const reviews = [
   {
     name: "Ahmed R.",
     rating: 5,
-    text: "Excellent haircut and beard trim. Professional staff and great prices. I have been coming here for over a year and never had a bad cut.",
+    text: "Been coming here for two years. Consistent cuts, fair prices, friendly team. My barber actually remembers how I like it.",
     location: "Karama"
   },
   {
-    name: "Mohammed S.",
+    name: "Omar S.",
     rating: 5,
-    text: "Best barber experience in Dubai. Friendly team and quick service. The Karama branch is my go-to spot.",
-    location: "Media City"
-  },
-  {
-    name: "Faisal K.",
-    rating: 5,
-    text: "Walked in on a Friday afternoon and was seated immediately. Clean fade, perfect beard line-up. AED well spent.",
-    location: "Bur Dubai"
-  },
-  {
-    name: "Omar D.",
-    rating: 5,
-    text: "15 minutes from my office, always consistent. The Media City branch is a lifesaver between meetings.",
+    text: "Walked in on a Friday afternoon, got a clean fade and beard line-up in under 30 minutes. No appointment needed. Exactly what I needed.",
     location: "Media City"
   },
   {
     name: "Khalid M.",
     rating: 5,
-    text: "Honest prices, professional service, hygienic shop. What more do you want from a Dubai barber?",
+    text: "Tried a few barbers in Bur Dubai. This is the one. Professional, hygienic, and they actually listen to what you want.",
+    location: "Bur Dubai"
+  },
+  {
+    name: "Faisal A.",
+    rating: 5,
+    text: "My son got his first haircut here. The barber was so patient with him. Now he asks to go back. That says everything.",
     location: "Karama"
   },
   {
-    name: "Saeed A.",
+    name: "Zayed H.",
     rating: 5,
-    text: "Took my son for a kids cut. Barbers were patient, quick, and the result was great. We are regulars now.",
+    text: "Quick, clean, affordable. The Media City branch is 5 minutes from my office. Been my go-to for over a year.",
+    location: "Media City"
+  },
+  {
+    name: "Nasser K.",
+    rating: 5,
+    text: "Honest prices, real skill, no attitude. This is what a gents salon should be. Highly recommend the keratin treatment — game changer in this humidity.",
     location: "Bur Dubai"
   }
 ];
 
-// ----- Gallery (verified-stable Unsplash IDs) -----
+// ----- Gallery -----
 export type GalleryItem = {
   src: string;
   alt: string;
@@ -419,66 +420,18 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
-  {
-    src: "/images/gallery-1.jpg",
-    alt: "Skin fade haircut at Danish Hanif Hair Lounge",
-    category: "haircut"
-  },
-  {
-    src: "/images/gallery-2.jpg",
-    alt: "Beard trim and styling",
-    category: "beard"
-  },
-  {
-    src: "/images/gallery-3.jpg",
-    alt: "Barber shop interior Dubai",
-    category: "shop"
-  },
-  {
-    src: "/images/gallery-4.jpg",
-    alt: "Taper fade haircut",
-    category: "haircut"
-  },
-  {
-    src: "/images/gallery-5.jpg",
-    alt: "Classic men's haircut",
-    category: "haircut"
-  },
-  {
-    src: "/images/gallery-6.jpg",
-    alt: "Modern men's haircut",
-    category: "haircut"
-  },
-  {
-    src: "/images/gallery-7.jpg",
-    alt: "Beard shaping and line-up",
-    category: "beard"
-  },
-  {
-    src: "/images/gallery-8.jpg",
-    alt: "Hair wash service",
-    category: "shop"
-  },
-  {
-    src: "/images/gallery-9.jpg",
-    alt: "Premium barber tools",
-    category: "shop"
-  },
-  {
-    src: "/images/gallery-10.jpg",
-    alt: "Stylish men's haircut transformation",
-    category: "transformation"
-  },
-  {
-    src: "/images/gallery-11.jpg",
-    alt: "Beard sculpting close-up",
-    category: "beard"
-  },
-  {
-    src: "/images/gallery-12.jpg",
-    alt: "Crew cut styling",
-    category: "haircut"
-  }
+  { src: "/images/gallery-1.jpg", alt: "Precision fade haircut by Kopila barbers", category: "haircut" },
+  { src: "/images/gallery-2.jpg", alt: "Beard trim and line-up service", category: "beard" },
+  { src: "/images/gallery-3.jpg", alt: "Inside our welcoming salon space", category: "shop" },
+  { src: "/images/gallery-4.jpg", alt: "Taper fade haircut — clean and modern", category: "haircut" },
+  { src: "/images/gallery-5.jpg", alt: "Classic men's scissor cut", category: "haircut" },
+  { src: "/images/gallery-6.jpg", alt: "Textured crop — modern and stylish", category: "haircut" },
+  { src: "/images/gallery-7.jpg", alt: "Beard sculpting and shaping", category: "beard" },
+  { src: "/images/gallery-8.jpg", alt: "Our relaxing hair wash station", category: "shop" },
+  { src: "/images/gallery-9.jpg", alt: "Professional grooming tools at every station", category: "shop" },
+  { src: "/images/gallery-10.jpg", alt: "Before and after — complete transformation", category: "transformation" },
+  { src: "/images/gallery-11.jpg", alt: "Close-up beard sculpting detail", category: "beard" },
+  { src: "/images/gallery-12.jpg", alt: "Precision crew cut styling", category: "haircut" }
 ];
 
 // ----- Hero / featured video (replaceable) -----
@@ -491,63 +444,63 @@ export const heroVideo = {
 export const faq = [
   {
     q: "What are your opening hours?",
-    a: "We are open daily from 8AM to 12AM (midnight) — including weekends and most public holidays."
+    a: "We're open every day from 8AM to 12AM (midnight) — including weekends and public holidays. Early bird or night owl, we've got you covered."
   },
   {
     q: "Do you accept walk-ins?",
-    a: "Yes. Walk-ins are welcome at all three Dubai branches. For evenings and weekends, an appointment keeps waiting time to a minimum."
+    a: "Absolutely. Walk-ins are welcome at all three branches. For Thursday to Saturday evenings, a quick WhatsApp message helps skip the wait."
   },
   {
     q: "Do I need an appointment?",
-    a: "Appointments are optional but recommended during busy hours (Thu–Sat evenings). Message us on WhatsApp to lock your slot."
+    a: "Appointments are optional, but we recommend them for Friday evenings and weekends. Drop us a message on WhatsApp and we'll lock your slot."
   },
   {
     q: "Do you cut women's hair?",
-    a: "No. We specialize exclusively in men's and boys' grooming services — it's what we do best."
+    a: "We specialize exclusively in men's and boys' grooming — haircuts, beard work, facials and treatments. It's what we do best."
   },
   {
     q: "How much does a haircut cost?",
-    a: "Haircuts start from AED 5 depending on the service. Beard, color and treatment pricing is on the Services page. We keep our prices honest and accessible."
+    a: "Haircuts start from AED 5. Our full price list is on the Services page. What you see is what you pay — no hidden charges, no surprise upsells."
   },
   {
     q: "Which branch should I visit?",
-    a: "Choose the location most convenient to you — Media City, Karama, or Ramee Royal Hotel (Bur Dubai). All three offer the same pricing, services and barbers."
+    a: "Whichever is closest. Media City, Karama and Bur Dubai all offer the same services, same pricing, same quality. Check the Locations page for maps and directions."
   },
   {
     q: "Do you offer kids' haircuts?",
-    a: "Yes. We have patient, kid-friendly barbers at every branch. Kids' cuts start from AED 25."
+    a: "Yes. We have patient, experienced barbers who are great with children. Kids' cuts start from AED 25."
   },
   {
-    q: "Do you offer home service?",
-    a: "We focus on in-shop grooming for hygiene, quality and tool control. Message us on WhatsApp for group bookings or special arrangements."
+    q: "What payment methods do you accept?",
+    a: "We accept cash, card, Apple Pay and Google Pay at all branches."
   }
 ];
 
 // ----- Why choose us -----
 export const whyChooseUs = [
   {
-    title: "Experienced Team",
-    description: "15+ professional barbers trained in modern and classic men's grooming."
+    title: "Experienced Barbers",
+    description: "15+ trained professionals who take pride in their work. No apprentices cutting corners."
   },
   {
-    title: "Affordable Pricing",
-    description: "Quality grooming without the AED 300+ salon markup. Honest Dubai prices."
+    title: "Honest Prices",
+    description: "AED 5 cuts, AED 250 keratin — fair pricing, clearly listed. No surprises."
   },
   {
     title: "Three Dubai Branches",
-    description: "Media City, Karama and Bur Dubai — easy access wherever you are."
+    description: "Media City, Karama, Bur Dubai. Same team, same quality, wherever you are."
   },
   {
-    title: "Open Daily",
-    description: "8AM until midnight, 7 days a week. Early or late, we're here."
+    title: "Open Long Hours",
+    description: "8AM to midnight, every single day. Early mornings, late nights — we're here."
   },
   {
-    title: "Clean Environment",
-    description: "Sanitized tools, fresh towels and hygienic workstations — every visit."
+    title: "Clean & Hygienic",
+    description: "Sanitized tools, fresh towels, clean chairs. Every station, every visit."
   },
   {
-    title: "Fast Service",
-    description: "Walk in, get cut, get out. Minimal waiting, maximum craft."
+    title: "Walk-in Friendly",
+    description: "No appointment? No problem. Walk in, sit down, get cut."
   }
 ];
 

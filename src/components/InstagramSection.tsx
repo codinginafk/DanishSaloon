@@ -1,64 +1,46 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { social, siteConfig } from "@/lib/siteConfig";
-import { SectionReveal } from "./Motion";
-import { Instagram, ArrowRight } from "lucide-react";
 
-export function InstagramSection() {
+export default function InstagramSection() {
   return (
-    <section id="instagram" className="section">
-      <div className="container-x">
-        <SectionReveal>
-          <div className="overflow-hidden rounded-3xl border border-ink-900/10 bg-gradient-to-br from-emerald-50 via-paper to-white p-8 shadow-card sm:p-12 dark:border-white/5 dark:bg-gradient-to-br dark:from-charcoal-800/60 dark:via-ink-950 dark:to-charcoal-900/60 dark:shadow-none">
-            <div className="flex flex-col items-center text-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-500 via-fuchsia-500 to-amber-400 text-white shadow-glow">
-                <Instagram className="h-6 w-6" />
-              </div>
-              <h2 className="heading-lg mt-5">Follow our latest transformations.</h2>
-              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
-                New cuts, beard designs, hair color and behind-the-chair moments
-                — updated daily on our Instagram.
-              </p>
-              <a
-                href={social.instagram.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary mt-6"
-              >
-                {social.instagram.handle} <ArrowRight className="h-4 w-4" />
-              </a>
-              <p className="mt-3 text-xs text-ink-400 dark:text-white/50">
-                Bookings: {siteConfig.whatsappDisplay} · {siteConfig.hours}
-              </p>
-            </div>
+    <section className="section bg-white dark:bg-charcoal-950">
+      <div className="container-x text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <span className="eyebrow">Stay Connected</span>
+          <h2 className="heading-lg mt-3 text-ink-900 dark:text-white">
+            Follow Us on Instagram
+          </h2>
+          <p className="mt-4 text-ink-500 dark:text-white/60">
+            Fresh cuts, shop vibes, and grooming tips every week.
+          </p>
+        </motion.div>
 
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
-              {[
-                "1599351431202-1e0f0137899a",
-                "1622286342621-4bd786c2447c",
-                "1503951914875-452162b0f3f1",
-                "1521590832167-7bcbfaa6381f",
-                "1605497788044-5a32c7078486",
-                "1521119989659-a83eee488004"
-              ].map((id) => (
-                <a
-                  key={id}
-                  href={social.instagram.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative aspect-square overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 dark:border-white/10 dark:bg-charcoal-800"
-                >
-                  <img
-                    src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=400&q=80`}
-                    alt="Danish Hanif Hair Lounge Instagram post"
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-ink-900/0 transition-colors duration-300 group-hover:bg-ink-900/30" />
-                  <Instagram className="absolute bottom-3 right-3 h-4 w-4 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                </a>
-              ))}
-            </div>
-          </div>
-        </SectionReveal>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mt-8"
+        >
+          <a
+            href={social.instagram.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary inline-flex items-center gap-2"
+          >
+            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            Follow @{siteConfig.shortName.toLowerCase()}
+          </a>
+        </motion.div>
       </div>
     </section>
   );

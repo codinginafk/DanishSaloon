@@ -1,77 +1,75 @@
 "use client";
 
 import { useState } from "react";
-import { faq } from "@/lib/siteConfig";
-import { SectionReveal } from "./Motion";
-import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { faq } from "@/lib/siteConfig";
 
-export function FaqSection() {
-  const [open, setOpen] = useState<number | null>(0);
+export default function FaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
-    <section id="faq" className="section">
-      <div className="container-x">
-        <SectionReveal>
-          <div className="grid gap-10 lg:grid-cols-[1fr_2fr]">
-            <div>
-              <p className="eyebrow">FAQ</p>
-              <h2 className="heading-lg mt-2">Got questions?</h2>
-              <p className="mt-3 text-ink-500 dark:text-white/65">
-                The things guys ask us most. Missed something? Hit us on WhatsApp
-                — we reply fast.
-              </p>
-            </div>
-            <div className="space-y-3">
-              {faq.map((item, i) => {
-                const isOpen = open === i;
-                return (
-                  <div
-                    key={i}
-                    className={`overflow-hidden rounded-2xl border transition-colors ${
-                      isOpen
-                        ? "border-emerald-500/40 bg-emerald-50 dark:bg-charcoal-800/70"
-                        : "border-ink-900/10 bg-white shadow-card hover:border-ink-900/20 dark:border-white/5 dark:bg-charcoal-800/40 dark:shadow-none dark:hover:border-white/10"
-                    }`}
+    <section className="section bg-ink-50 dark:bg-charcoal-900/50">
+      <div className="container-x max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <span className="eyebrow">FAQ</span>
+          <h2 className="heading-lg mt-3 text-ink-900 dark:text-white">
+            Quick Answers
+          </h2>
+          <p className="mt-4 text-ink-500 dark:text-white/60">
+            Everything you need to know before your first visit.
+          </p>
+        </motion.div>
+
+        <div className="mt-12 space-y-3">
+          {faq.map((item, i) => (
+            <div
+              key={i}
+              className="card cursor-pointer overflow-hidden transition-colors hover:border-emerald-300 dark:hover:border-emerald-500/30"
+              onClick={() => setOpenIndex(openIndex === i ? null : i)}
+            >
+              <button
+                className="flex w-full items-center justify-between p-5 text-left"
+                aria-expanded={openIndex === i}
+              >
+                <span className="text-sm font-semibold text-ink-900 dark:text-white sm:text-base">
+                  {item.q}
+                </span>
+                <svg
+                  className={`h-4 w-4 shrink-0 text-ink-400 transition-transform duration-300 dark:text-white/50 ${
+                    openIndex === i ? "rotate-45" : ""
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <AnimatePresence initial={false}>
+                {openIndex === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: "easeInOut" }}
+                    className="overflow-hidden"
                   >
-                    <button
-                      onClick={() => setOpen(isOpen ? null : i)}
-                      className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="text-base font-semibold text-ink-900 dark:text-white">
-                        {item.q}
-                      </span>
-                      <span
-                        className={`flex h-8 w-8 flex-none items-center justify-center rounded-full border transition-colors ${
-                          isOpen
-                            ? "border-emerald-500 bg-emerald-500 text-ink-950"
-                            : "border-ink-900/20 text-ink-500 dark:border-white/15 dark:text-white/70"
-                        }`}
-                      >
-                        {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
-                      </span>
-                    </button>
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25, ease: "easeOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-5 pb-5 text-sm leading-relaxed text-ink-600 dark:text-white/70">
-                            {item.a}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
+                    <p className="border-t border-ink-100 px-5 pb-5 pt-3 text-sm leading-relaxed text-ink-500 dark:border-white/10 dark:text-white/60">
+                      {item.a}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-          </div>
-        </SectionReveal>
+          ))}
+        </div>
       </div>
     </section>
   );

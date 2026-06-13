@@ -1,94 +1,70 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { services } from "@/lib/siteConfig";
-import { ArrowRight } from "lucide-react";
-import { SectionReveal } from "./Motion";
 
-const categoryMeta: Record<string, { title: string; subtitle: string; tone: string }> = {
-  hair: { title: "Hair Services", subtitle: "Cuts, color, wash & care", tone: "from-emerald-500/10" },
-  beard: { title: "Beard Services", subtitle: "Trim, sculpt, style", tone: "from-emerald-500/10" },
-  face: { title: "Face & Grooming", subtitle: "Facial & threading", tone: "from-emerald-500/10" },
-  treatment: { title: "Treatments", subtitle: "Protein & keratin", tone: "from-emerald-500/10" }
-};
-
-const categoryOrder: Array<"hair" | "beard" | "face" | "treatment"> = [
-  "hair",
-  "beard",
-  "face",
-  "treatment"
-];
-
-const categoryServices: Record<string, typeof services> = {
-  hair: services.filter((s) => s.category === "hair"),
-  beard: services.filter((s) => s.category === "beard"),
-  face: services.filter((s) => s.category === "face"),
-  treatment: services.filter((s) => s.category === "treatment")
-};
-
-export function ServicesSection() {
+export default function ServicesSection() {
   return (
-    <section id="services" className="section relative">
+    <section className="section bg-white dark:bg-charcoal-950">
       <div className="container-x">
-        <SectionReveal>
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="eyebrow">Services</p>
-              <h2 className="heading-lg mt-2">Everything your hair needs.</h2>
-              <p className="mt-3 max-w-2xl text-ink-600 dark:text-white/65">
-                AED 5 haircut or AED 250 keratin — no hidden fees, no upsells, no attitude.
-                Just good work by barbers who actually listen.
-              </p>
-            </div>
-            <Link href="/services" className="btn-outline whitespace-nowrap">
-              View all services <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </SectionReveal>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <span className="eyebrow">What We Do</span>
+          <h2 className="heading-lg mt-3 text-ink-900 dark:text-white">
+            Men&apos;s Grooming, Done Right
+          </h2>
+          <p className="mt-4 text-ink-500 dark:text-white/60">
+            Every service starts with a conversation. We listen, then we work.
+          </p>
+        </motion.div>
 
-        <div className="mt-12 space-y-12">
-          {categoryOrder.map((cat) => {
-            const items = categoryServices[cat];
-            if (!items?.length) return null;
-            const meta = categoryMeta[cat];
-            return (
-              <SectionReveal key={cat}>
-                <div className={`rounded-3xl border border-ink-900/10 bg-gradient-to-br ${meta.tone} to-white p-6 shadow-card sm:p-8 dark:border-white/10 dark:bg-none dark:shadow-none`}>
-                  <div className="mb-6 flex items-end justify-between">
-                    <div>
-                      <h3 className="heading-md">{meta.title}</h3>
-                      <p className="text-sm text-ink-400 dark:text-white/55">{meta.subtitle}</p>
-                    </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
+            >
+              <Link
+                href={`/services/${service.slug}`}
+                className="card card-hover group block overflow-hidden"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-bold text-ink-900 dark:text-white">
+                      {service.name}
+                    </h3>
+                    <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+                      {service.startingPrice}
+                    </span>
                   </div>
-                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {items.map((s) => (
-                      <Link
-                        key={s.id}
-                        href={`/services/${s.slug}`}
-                        className="card card-hover group overflow-hidden"
-                      >
-                        <div className="relative -mx-6 -mt-6 mb-4 aspect-[16/9] overflow-hidden">
-                          <img
-                            src={s.image}
-                            alt={s.name}
-                            loading="lazy"
-                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                        </div>
-                        <div className="flex items-start justify-between gap-3">
-                          <h4 className="text-lg font-semibold text-ink-900 dark:text-white">{s.name}</h4>
-                          <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
-                            {s.startingPrice}
-                          </span>
-                        </div>
-                        <p className="mt-2 text-sm text-ink-500 dark:text-white/60">{s.shortDescription}</p>
-                        <p className="mt-4 text-xs text-ink-400 dark:text-white/45">{s.duration}</p>
-                      </Link>
-                    ))}
+                  <p className="mt-1.5 text-sm leading-relaxed text-ink-500 dark:text-white/60">
+                    {service.shortDescription}
+                  </p>
+                  <div className="mt-3 flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    <span>{service.duration}</span>
+                    <span>·</span>
+                    <span>Learn more →</span>
                   </div>
                 </div>
-              </SectionReveal>
-            );
-          })}
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

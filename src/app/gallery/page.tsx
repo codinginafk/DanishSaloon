@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { gallery } from "@/lib/siteConfig";
+import { gallery, siteConfig } from "@/lib/siteConfig";
 import { SectionReveal } from "@/components/Motion";
-import { WhatsAppCta } from "@/components/WhatsAppCta";
-import { X } from "lucide-react";
-import { siteConfig } from "@/lib/siteConfig";
+import WhatsAppCta from "@/components/WhatsAppCta";
 
-const categories = ["all", "haircut", "beard", "shop", "team", "transformation"] as const;
+const categories = ["all", "haircut", "beard", "shop", "transformation"] as const;
 type Cat = (typeof categories)[number];
 
 export default function GalleryPage() {
@@ -26,10 +24,11 @@ export default function GalleryPage() {
         <div className="container-x">
           <SectionReveal>
             <p className="eyebrow">Gallery</p>
-            <h1 className="heading-lg mt-2">Haircuts, beards & the shop.</h1>
+            <h1 className="heading-lg mt-2 text-ink-900 dark:text-white">
+              Haircuts, beards & the shop.
+            </h1>
             <p className="mt-4 max-w-2xl text-ink-500 dark:text-white/70">
-              A growing collection of our work. Replace these placeholders with your
-              own before & after shots and customer transformations.
+              A collection of cuts and styles from all three Kopila branches.
             </p>
           </SectionReveal>
         </div>
@@ -44,8 +43,8 @@ export default function GalleryPage() {
                 onClick={() => setFilter(c)}
                 className={`rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                   filter === c
-                    ? "border-emerald-400 bg-emerald-500/15 text-emerald-600 dark:text-emerald-200"
-                    : "border-ink-900/20 text-ink-500 hover:border-ink-900/40 hover:text-ink-700 dark:border-white/10 dark:text-white/60 dark:hover:border-white/20 dark:hover:text-white"
+                    ? "border-emerald-400 bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-200"
+                    : "border-ink-200 text-ink-500 hover:border-ink-400 hover:text-ink-700 dark:border-white/10 dark:text-white/60 dark:hover:border-white/20 dark:hover:text-white"
                 }`}
               >
                 {c}
@@ -58,24 +57,18 @@ export default function GalleryPage() {
               <button
                 key={`${img.src}-${i}`}
                 onClick={() => setLightbox(i)}
-                className={`group overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card text-left dark:border-white/5 dark:bg-charcoal-800/40 dark:shadow-none ${
-                  i % 5 === 0 ? "row-span-2" : ""
-                }`}
+                className="card group overflow-hidden"
               >
-                <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
+                <div className="aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                      i % 5 === 0 ? "sm:absolute sm:inset-0" : ""
-                    }`}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300">
-                      {img.category}
-                    </p>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300">{img.category}</p>
                     <p className="text-sm text-white">{img.alt}</p>
                   </div>
                 </div>
@@ -95,7 +88,9 @@ export default function GalleryPage() {
             aria-label="Close"
             className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white hover:bg-white/10"
           >
-            <X className="h-5 w-5" />
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
           <img
             src={items[lightbox].src}

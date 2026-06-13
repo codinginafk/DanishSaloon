@@ -1,60 +1,58 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { gallery } from "@/lib/siteConfig";
-import { SectionReveal } from "./Motion";
-import { ArrowRight } from "lucide-react";
-import { SmartImage } from "./SmartImage";
 
-const FALLBACK = "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80";
-
-export function GallerySection() {
+export default function GallerySection() {
   return (
-    <section id="gallery" className="section">
+    <section className="section bg-white dark:bg-charcoal-950">
       <div className="container-x">
-        <SectionReveal>
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="eyebrow">Gallery</p>
-              <h2 className="heading-lg mt-2">A glimpse of our work.</h2>
-              <p className="mt-3 max-w-2xl text-ink-500 dark:text-white/65">
-                Real cuts, real beards, real customers. Replace these placeholders with
-                your own before & after shots and transformations.
-              </p>
-            </div>
-            <Link href="/gallery" className="btn-outline whitespace-nowrap">
-              See full gallery <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </SectionReveal>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <span className="eyebrow">Gallery</span>
+          <h2 className="heading-lg mt-3 text-ink-900 dark:text-white">
+            Our Work Speaks for Itself
+          </h2>
+          <p className="mt-4 text-ink-500 dark:text-white/60">
+            A glimpse inside Kopila — the cuts, the shop, the team.
+          </p>
+        </motion.div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {gallery.slice(0, 12).map((img, i) => (
-            <SectionReveal key={i} delay={(i % 4) * 0.05}>
-              <div
-                className={`group overflow-hidden rounded-2xl border border-ink-900/10 bg-paper-100 shadow-card dark:border-white/10 dark:bg-charcoal-800/40 dark:shadow-none ${
-                  i % 5 === 0 ? "row-span-2" : ""
-                }`}
-              >
-                <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
-                  <SmartImage
-                    src={img.src}
-                    alt={img.alt}
-                    fallbackSrc={FALLBACK}
-                    className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                      i % 5 === 0 ? "sm:absolute sm:inset-0" : ""
-                    }`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="absolute inset-x-0 bottom-0 translate-y-2 p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <p className="text-xs font-medium uppercase tracking-wider text-emerald-300">
-                      {img.category}
-                    </p>
-                    <p className="text-sm text-white">{img.alt}</p>
-                  </div>
-                </div>
-              </div>
-            </SectionReveal>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {gallery.map((item, i) => (
+            <motion.div
+              key={item.src}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.04, duration: 0.35 }}
+              className="img-raised group cursor-pointer"
+            >
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-10 text-center"
+        >
+          <Link href="/gallery" className="btn-ghost">
+            View Full Gallery →
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

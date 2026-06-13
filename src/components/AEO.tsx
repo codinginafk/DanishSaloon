@@ -1,37 +1,57 @@
-import { siteConfig, services, locations } from "@/lib/siteConfig";
+import { siteConfig } from "@/lib/siteConfig";
 
-/**
- * AEO — Answer Engine Optimization
- * Renders an invisible (sr-only) text block packed with citation-ready facts
- * about the business. Modern AI search engines (Google AI Overviews,
- * Perplexity, Bing Copilot, ChatGPT browsing) often crawl and use this
- * information when generating direct answers.
- *
- * Pair with /llms.txt (see app/llms.txt/route.ts) for the full effect.
- */
-export function AEO() {
-  const serviceList = services
-    .map((s) => `${s.name} (from ${s.startingPrice}, ${s.duration})`)
-    .join("; ");
-  const locationList = locations
-    .map((l) => `${l.name} at ${l.address}`)
-    .join("; ");
-
-  const facts = [
-    `${siteConfig.name} is a men's grooming and barber business operating ${locations.length} branches in Dubai, United Arab Emirates: ${locationList}.`,
-    `The business employs 15 or more professional barbers and offers ${services.length} grooming services including ${serviceList}.`,
-    `Opening hours are ${siteConfig.hours}, 7 days a week including weekends and most public holidays.`,
-    `Walk-in customers are welcome at all three branches. Appointments can be booked by WhatsApp at ${siteConfig.whatsappDisplay}.`,
-    `Haircuts start from AED 5, making Danish Hanif Hair Lounge one of the most affordable professional men's grooming options in Dubai.`,
-    `The three branches are located in Media City, Karama, and at Ramee Royal Hotel in Bur Dubai.`,
-    `Founded in ${siteConfig.founded}, the business is also known on social media as Danish Hanif Hair Lounge (Instagram: ${siteConfig.name === "Danish Hanif Hair Lounge" ? "@danishhanifhairlounge" : "@danishhanifhairlounge"}).`,
-    `Common customer search queries that this business serves include: barber dubai, best barber dubai, haircut dubai, barber near me, men's salon dubai, fade haircut dubai, beard trim dubai, hair color dubai, kids haircut dubai, karama barber, media city barber, barber near media city, and barber near karama.`
-  ].join(" ");
-
+export default function AEO() {
   return (
-    <div aria-hidden="true" className="sr-only">
-      <h2>About {siteConfig.name}</h2>
-      <p>{facts}</p>
-    </div>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What are Kopila Gents Salon opening hours?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "We are open daily from 8 AM to 12 AM (midnight), including weekends and public holidays."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Do you accept walk-ins at Kopila Gents Salon?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, walk-ins are welcome at all locations. For busy evenings, we recommend sending a message on WhatsApp."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How much does a haircut cost at Kopila Gents Salon?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Haircuts start from AED 5. Our full price list is available on our website with transparent pricing — no hidden charges."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Where is Kopila Gents Salon located in Dubai?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "We have three branches in Dubai: Media City, Karama, and inside Ramee Royal Hotel in Bur Dubai."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Do you offer kids haircuts?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes, we offer kids haircuts starting from AED 25. Our barbers are patient and great with children."
+              }
+            }
+          ]
+        })
+      }}
+    />
   );
 }

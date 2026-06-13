@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Inter font loaded via next/font; system fallback below */
 :root {
   --background: 255 255 255;
   --foreground: 11 11 12;
@@ -10,7 +9,6 @@
   --border: 226 226 226;
   --surface: 251 251 250;
   --emerald: 16 185 129;
-  --emerald-soft: 16 185 129 / 0.10;
   --shadow-color: 11 11 12;
 }
 
@@ -32,8 +30,7 @@ html {
 body {
   background: rgb(var(--background));
   color: rgb(var(--foreground));
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,7 +47,6 @@ body {
   color: #ffffff;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: rgb(var(--surface)); }
 ::-webkit-scrollbar-thumb { background: rgb(var(--border)); border-radius: 8px; }
@@ -62,94 +58,72 @@ body {
   }
 
   .heading-xl {
-    @apply text-4xl font-extrabold tracking-[-0.02em] text-ink-900 sm:text-5xl md:text-6xl lg:text-7xl;
+    @apply text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl md:text-6xl lg:text-7xl;
   }
   .heading-lg {
-    @apply text-3xl font-bold tracking-[-0.02em] text-ink-900 sm:text-4xl md:text-5xl;
+    @apply text-3xl font-bold tracking-[-0.02em] sm:text-4xl md:text-5xl;
   }
   .heading-md {
-    @apply text-2xl font-bold tracking-[-0.015em] text-ink-900 sm:text-3xl;
+    @apply text-2xl font-bold tracking-[-0.015em] sm:text-3xl;
   }
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700;
-  }
-  .dark .eyebrow {
-    @apply text-emerald-400;
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-emerald-600 dark:text-emerald-400;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-ink-950;
   }
-  .dark .btn { @apply focus-visible:ring-offset-ink-900; }
 
   .btn-primary {
-    @apply btn bg-ink-900 text-white hover:bg-ink-800 hover:shadow-soft active:scale-[0.98];
+    @apply btn bg-ink-900 text-white hover:bg-ink-800 shadow-sm hover:shadow-md active:scale-[0.97] dark:bg-emerald-500 dark:text-ink-950 dark:hover:bg-emerald-400 dark:hover:shadow-glow;
   }
-  .dark .btn-primary { @apply bg-emerald-500 text-ink-950 hover:bg-emerald-400 hover:shadow-glow; }
 
   .btn-ghost {
-    @apply btn border border-ink-900/15 bg-white text-ink-900 hover:border-ink-900/30 hover:bg-paper-50;
-  }
-  .dark .btn-ghost {
-    @apply border-white/15 bg-white/5 text-white backdrop-blur hover:border-emerald-400/60 hover:bg-white/10;
+    @apply btn border border-ink-200 bg-white text-ink-800 hover:border-ink-300 hover:bg-ink-50 dark:border-white/20 dark:bg-white/5 dark:text-white dark:hover:border-emerald-400/50 dark:hover:bg-white/10;
   }
 
   .btn-outline {
-    @apply btn border border-ink-900/15 text-ink-900 hover:border-ink-900/40;
-  }
-  .dark .btn-outline {
-    @apply border-white/15 text-white hover:border-emerald-400 hover:text-emerald-300;
+    @apply btn border border-ink-200 text-ink-700 hover:border-ink-400 hover:text-ink-900 dark:border-white/20 dark:text-white/80 dark:hover:border-emerald-400 dark:hover:text-emerald-300;
   }
 
   .card {
-    @apply rounded-2xl border border-ink-900/10 bg-white p-6 shadow-card transition-all duration-300;
-  }
-  .dark .card {
-    @apply border-white/5 bg-charcoal-800/60 backdrop-blur;
+    @apply rounded-2xl border border-ink-100 bg-white shadow-sm transition-all duration-300 dark:border-white/10 dark:bg-charcoal-800/60 dark:backdrop-blur;
   }
   .card-hover {
-    @apply hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-soft;
+    @apply hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md dark:hover:border-emerald-500/30 dark:hover:shadow-glow;
   }
-  .dark .card-hover {
-    @apply hover:border-emerald-500/30 hover:shadow-glow;
+
+  .card-img {
+    @apply w-full object-cover;
+  }
+  .card-img-top {
+    @apply card-img rounded-t-2xl;
   }
 
   .chip {
-    @apply inline-flex items-center gap-2 rounded-full border border-ink-900/10 bg-paper-50 px-3 py-1 text-xs font-medium text-ink-700;
-  }
-  .dark .chip {
-    @apply border-white/10 bg-white/5 text-white/80;
+    @apply inline-flex items-center gap-2 rounded-full border border-ink-200 bg-ink-50 px-3 py-1 text-xs font-medium text-ink-600 dark:border-white/15 dark:bg-white/5 dark:text-white/80;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-700 bg-clip-text text-transparent;
-  }
-  .dark .gradient-text {
-    @apply from-emerald-300 via-emerald-400 to-emerald-500;
+    @apply bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-700 bg-clip-text text-transparent dark:from-emerald-300 dark:via-emerald-400 dark:to-emerald-500;
   }
 
   .section { @apply py-20 sm:py-24 lg:py-28; }
 
-  .divider-glow {
-    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
-  }
-
   .nav-link {
-    @apply rounded-full px-3.5 py-2 text-sm font-medium text-ink-700 transition-colors hover:text-ink-900;
+    @apply rounded-full px-3.5 py-2 text-sm font-medium text-ink-600 transition-colors hover:text-ink-900 dark:text-white/70 dark:hover:text-white;
   }
-  .dark .nav-link { @apply text-white/75 hover:text-white; }
 
-  .stat {
-    @apply text-center;
-  }
   .stat-num {
-    @apply text-3xl font-extrabold text-ink-900 sm:text-4xl;
+    @apply text-3xl font-extrabold sm:text-4xl;
   }
-  .dark .stat-num { @apply text-white; }
   .stat-label {
-    @apply mt-1 text-xs uppercase tracking-wider text-ink-500;
+    @apply mt-1 text-xs uppercase tracking-wider text-ink-400 dark:text-white/55;
   }
-  .dark .stat-label { @apply text-white/55; }
+
+  .img-raised {
+    @apply overflow-hidden rounded-xl shadow-sm ring-1 ring-ink-900/5 dark:ring-white/5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

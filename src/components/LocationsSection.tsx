@@ -1,64 +1,67 @@
-import Link from "next/link";
+"use client";
+
+import { motion } from "framer-motion";
 import { locations, siteConfig } from "@/lib/siteConfig";
-import { SectionReveal } from "./Motion";
-import { MapPin, Clock, Phone, Navigation } from "lucide-react";
 
-export function LocationsSection() {
+export default function LocationsSection() {
   return (
-    <section id="locations" className="section">
+    <section className="section bg-ink-50 dark:bg-charcoal-900/50">
       <div className="container-x">
-        <SectionReveal>
-          <div className="text-center">
-            <p className="eyebrow">Locations</p>
-            <h2 className="heading-lg mt-2">Three branches across Dubai.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-ink-500 dark:text-white/65">
-              Same pricing, same barbers, same quality — wherever you are in Dubai.
-            </p>
-          </div>
-        </SectionReveal>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <span className="eyebrow">Locations</span>
+          <h2 className="heading-lg mt-3 text-ink-900 dark:text-white">
+            Find Us in Dubai
+          </h2>
+          <p className="mt-4 text-ink-500 dark:text-white/60">
+            Three branches across the city. Same quality, same team, same prices.
+          </p>
+        </motion.div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {locations.map((l, i) => (
-            <SectionReveal key={l.id} delay={i * 0.07}>
-              <article className="card card-hover flex h-full flex-col">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-300">
-                    <MapPin className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-ink-900 dark:text-white">{l.name}</h3>
-                    <p className="text-sm text-ink-400 dark:text-white/55">{l.landmark}</p>
-                  </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {locations.map((loc, i) => (
+            <motion.div
+              key={loc.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+            >
+              <div className="card card-hover p-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-400">
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
                 </div>
-                <p className="mt-4 text-sm text-ink-600 dark:text-white/70">{l.description}</p>
-
-                <div className="mt-5 space-y-2 text-sm text-ink-600 dark:text-white/75">
-                  <p className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-emerald-400" /> {l.hours}
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-emerald-400" /> {siteConfig.whatsappDisplay}
-                  </p>
-                </div>
-
-                <div className="mt-6 flex gap-2">
+                <h3 className="mt-4 text-lg font-bold text-ink-900 dark:text-white">{loc.name}</h3>
+                <p className="mt-1 text-sm text-ink-500 dark:text-white/60">{loc.description}</p>
+                <p className="mt-3 text-sm text-ink-400 dark:text-white/50">{loc.hours}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
                   <a
-                    href={l.mapLink}
+                    href={loc.mapLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary flex-1 !py-2.5 text-sm"
+                    className="btn-outline flex-1 px-4 py-2 text-xs"
                   >
-                    <Navigation className="h-4 w-4" /> Get directions
+                    View on Maps
                   </a>
-                  <Link
-                    href={`/locations/${l.slug}`}
-                    className="btn-outline !px-4 !py-2.5 text-sm"
+                  <a
+                    href={siteConfig.whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex-1 px-4 py-2 text-xs"
                   >
-                    View
-                  </Link>
+                    WhatsApp Us
+                  </a>
                 </div>
-              </article>
-            </SectionReveal>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
