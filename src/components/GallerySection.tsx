@@ -38,14 +38,21 @@ export default function GallerySection() {
                 i === 0 || i === 7 ? "row-span-2" : ""
               }`}
             >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                  i === 0 || i === 7 ? "" : "aspect-square"
-                }`}
-              />
-            </motion.div>
+              <div className="relative h-full w-full">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                      i === 0 || i === 7 ? "" : "aspect-square"
+                    }`}
+                  />
+                  {item.credits && (
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="text-[10px] text-white/80">{item.credits}</p>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
           ))}
         </div>
 

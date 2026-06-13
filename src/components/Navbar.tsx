@@ -11,12 +11,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const isHome = pathname === "/";
+  const showScrolled = !isHome || scrolled;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     setOpen(false);
@@ -25,7 +28,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
+        showScrolled
           ? "bg-white/80 backdrop-blur-md shadow-sm dark:bg-charcoal-900/80 dark:shadow-white/5"
           : "bg-transparent"
       }`}
@@ -34,7 +37,7 @@ export default function Navbar() {
         <Link
           href="/"
           className={`flex items-center gap-2 text-lg font-bold tracking-tight transition-colors ${
-            scrolled ? "text-ink-900 dark:text-white" : "text-white"
+            showScrolled ? "text-ink-900 dark:text-white" : "text-white"
           }`}
         >
           <span className="text-emerald-500">✦</span>
@@ -48,10 +51,10 @@ export default function Navbar() {
               href={item.href}
               className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
                 pathname === item.href
-                  ? scrolled
+                  ? showScrolled
                     ? "bg-ink-100 text-ink-900 dark:bg-white/10 dark:text-white"
                     : "bg-white/20 text-white"
-                  : scrolled
+                  : showScrolled
                     ? "text-ink-600 hover:text-ink-900 dark:text-white/70 dark:hover:text-white"
                     : "text-white/80 hover:text-white"
               }`}
@@ -64,7 +67,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen(!open)}
           className={`relative z-50 flex h-9 w-9 items-center justify-center rounded-full border transition-colors md:hidden ${
-            scrolled
+            showScrolled
               ? "border-ink-200 bg-white dark:border-white/20 dark:bg-charcoal-800"
               : "border-white/30 bg-white/10"
           }`}
@@ -73,17 +76,17 @@ export default function Navbar() {
           <span
             className={`block h-px w-4 transition-all duration-300 ${
               open ? "translate-y-0 rotate-45" : "-translate-y-1"
-            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
+            } ${showScrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
           <span
             className={`block h-px w-4 transition-all duration-300 ${
               open ? "opacity-0" : ""
-            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
+            } ${showScrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
           <span
             className={`block h-px w-4 transition-all duration-300 ${
               open ? "translate-y-0 -rotate-45" : "translate-y-1"
-            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
+            } ${showScrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
         </button>
       </div>

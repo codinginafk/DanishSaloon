@@ -281,7 +281,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Skin Fade",
     description: "Modern, sharp — the fade that starts every conversation.",
     illustration: "skin-fade",
-    image: "/images/haircut-1.jpg"
+    image: "/images/side-profile-fade.jpg"
   },
   {
     id: "taper-fade",
@@ -289,7 +289,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Taper Fade",
     description: "Professional, timeless. Works with every style.",
     illustration: "taper-fade",
-    image: "/images/haircut-4.jpg"
+    image: "/images/side-profile-textured-crop.jpg"
   },
   {
     id: "buzz-cut",
@@ -297,7 +297,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Buzz Cut",
     description: "Low maintenance, high impact. Clean and effortless.",
     illustration: "buzz-cut",
-    image: "/images/haircut-2.jpg"
+    image: "/images/hairstyle-buzz-cut.jpg"
   },
   {
     id: "crew-cut",
@@ -305,7 +305,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Crew Cut",
     description: "The business meeting standard. Polished and sharp.",
     illustration: "crew-cut",
-    image: "/images/haircut-3.jpg"
+    image: "/images/hairstyle-crew-cut.jpg"
   },
   {
     id: "textured-crop",
@@ -313,7 +313,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Textured Crop",
     description: "Modern, messy, full of movement. Trending for a reason.",
     illustration: "textured-crop",
-    image: "/images/beard-1.jpg"
+    image: "/images/hairstyle-textured-top-fade.jpg"
   },
   {
     id: "beard-styling",
@@ -321,7 +321,7 @@ export const featuredHaircuts: Haircut[] = [
     name: "Beard Styling",
     description: "Custom beard design — shaped, sculpted, perfected.",
     illustration: "beard-styling",
-    image: "/images/beard-2.jpg"
+    image: "/images/beard-scissor-trim.jpg"
   }
 ];
 
@@ -417,21 +417,43 @@ export type GalleryItem = {
   src: string;
   alt: string;
   category: "haircut" | "beard" | "shop" | "team" | "transformation";
+  credits?: string;
 };
 
 export const gallery: GalleryItem[] = [
-  { src: "/images/haircut-1.jpg", alt: "Precision fade haircut by Kopila barbers", category: "haircut" },
-  { src: "/images/beard-1.jpg", alt: "Beard trim and line-up service", category: "beard" },
-  { src: "/images/shop-1.jpg", alt: "Inside our welcoming salon space", category: "shop" },
-  { src: "/images/haircut-4.jpg", alt: "Taper fade haircut — clean and modern", category: "haircut" },
-  { src: "/images/haircut-2.jpg", alt: "Classic men's scissor cut", category: "haircut" },
-  { src: "/images/haircut-3.jpg", alt: "Textured crop — modern and stylish", category: "haircut" },
-  { src: "/images/beard-2.jpg", alt: "Beard sculpting and shaping", category: "beard" },
-  { src: "/images/shop-2.jpg", alt: "Our relaxing hair wash station", category: "shop" },
-  { src: "/images/hair-wash.jpg", alt: "Professional grooming tools at every station", category: "shop" },
-  { src: "/images/transformation-1.jpg", alt: "Before and after — complete transformation", category: "transformation" },
-  { src: "/images/beard-3.jpg", alt: "Close-up beard sculpting detail", category: "beard" },
-  { src: "/images/team-1.jpg", alt: "Precision crew cut styling", category: "haircut" }
+  // SIDE PROFILE SPECIFICS
+  { src: "/images/side-profile-fade.jpg", alt: "Side profile skin fade precision", category: "haircut", credits: "Photo by Gabriel Teixeira on Unsplash" },
+  { src: "/images/side-profile-textured-crop.jpg", alt: "Side profile textured crop high drop fade", category: "haircut", credits: "Photo by Allef Vinicius on Unsplash" },
+  { src: "/images/side-profile-lineup.jpg", alt: "Side profile crisp lineup and temple taper", category: "haircut", credits: "Photo from Pexels" },
+  { src: "/images/side-profile-undercut.jpg", alt: "Side profile sharp disconnected undercut", category: "haircut", credits: "Photo by Thgusstavo Santana from Pexels" },
+  { src: "/images/side-profile-pompadour.jpg", alt: "Side profile classic pompadour shadow fade", category: "haircut", credits: "Photo by Jonathan Cooper on Unsplash" },
+  // BEARD CUTS & SHAPING
+  { src: "/images/razor-lineup.jpg", alt: "Close-up straight razor cheek alignment line-up", category: "beard", credits: "Photo by Mostafa Meraji on Unsplash" },
+  { src: "/images/beard-scissor-trim.jpg", alt: "Full thick beard freehand scissor trim and sculpt", category: "beard", credits: "Photo by Ashraful Pranto from Pexels" },
+  { src: "/images/goatee-lineup.jpg", alt: "Sharp goatee detail and short boxed beard line-up", category: "beard", credits: "Photo from Pexels" },
+  { src: "/images/hot-towel-shave.jpg", alt: "Classic hot towel prep and straight razor clean neck shave", category: "beard", credits: "Photo by Cottonbro Studio from Pexels" },
+  { src: "/images/mustache-styling.jpg", alt: "Detailed mustache styling and stubble beard alignment", category: "beard", credits: "Photo by Christopher Campbell on Unsplash" },
+  // HAIRSTYLE TYPES
+  { src: "/images/hairstyle-crew-cut.jpg", alt: "Classic Crew Cut with clean tapered sides", category: "haircut", credits: "Photo by Michael Dam on Unsplash" },
+  { src: "/images/hairstyle-high-tight.jpg", alt: "High and Tight military style clipper crop", category: "haircut", credits: "Photo by Yaroslav Shuraev from Pexels" },
+  { src: "/images/hairstyle-textured-top-fade.jpg", alt: "Messy Textured Top with low skin fade", category: "haircut", credits: "Photo by Mohammad Farque on Unsplash" },
+  { src: "/images/hairstyle-textured-quiff.jpg", alt: "Modern Textured Quiff with drop fade", category: "haircut", credits: "Photo by Craig Adderley from Pexels" },
+  { src: "/images/hairstyle-slicked-back.jpg", alt: "Slicked Back Undercut classic style", category: "haircut", credits: "Photo by Joseph Gonzales on Unsplash" },
+  { src: "/images/hairstyle-buzz-cut.jpg", alt: "Modern Buzz Cut uniform length with sharp lineup", category: "haircut", credits: "Photo by Bence Boros from Pexels" },
+  { src: "/images/hairstyle-pompadour.jpg", alt: "Voluminous Pompadour with mid skin fade", category: "haircut", credits: "Photo by Ema Estudio on Unsplash" },
+  { src: "/images/hairstyle-side-part.jpg", alt: "Classic Side Part traditional office comb-over", category: "haircut", credits: "Photo by Andrea Piacquadio from Pexels" },
+  { src: "/images/hairstyle-curly-high-top.jpg", alt: "Natural Curly High-Top drop taper fade", category: "haircut", credits: "Photo by Jake Nackos on Unsplash" },
+  { src: "/images/hairstyle-long-textured-waves.jpg", alt: "Long Textured Waves natural finish brushback", category: "haircut", credits: "Photo by Stefan Stefanovic from Pexels" },
+  { src: "/images/hairstyle-faux-hawk.jpg", alt: "Modern Faux Hawk with sharp clipper lined sides", category: "haircut", credits: "Photo by ASMR Barber Source on Unsplash" },
+  { src: "/images/hairstyle-french-crop.jpg", alt: "Short French Crop with blunt textured fringe", category: "haircut", credits: "Photo by Spenser Sembrat from Pexels" },
+  { src: "/images/hairstyle-comb-over-taper.jpg", alt: "Comb-Over Taper classic gentlemen cut", category: "haircut", credits: "Photo by Amy Hirschi on Unsplash" },
+  { src: "/images/hairstyle-mid-fade-texture.jpg", alt: "Mid Fade with short operational twist texture", category: "haircut", credits: "Photo by Gidyon Thompson from Pexels" },
+  { src: "/images/hairstyle-shaved-head.jpg", alt: "Shaved Head bald razor finish look", category: "haircut", credits: "Photo by Albert Dera on Unsplash" },
+  { src: "/images/hairstyle-top-knot.jpg", alt: "Long Hair Top Knot with cleanly shaved undercut sides", category: "haircut", credits: "Photo by Pixabay from Pexels" },
+  { src: "/images/hairstyle-platinum-crop.jpg", alt: "Bleached Platinum Crop with high skin drop fade", category: "haircut", credits: "Photo from Pexels" },
+  { src: "/images/hairstyle-afro-taper-fade.jpg", alt: "Natural Afro Taper Fade crisp geometric perimeter", category: "haircut", credits: "Photo by Jurian Kersten from Pexels" },
+  { src: "/images/hairstyle-caesar-cut.jpg", alt: "Textured Caesar cut with short framing lengths", category: "haircut", credits: "Photo by LinkedIn Sales Solutions on Unsplash" },
+  { src: "/images/hairstyle-edgar-cut.jpg", alt: "Modern Edgar Cut with high contrast straight fringe", category: "haircut", credits: "Photo by Mykhailo Volkov from Pexels" }
 ];
 
 // ----- Hero / featured video (replaceable) -----

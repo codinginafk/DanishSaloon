@@ -70,6 +70,7 @@ export default function GalleryPage() {
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 p-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   <p className="text-[10px] font-semibold uppercase tracking-wider text-emerald-300">{img.category}</p>
                   <p className="text-xs text-white/90">{img.alt}</p>
+                  {img.credits && <p className="mt-0.5 text-[9px] text-white/60">{img.credits}</p>}
                 </div>
               </button>
             ))}
@@ -104,8 +105,9 @@ export default function GalleryPage() {
               className="max-h-[88vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
             />
           </div>
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-black/50 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-            {items[lightbox].alt}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 space-y-0.5 rounded-full bg-black/50 px-5 py-2.5 text-center text-sm text-white/80 backdrop-blur-sm">
+            <p>{items[lightbox].alt}</p>
+            {items[lightbox].credits && <p className="text-[10px] text-white/50">{items[lightbox].credits}</p>}
           </div>
         </div>
       )}
