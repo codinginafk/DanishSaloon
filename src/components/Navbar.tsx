@@ -33,9 +33,11 @@ export default function Navbar() {
       <div className="container-x flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-ink-900 dark:text-white"
+          className={`flex items-center gap-2 text-lg font-bold tracking-tight transition-colors ${
+            scrolled ? "text-ink-900 dark:text-white" : "text-white"
+          }`}
         >
-          <span className="text-emerald-600 dark:text-emerald-400">✦</span>
+          <span className="text-emerald-500">✦</span>
           {siteConfig.shortName}
         </Link>
 
@@ -44,10 +46,14 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-link ${
+              className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
                 pathname === item.href
-                  ? "!bg-ink-100 !text-ink-900 dark:!bg-white/10 dark:!text-white"
-                  : ""
+                  ? scrolled
+                    ? "bg-ink-100 text-ink-900 dark:bg-white/10 dark:text-white"
+                    : "bg-white/20 text-white"
+                  : scrolled
+                    ? "text-ink-600 hover:text-ink-900 dark:text-white/70 dark:hover:text-white"
+                    : "text-white/80 hover:text-white"
               }`}
             >
               {item.label}
@@ -57,23 +63,27 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="relative z-50 flex h-9 w-9 items-center justify-center rounded-full border border-ink-200 bg-white md:hidden dark:border-white/20 dark:bg-charcoal-800"
+          className={`relative z-50 flex h-9 w-9 items-center justify-center rounded-full border transition-colors md:hidden ${
+            scrolled
+              ? "border-ink-200 bg-white dark:border-white/20 dark:bg-charcoal-800"
+              : "border-white/30 bg-white/10"
+          }`}
           aria-label={open ? "Close menu" : "Open menu"}
         >
           <span
-            className={`block h-px w-4 bg-ink-700 transition-all duration-300 dark:bg-white ${
+            className={`block h-px w-4 transition-all duration-300 ${
               open ? "translate-y-0 rotate-45" : "-translate-y-1"
-            }`}
+            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
           <span
-            className={`block h-px w-4 bg-ink-700 transition-all duration-300 dark:bg-white ${
+            className={`block h-px w-4 transition-all duration-300 ${
               open ? "opacity-0" : ""
-            }`}
+            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
           <span
-            className={`block h-px w-4 bg-ink-700 transition-all duration-300 dark:bg-white ${
+            className={`block h-px w-4 transition-all duration-300 ${
               open ? "translate-y-0 -rotate-45" : "translate-y-1"
-            }`}
+            } ${scrolled ? "bg-ink-700 dark:bg-white" : "bg-white"}`}
           />
         </button>
       </div>

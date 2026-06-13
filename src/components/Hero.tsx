@@ -59,7 +59,7 @@ export default function Hero() {
             href={siteConfig.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-ghost border-white/20 text-white hover:bg-white/10"
+            className="btn border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:border-white/50 hover:bg-white/20"
           >
             Book on WhatsApp
           </a>

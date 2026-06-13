@@ -5,6 +5,8 @@ import Link from "next/link";
 import { gallery } from "@/lib/siteConfig";
 
 export default function GallerySection() {
+  const items = gallery.slice(0, 8);
+
   return (
     <section className="section bg-white dark:bg-charcoal-950">
       <div className="container-x">
@@ -24,20 +26,24 @@ export default function GallerySection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {gallery.map((item, i) => (
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {items.map((item, i) => (
             <motion.div
               key={item.src}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.04, duration: 0.35 }}
-              className="img-raised group cursor-pointer"
+              className={`img-raised group cursor-pointer overflow-hidden ${
+                i === 0 || i === 7 ? "row-span-2" : ""
+              }`}
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                  i === 0 || i === 7 ? "" : "aspect-square"
+                }`}
               />
             </motion.div>
           ))}
