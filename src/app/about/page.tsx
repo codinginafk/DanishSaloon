@@ -59,13 +59,13 @@ export default function AboutPage() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="/images/gallery-1.jpg"
+                  src="/images/shop-1.jpg"
                   alt="Barber shop interior"
                   className="aspect-[3/4] w-full rounded-2xl object-cover ring-1 ring-ink-900/10 dark:ring-white/10"
                   loading="lazy"
                 />
                 <img
-                  src="/images/gallery-4.jpg"
+                  src="/images/haircut-4.jpg"
                   alt="Precision fade haircut"
                   className="mt-12 aspect-[3/4] w-full rounded-2xl object-cover ring-1 ring-ink-900/10 dark:ring-white/10"
                   loading="lazy"

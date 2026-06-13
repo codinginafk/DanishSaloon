@@ -420,18 +420,18 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
-  { src: "/images/gallery-1.jpg", alt: "Precision fade haircut by Kopila barbers", category: "haircut" },
-  { src: "/images/gallery-2.jpg", alt: "Beard trim and line-up service", category: "beard" },
-  { src: "/images/gallery-3.jpg", alt: "Inside our welcoming salon space", category: "shop" },
-  { src: "/images/gallery-4.jpg", alt: "Taper fade haircut — clean and modern", category: "haircut" },
-  { src: "/images/gallery-5.jpg", alt: "Classic men's scissor cut", category: "haircut" },
-  { src: "/images/gallery-6.jpg", alt: "Textured crop — modern and stylish", category: "haircut" },
-  { src: "/images/gallery-7.jpg", alt: "Beard sculpting and shaping", category: "beard" },
-  { src: "/images/gallery-8.jpg", alt: "Our relaxing hair wash station", category: "shop" },
-  { src: "/images/gallery-9.jpg", alt: "Professional grooming tools at every station", category: "shop" },
-  { src: "/images/gallery-10.jpg", alt: "Before and after — complete transformation", category: "transformation" },
-  { src: "/images/gallery-11.jpg", alt: "Close-up beard sculpting detail", category: "beard" },
-  { src: "/images/gallery-12.jpg", alt: "Precision crew cut styling", category: "haircut" }
+  { src: "/images/haircut-1.jpg", alt: "Precision fade haircut by Kopila barbers", category: "haircut" },
+  { src: "/images/beard-1.jpg", alt: "Beard trim and line-up service", category: "beard" },
+  { src: "/images/shop-1.jpg", alt: "Inside our welcoming salon space", category: "shop" },
+  { src: "/images/haircut-4.jpg", alt: "Taper fade haircut — clean and modern", category: "haircut" },
+  { src: "/images/haircut-2.jpg", alt: "Classic men's scissor cut", category: "haircut" },
+  { src: "/images/haircut-3.jpg", alt: "Textured crop — modern and stylish", category: "haircut" },
+  { src: "/images/beard-2.jpg", alt: "Beard sculpting and shaping", category: "beard" },
+  { src: "/images/shop-2.jpg", alt: "Our relaxing hair wash station", category: "shop" },
+  { src: "/images/hair-wash.jpg", alt: "Professional grooming tools at every station", category: "shop" },
+  { src: "/images/transformation-1.jpg", alt: "Before and after — complete transformation", category: "transformation" },
+  { src: "/images/beard-3.jpg", alt: "Close-up beard sculpting detail", category: "beard" },
+  { src: "/images/team-1.jpg", alt: "Precision crew cut styling", category: "haircut" }
 ];
 
 // ----- Hero / featured video (replaceable) -----
