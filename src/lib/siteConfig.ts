@@ -131,7 +131,7 @@ export const services: Service[] = [
     shortDescription: "Deep-cleansing facial designed for men's thicker skin.",
     description: "A professional men's facial that goes beyond a simple cleanse. Steam opens pores, gentle exfoliation removes dead cells, and a hydrating mask replenishes moisture. Tailored to men's thicker, oilier skin — leaves you looking fresh, clean and rejuvenated.",
     duration: "30 min", startingPrice: "AED 75",
-    image: "/images/facial-new-1.jpg",
+    image: "/images/facial-men.jpg",
     benefits: ["Deep pore cleansing", "Gentle exfoliation", "Hydrating face mask", "Relaxing steam treatment"]
   },
   {
@@ -139,7 +139,7 @@ export const services: Service[] = [
     shortDescription: "Sharp eyebrows, clean lines — precision threading in minutes.",
     description: "Quick, precise threading for eyebrows, upper lip, and facial hair. Using clean cotton thread, our specialists create sharp, defined lines that frame your face naturally. Hygienic, fast, and virtually painless.",
     duration: "10–15 min", startingPrice: "AED 15",
-    image: "/images/threading.jpg",
+    image: "/images/threading-men.jpg",
     benefits: ["Precise shaping", "Quick & hygienic", "Natural, clean results", "Minimal redness"]
   },
   {
@@ -194,13 +194,13 @@ export const featuredHaircuts: Haircut[] = [
     id: "buzz-cut", slug: "buzz-cut", name: "Buzz Cut",
     description: "Low maintenance, maximum impact. Clean, uniform length — the ultimate no-fuss cut.",
     illustration: "buzz-cut",
-    image: "/images/buzzcut-new.jpg"
+    image: "/images/buzzcut-user.jpg"
   },
   {
     id: "crew-cut", slug: "crew-cut", name: "Crew Cut",
     description: "The boardroom standard. Polished, proportioned, and always camera-ready.",
     illustration: "crew-cut",
-    image: "/images/hairstyle-crew-cut.jpg"
+    image: "/images/crewcut-search-2.jpg"
   },
   {
     id: "textured-crop", slug: "textured-crop", name: "Textured Crop",
