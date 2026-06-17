@@ -123,7 +123,7 @@ export const services: Service[] = [
     shortDescription: "Deep cleanse with a relaxing scalp massage. Pure refresh.",
     description: "A thorough shampoo and conditioning treatment using premium products. Paired with a relaxing scalp massage that relieves tension and promotes healthy hair growth. Clean towel finish. Perfect as an add-on or a quick midday refresh.",
     duration: "15 min", startingPrice: "AED 15",
-    image: "/images/hairwash-new-1.jpg",
+    image: "/images/hairwash-men-2.jpg",
     benefits: ["Premium shampoo & conditioner", "Stress-relieving scalp massage", "Clean towel finish", "Promotes healthy hair"]
   },
   {
@@ -155,7 +155,7 @@ export const services: Service[] = [
     shortDescription: "Rebuild strength, reduce breakage, restore natural shine.",
     description: "A reconstructive protein treatment that penetrates deep into the hair shaft. Strengthens damaged hair, reduces split ends, and restores natural shine. Ideal after coloring, heat styling, or chemical treatments. Your hair feels stronger and healthier from the first treatment.",
     duration: "45 min", startingPrice: "AED 150",
-    image: "/images/protein.jpg",
+    image: "/images/protein-new.jpg",
     benefits: ["Strengthens hair structure", "Reduces breakage & split ends", "Restores natural shine & softness", "Recommended post-color treatment"]
   },
   {
@@ -194,7 +194,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "buzz-cut", slug: "buzz-cut", name: "Buzz Cut",
     description: "Low maintenance, maximum impact. Clean, uniform length — the ultimate no-fuss cut.",
     illustration: "buzz-cut",
-    image: "/images/hairstyle-buzz-cut.jpg"
+    image: "/images/buzzcut-new.jpg"
   },
   {
     id: "crew-cut", slug: "crew-cut", name: "Crew Cut",
