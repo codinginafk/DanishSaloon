@@ -10,9 +10,9 @@ const fallbackUrl = "https://www.kopilagentssalon.com";
 export const siteConfig = {
   name: "Kopila Gents Salon",
   shortName: "Kopila",
-  tagline: "Dubai's Premium Men's Grooming Destination",
+  tagline: "The Cut Every Dubai Man Deserves",
   description:
-    "Expert haircuts, beard trimming, facials and hair treatments for men across three Dubai locations. Open daily 8AM–12AM. Walk-ins welcome.",
+    "Honest, skilled barbering for men. Haircuts from AED 5, beard trims, facials, and hair treatments — three locations across Dubai. Open 8AM to midnight, every day. Walk in or WhatsApp us.",
   url: envUrl || fallbackUrl,
   ogImage: "/images/hero-shop.jpg",
   phone: "+971529058527",
@@ -22,7 +22,7 @@ export const siteConfig = {
   email: "info@kopilagentssalon.com",
   hours: "Daily 8AM – 12AM",
   founded: 2014,
-  bookingNote: "Walk-ins always welcome. WhatsApp for appointments during peak hours.",
+  bookingNote: "No appointment? No worries. Walk in whenever — we're here 8AM to midnight. Want to skip the wait on busy evenings? Drop us a WhatsApp, we'll save you a spot.",
   indexnowKey: "7d6e40cb593a8f12",
   gscId: "google.com, pub-0000000000000000"
 };
@@ -245,7 +245,7 @@ export const reviews = [
 export type GalleryItem = { src: string; alt: string; category: "haircut" | "beard" | "shop" | "transformation"; credits?: string; };
 
 export const gallery: GalleryItem[] = [
-  // ---- HAIRCUTS ----
+  // ---- HAIRCUTS (expanded) ----
   { src: "/images/service-haircut.jpg", alt: "Classic scissor-over-comb technique — precision barbering", category: "haircut" },
   { src: "/images/service-fade.jpg", alt: "Precision skin fade — close-up detail view", category: "haircut" },
   { src: "/images/service-skin-fade.jpg", alt: "Master-level skin fade gradient blending", category: "haircut" },
@@ -256,6 +256,19 @@ export const gallery: GalleryItem[] = [
   { src: "/images/hairstyle-textured-quiff.jpg", alt: "Modern textured quiff with drop fade", category: "haircut" },
   { src: "/images/hairstyle-crew-cut.jpg", alt: "Classic crew cut — clean tapered sides", category: "haircut" },
   { src: "/images/hairstyle-pompadour.jpg", alt: "Voluminous pompadour with mid skin fade", category: "haircut" },
+  { src: "/images/hairstyle-faux-hawk.jpg", alt: "Bold faux hawk — sharp clipper-lined sides", category: "haircut" },
+  { src: "/images/hairstyle-french-crop.jpg", alt: "Short French crop with blunt textured fringe", category: "haircut" },
+  { src: "/images/hairstyle-slicked-back.jpg", alt: "Slicked back undercut — classic gentleman style", category: "haircut" },
+  { src: "/images/hairstyle-curly-high-top.jpg", alt: "Natural curly high-top with drop taper", category: "haircut" },
+  { src: "/images/hairstyle-caesar-cut.jpg", alt: "Textured Caesar cut — short and sharp", category: "haircut" },
+  { src: "/images/hairstyle-comb-over-taper.jpg", alt: "Comb-over taper — timeless office cut", category: "haircut" },
+  { src: "/images/hairstyle-high-tight.jpg", alt: "High and tight military-style crop", category: "haircut" },
+  { src: "/images/hairstyle-side-part.jpg", alt: "Classic side part — traditional comb-over", category: "haircut" },
+  { src: "/images/hairstyle-mid-fade-texture.jpg", alt: "Mid fade with textured twist", category: "haircut" },
+  { src: "/images/hairstyle-afro-taper-fade.jpg", alt: "Natural afro taper fade — geometric perimeter", category: "haircut" },
+  { src: "/images/hairstyle-top-knot.jpg", alt: "Long hair top knot with clean undercut", category: "haircut" },
+  { src: "/images/haircut-1.jpg", alt: "Clean fade haircut result", category: "haircut" },
+  { src: "/images/haircut-2.jpg", alt: "Precision barber haircut detail", category: "haircut" },
   // ---- BEARDS ----
   { src: "/images/service-beard.jpg", alt: "Professional razor line-up — crisp beard edges", category: "beard" },
   { src: "/images/service-beard-style.jpg", alt: "Full beard scissor trim and sculpt", category: "beard" },
