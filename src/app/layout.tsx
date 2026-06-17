@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -75,6 +77,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <WhatsAppFloat />
           <BackToTop />
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

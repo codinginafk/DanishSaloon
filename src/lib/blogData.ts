@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     summary: "If you've noticed more hair on your pillow than on your head since moving to Dubai, your shampoo might be part of the problem — and part of the solution. Here's what actually works.",
     tags: ["shampoo", "hair loss", "dubai hair care", "men hair products", "hard water"],
     relatedServices: ["hair-wash", "keratin-treatment", "protein-treatment"],
-    relatedPosts: ["dubai-hair-loss-guide-men", "keratin-vs-protein-treatment-dubai"],
+    relatedPosts: ["dubai-hair-loss-guide-men", "keratin-vs-protein-treatment-dubai", "dubai-summer-hair-survival-guide-men"],
     content: [
       {
         type: "intro",
@@ -227,7 +227,7 @@ export const blogPosts: BlogPost[] = [
     summary: "You moved to Dubai. Your hair started leaving. It's not just in your head — it's the water, the climate, and a few things you can actually fix.",
     tags: ["hair loss", "dubai water", "men hair thinning", "hair fall", "scalp care"],
     relatedServices: ["hair-wash", "protein-treatment", "keratin-treatment"],
-    relatedPosts: ["best-shampoo-for-men-hair-care-dubai", "keratin-vs-protein-treatment-dubai"],
+    relatedPosts: ["best-shampoo-for-men-hair-care-dubai", "keratin-vs-protein-treatment-dubai", "dubai-summer-hair-survival-guide-men"],
     content: [
       {
         type: "intro",
@@ -340,7 +340,7 @@ export const blogPosts: BlogPost[] = [
     summary: "Ever shown your barber a photo and walked out looking nothing like it? That happens because the style doesn't match your face. Here's how to fix that — and exactly what to say when you sit in the chair.",
     tags: ["haircut guide", "face shapes", "fade", "barber talk", "men hairstyles"],
     relatedServices: ["hair-cut", "beard-trim", "beard-styling"],
-    relatedPosts: ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men"],
+    relatedPosts: ["mens-beard-grooming-guide-dubai", "dubai-summer-hair-survival-guide-men", "dubai-hair-loss-guide-men", "keratin-vs-protein-treatment-dubai"],
     content: [
       {
         type: "intro",
@@ -480,6 +480,390 @@ export const blogPosts: BlogPost[] = [
         text: "Ready for a cut that actually suits your face? Walk into any Kopila Gents Salon. Our barbers will look at your face shape, hair type, and lifestyle, then give you an honest recommendation — not just the trend of the month. Find us in Karama (flagship), Media City, or Bur Dubai inside Ramee Royal Hotel. Open 8AM to midnight. Walk in or WhatsApp us. No appointment needed."
       }
     ]
+  },
+
+  // ===================================================================
+  // ARTICLE 4: Keratin vs Protein
+  // ===================================================================
+  {
+    slug: "keratin-vs-protein-treatment-dubai",
+    title: "Keratin vs Protein Hair Treatment: Which One Does Your Hair Actually Need?",
+    metaTitle: "Keratin vs Protein Treatment for Men in Dubai | Kopila Gents Salon Guide",
+    metaDescription: "Confused between keratin and protein treatments? Our barbers explain the real difference, what each does, and which one your hair needs — based on what we see daily at our Dubai shops.",
+    category: "treatments",
+    author: "Kopila Team",
+    publishedDate: "2026-06-17",
+    updatedDate: "2026-06-17",
+    readTime: "6 min read",
+    image: "/images/keratin-treatment.jpg",
+    imageAlt: "Keratin hair treatment at Kopila Gents Salon Dubai — smooth, frizz-free results for men",
+    summary: "\"Should I get keratin or protein?\" It's the most common question we hear. The short answer: if your hair is frizzy and hard to style, you need keratin. If it's weak and breaking, you need protein. Here's the full breakdown.",
+    tags: ["keratin", "protein treatment", "hair treatment", "frizzy hair", "damaged hair"],
+    relatedServices: ["keratin-treatment", "protein-treatment", "hair-wash"],
+    relatedPosts: ["dubai-hair-loss-guide-men", "best-shampoo-for-men-hair-care-dubai"],
+    content: [
+      {
+        type: "intro",
+        text: "Picture this: a guy walks into **Kopila Gents Salon** — our Karama branch gets this a lot — and says, 'My hair is driving me crazy. What treatment should I get?' He's heard about keratin and protein but has no clue which one is right for him. If that's you, you're not alone. It's literally the most common question we hear at all three of our Dubai locations. Here's the honest answer, from barbers who've done thousands of these treatments."
+      },
+      {
+        type: "faq",
+        question: "What's the difference between keratin and protein treatments?",
+        answer: "Keratin is about the OUTSIDE of your hair — it smooths the cuticle, tames frizz, adds shine, and makes hair dramatically easier to style. Think of it as a shield. Protein is about the INSIDE — it rebuilds damaged hair structure, strengthens weak strands, and stops breakage. Think of it as a repair crew. Many guys need both eventually, but you should start with whichever problem is worse: frizz → keratin first. Breakage → protein first."
+      },
+      {
+        type: "faq",
+        question: "Can I get both treatments at the same time?",
+        answer: "Yes, but we usually recommend spacing them a week apart. Doing both at once can overload your hair with too much protein, making it feel stiff or crunchy. At Kopila, we'll do keratin first to smooth and protect, then protein a week later to strengthen from within. Or vice versa depending on your hair's condition."
+      },
+      {
+        type: "faq",
+        question: "How long do these treatments last?",
+        answer: "Keratin lasts 4-6 weeks depending on how often you wash. Protein lasts 4-8 weeks. Both last longer if you use sulfate-free shampoo (the sulfate strips the treatment off faster). Dubai's humidity shortens keratin's lifespan slightly compared to drier climates."
+      },
+      {
+        type: "h2",
+        heading: "Keratin Treatment — The Frizz Fighter",
+        text: "Keratin is a protein that already exists naturally in your hair. When you get a keratin treatment, we're essentially adding more of it back — filling in the gaps in your hair's outer layer (the cuticle). The result is hair that's smoother, shinier, and way easier to style. If you dread mornings because your hair takes forever to tame, keratin is your answer."
+      },
+      {
+        type: "h3",
+        heading: "You need keratin if:",
+      },
+      {
+        type: "list",
+        items: [
+          "Your hair puffs up the moment you step outside in Dubai humidity",
+          "You spend 15+ minutes styling your hair every morning",
+          "Your hair looks dull and feels rough to the touch",
+          "You want that sleek, put-together look that lasts all day",
+          "Your hair is generally healthy but just won't cooperate"
+        ]
+      },
+      {
+        type: "h3",
+        heading: "What happens during a keratin treatment at Kopila:",
+      },
+      {
+        type: "step",
+        heading: "The Process",
+        items: [
+          "**Step 1 — Hair Wash:** We wash your hair with a clarifying shampoo to open up the cuticle and remove buildup.",
+          "**Step 2 — Application:** The keratin solution is applied section by section to clean, damp hair.",
+          "**Step 3 — Setting:** The treatment sits for 30-45 minutes to penetrate the hair shaft.",
+          "**Step 4 — Blow Dry & Flat Iron:** We blow dry your hair straight, then seal the treatment with a flat iron at controlled heat. This locks the keratin into your hair cuticle.",
+          "**Step 5 — Final Touches:** A light trim and styling so you walk out looking done, not like a science experiment.",
+          "Total time: about 90 minutes. Cost: AED 250 at all three Kopila branches."
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/service-keratin.jpg",
+        imageAlt: "Professional keratin hair treatment for men at Kopila Gents Salon — frizz-free, smooth results"
+      },
+      {
+        type: "h2",
+        heading: "Protein Treatment — The Damage Repairer",
+        text: "While keratin sits on the outside, protein goes deeper. If your hair has been damaged — by coloring, excessive heat styling, sun exposure, or just Dubai's harsh environment — the internal protein structure is compromised. Hair becomes weak, snaps easily when you run your fingers through it, and looks stringy. A protein treatment rebuilds that internal structure. It's like putting rebar into crumbling concrete."
+      },
+      {
+        type: "h3",
+        heading: "You need protein if:",
+      },
+      {
+        type: "list",
+        items: [
+          "Your hair snaps or breaks when you gently pull a strand (try the stretch test — healthy hair stretches slightly then returns; damaged hair snaps immediately)",
+          "You color or bleach your hair",
+          "Your hair feels gummy or mushy when wet",
+          "You're noticing more breakage than usual, especially shorter pieces",
+          "Your hair has been exposed to chlorine, saltwater, or excessive sun"
+        ]
+      },
+      {
+        type: "step",
+        heading: "The Protein Treatment Process at Kopila:",
+        items: [
+          "**Step 1 — Assessment:** We check your hair's elasticity and porosity to confirm protein is what you need. We won't sell you something you don't need.",
+          "**Step 2 — Deep Cleanse:** The same clarifying shampoo to remove buildup and prepare the hair.",
+          "**Step 3 — Protein Application:** The concentrated protein formula is applied evenly from roots to ends.",
+          "**Step 4 — Heat Activation:** 20-30 minutes under controlled heat. The protein bonds with your hair's natural keratin.",
+          "**Step 5 — Rinse & Condition:** We rinse thoroughly and apply a moisturizing conditioner — crucial because protein can leave hair feeling slightly stiff without it.",
+          "Total time: about 60 minutes. Cost: AED 150 at all three Kopila branches."
+        ]
+      },
+      {
+        type: "h2",
+        heading: "Side-by-Side: Keratin vs Protein",
+      },
+      {
+        type: "list",
+        heading: "",
+        items: [
+          "**Keratin — AED 250 (90 min):** Smoothes outer layer · Kills frizz · Adds shine · Makes styling easy · Best for: frizzy, unmanageable hair that's otherwise healthy",
+          "**Protein — AED 150 (60 min):** Repairs internal structure · Stops breakage · Strengthens weak hair · Rebuilds damage · Best for: weak, breaking, chemically damaged, or over-processed hair"
+        ]
+      },
+      {
+        type: "tip",
+        heading: "The \"Can I Just Do Nothing?\" Question",
+        text: "If your hair is neither frizzy nor damaged — congratulations, you have good hair genetics. But even healthy hair benefits from a treatment every 3-4 months in Dubai. Think of it like an oil change for your car. You don't wait for the engine to seize before doing maintenance. Same with hair."
+      },
+      {
+        type: "h2",
+        heading: "Aftercare: Don't Undo the Treatment You Just Paid For",
+        text: "The number one mistake guys make: getting a treatment, then going home and washing with a harsh sulfate shampoo. That strips the treatment right off. Here's what to do:"
+      },
+      {
+        type: "list",
+        items: [
+          "Use sulfate-free shampoo ONLY (we covered the best ones in our shampoo guide)",
+          "Keratin: Don't wet your hair for 24 hours after the treatment. Let it fully set.",
+          "Protein: You can wash after 24 hours. Use cool or lukewarm water, never hot.",
+          "Both: Avoid swimming pools (chlorine) for at least 3 days. Chlorine destroys both treatments.",
+          "Extend the life: Wash every other day, not daily. Dry shampoo is your friend on off-days."
+        ]
+      },
+      {
+        type: "cta",
+        text: "Still not sure which treatment your hair needs? Come in and let our barbers look at your hair for 30 seconds — we'll tell you honestly. No sales pitch, no pressure. Find us in Karama (flagship), Media City, or inside Ramee Royal Hotel in Bur Dubai. Open 8AM to midnight, every day. Walk in or WhatsApp us."
+      }
+    ]
+  },
+
+  // ===================================================================
+  // ARTICLE 5: Beard Grooming Guide
+  // ===================================================================
+  {
+    slug: "mens-beard-grooming-guide-dubai",
+    title: "The Dubai Man's Complete Beard Grooming Guide",
+    metaTitle: "Men's Beard Grooming Guide Dubai: Trimming, Styling & Care | Kopila Gents Salon",
+    metaDescription: "Patchy beard? Dry beard? Don't know what shape suits your face? Our barbers at Kopila — Dubai's best gents salon in Karama & Bur Dubai — share every beard trick they know.",
+    category: "beard-grooming",
+    author: "Kopila Team",
+    publishedDate: "2026-06-17",
+    updatedDate: "2026-06-17",
+    readTime: "7 min read",
+    image: "/images/service-beard-trim.jpg",
+    imageAlt: "Professional beard grooming and trimming at Kopila Gents Salon Dubai",
+    summary: "A good beard can change your entire face. A bad one can make you look like you've given up. Here's how to grow, shape, and maintain a beard that actually works in Dubai's climate.",
+    tags: ["beard grooming", "beard trim", "beard oil", "beard styling", "face shape"],
+    relatedServices: ["beard-trim", "beard-styling"],
+    relatedPosts: ["mens-hairstyle-guide-dubai-face-shapes", "dubai-hair-loss-guide-men"],
+    content: [
+      {
+        type: "intro",
+        text: "A beard is the cheapest facelift a man can get. Done right, it adds jaw definition, balances your face, and makes you look more authoritative instantly. Done wrong, it makes you look like you've been sleeping on a park bench. At **Kopila Gents Salon** — with three shops across Dubai — we shape thousands of beards. Here's what actually works."
+      },
+      {
+        type: "faq",
+        question: "What beard style suits my face shape?",
+        answer: "Round face: keep sides shorter, add length at the chin to elongate. Square face: fuller beard softens the jaw, avoid sharp angles. Oval face: you're lucky, most styles work — try a full beard or designer stubble. Oblong face: keep sides fuller to add width, avoid too much length at the chin. Heart face: fuller at the jaw to balance a wider forehead. We break all of this down below."
+      },
+      {
+        type: "faq",
+        question: "How do I fix a patchy beard?",
+        answer: "You have options. First, let it grow for 8-12 weeks before judging — many 'patchy' beards just need more time. Second, work with what you have: a well-shaped short beard or heavy stubble can look intentional and sharp even with patchy spots. Third, our barbers can show you how to style around patchy areas. And if it's truly sparse, a clean shave or light stubble is always better than forcing a beard that isn't there."
+      },
+      {
+        type: "faq",
+        question: "Why does my beard itch so much — especially in Dubai?",
+        answer: "Dubai's air conditioning dries out your skin and beard hair. The itch is caused by dry skin underneath the beard (beard dandruff, technically called seborrheic dermatitis) combined with sharp hair tips poking your skin. The fix: beard oil every day (it moisturizes the skin underneath, not just the hair), beard wash 2-3x a week (not daily shampoo — it's too harsh), and regular brushing to train the hairs to lie flat."
+      },
+      {
+        type: "h2",
+        heading: "The 4-Week Beard Growth Rule Nobody Tells You",
+        text: "Most guys give up on their beard at week 2 or 3 — right when it looks its worst. The itchy phase. The patchy phase. Here's the truth: a beard needs 4 weeks minimum to even start looking like a real beard, and 8-12 weeks to fill in properly. During this time, you WILL look a bit scruffy. That's not a sign it's failing — it's a sign it's growing. Push through."
+      },
+      {
+        type: "step",
+        heading: "The Growth Timeline:",
+        items: [
+          "**Week 1:** Stubble. Looks intentional. No maintenance needed aside from keeping neckline clean.",
+          "**Week 2-3:** The \"awkward phase.\" Itchy, patchy, and you'll want to shave. DON'T. Use beard oil twice a day to calm the itch.",
+          "**Week 4:** Starting to look like a real beard. Get your first professional shape at this point — we'll define your neckline and cheek line without cutting length.",
+          "**Week 6-8:** Full beard territory. Regular trims to maintain shape. This is when you can decide your final style.",
+          "**Week 12+:** Peak beard. You now know your beard's natural shape, density, and growth pattern. Work with it, not against it."
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/service-beard-styling.jpg",
+        imageAlt: "Professional beard styling and shaping at Kopila Gents Salon — men's grooming in Dubai"
+      },
+      {
+        type: "h2",
+        heading: "Beard Styles by Face Shape",
+      },
+      {
+        type: "h3",
+        heading: "Round Face → Go angular",
+        text: "Keep the sides short and tight. Grow more length at the chin to create a slimming, elongating effect. A well-defined cheek line with a pointed bottom shape works best. Think of creating a V-shape with your beard."
+      },
+      {
+        type: "h3",
+        heading: "Square Face → Go soft",
+        text: "Your jaw is already strong — you don't need the beard to emphasize it. A fuller, slightly rounder beard shape softens your angles. Avoid sharp lines and hard edges. A natural, medium-length beard works beautifully."
+      },
+      {
+        type: "h3",
+        heading: "Oval Face → Go wild",
+        text: "Almost everything works on an oval face. Full beard, short boxed beard, designer stubble, goatee — you have options. Pick the style that fits your personality and lifestyle."
+      },
+      {
+        type: "h3",
+        heading: "Oblong/Long Face → Go wider",
+        text: "Keep the sides full to add width. Don't grow too much length at the chin — it makes your face look longer. A medium, well-groomed beard that's fuller at the jaw is ideal."
+      },
+      {
+        type: "h3",
+        heading: "Heart Face → Go fuller at the jaw",
+        text: "Your forehead is wider than your jaw. A fuller beard at the jawline creates balance. Avoid styles that are heavy on the cheeks but thin at the chin — it emphasizes the imbalance."
+      },
+      {
+        type: "h2",
+        heading: "The Dubai Beard Survival Kit",
+        text: "You need exactly four things. Not fifteen things from a YouTube influencer. Four."
+      },
+      {
+        type: "list",
+        items: [
+          "**Beard Oil (daily):** This is non-negotiable in Dubai. The air conditioning dries your skin and beard. Oil moisturizes the skin underneath AND the hair. Apply 3-4 drops after showering, massage into the skin (not just the hair). Any decent brand works — we're not precious about brands.",
+          "**Beard Wash (2-3x/week):** NOT regular shampoo. Beard hair is coarser than head hair and your facial skin is more sensitive. Beard wash is gentler. On days you don't use it, just rinse with water.",
+          "**Boar Bristle Brush (daily):** Trains the hairs to grow in the direction you want, distributes natural oils, and exfoliates the skin underneath. Brush in the morning after applying oil.",
+          "**Professional Trim (every 2-3 weeks):** Home maintenance is good. Professional shaping is better. A barber sees angles you can't see in the mirror. At Kopila, a beard trim starts at AED 5 — there's no excuse to neglect it."
+        ]
+      },
+      {
+        type: "tip",
+        heading: "The Neckline Rule That Changes Everything",
+        text: "The most common beard mistake: shaving the neckline too high. Place two fingers above your Adam's apple. That's your neckline. Anything below that gets shaved. Anything above stays. If you shave all the way up to your jawbone, you look like you're wearing a beard helmet. Don't do it."
+      },
+      {
+        type: "h2",
+        heading: "Common Beard Problems & Quick Fixes",
+      },
+      {
+        type: "list",
+        items: [
+          "**Beard dandruff:** You're not washing enough (dead skin buildup) OR you're washing too much (dry skin). Solution: beard wash 2-3x/week + daily beard oil. If it persists, try a drop of tea tree oil mixed into your beard oil.",
+          "**Beard won't connect (cheeks to mustache):** This is genetic. You can't grow what isn't there. Solution: work with it. A well-shaped disconnected beard can look intentional and stylish. Blake Lively's husband has one. It works.",
+          "**Gray beard:** Embrace it. Gray beards look distinguished. If it bothers you, beard dye exists — but do it professionally, not at home. A botched home dye job looks 10x worse than gray hair.",
+          "**Beard feels rough/scratchy:** You're not using enough oil, or your beard is dehydrated from Dubai's environment. Double your oil application and switch to a beard butter (heavier than oil) at night."
+        ]
+      },
+      {
+        type: "cta",
+        text: "Want a beard that actually works for your face? Walk into any Kopila Gents Salon. Tell our barbers what you're going for — full beard, stubble, shaped — and they'll give you the shape that suits YOUR face, not a copy of what's trending. Beard trim from AED 5. Find us in Karama, Media City, or Bur Dubai (Ramee Royal Hotel). Open 8AM to midnight."
+      }
+    ]
+  },
+
+  // ===================================================================
+  // ARTICLE 6: Summer Hair Survival Guide
+  // ===================================================================
+  {
+    slug: "dubai-summer-hair-survival-guide-men",
+    title: "Dubai Summer Hair Survival Guide for Men: Sun, Sweat & Pool-Proof Your Hair",
+    metaTitle: "Dubai Summer Hair Care for Men: Sun, Pool & Humidity Tips | Kopila Gents Salon",
+    metaDescription: "Dubai summer destroying your hair? Our barbers share how to protect men's hair from sun, sweat, swimming pools, and AC damage. Real tips from Dubai's best barber in Karama & Bur Dubai.",
+    category: "lifestyle",
+    author: "Kopila Team",
+    publishedDate: "2026-06-17",
+    updatedDate: "2026-06-17",
+    readTime: "5 min read",
+    image: "/images/service-hair-wash.jpg",
+    imageAlt: "Men's hair care and washing at Kopila Gents Salon — summer hair protection in Dubai",
+    summary: "Dubai summer is a four-month assault on your hair. 45°C outside, 20°C inside, swimming pools, sweat, and UV damage. Here's the no-nonsense survival guide from barbers who fix summer-damaged hair every day.",
+    tags: ["summer", "hair care", "heat protection", "swimming", "UV damage"],
+    relatedServices: ["hair-wash", "keratin-treatment", "hair-cut"],
+    relatedPosts: ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men", "keratin-vs-protein-treatment-dubai"],
+    content: [
+      {
+        type: "intro",
+        text: "From June through September, Dubai does things to your hair that no gel or spray can fix alone. The sun bakes it. The pool chlorine strips it. The AC dehydrates it. And the humidity — just when you think you've tamed it — makes it explode. At **Kopila Gents Salon**, we see the summer damage peak every August. Men walk in with hair that's simultaneously fried AND frizzy, which shouldn't even be possible. Here's how to survive Dubai summer with your hair intact."
+      },
+      {
+        type: "faq",
+        question: "Does Dubai summer sun actually damage hair?",
+        answer: "Absolutely. UV rays break down the protein bonds in your hair (keratin), the same way the sun fades fabric and damages skin. Your hair becomes brittle, loses its natural color, and develops split ends faster. Men with shorter hair are actually MORE exposed because there's less hair to protect the scalp. If your hair feels like straw by August, that's UV damage — not just dryness."
+      },
+      {
+        type: "faq",
+        question: "How do I protect my hair from swimming pool damage?",
+        answer: "The green tint some guys get from pools isn't chlorine — it's copper in the water binding to your hair proteins. To prevent it: (1) Wet your hair with clean water BEFORE jumping in (hair is like a sponge — if it's already saturated, it absorbs less pool water), (2) Rinse immediately after swimming, (3) Use a clarifying shampoo once a week to remove chlorine buildup, (4) A keratin treatment creates a protective barrier that chlorine can't penetrate as easily."
+      },
+      {
+        type: "faq",
+        question: "Should I cut my hair short for summer?",
+        answer: "It's not mandatory, but it helps. Shorter hair means less surface area for UV damage and humidity to attack. It also dries faster (less time wet = less damage) and is easier to manage with less product. A skin fade with medium length on top is the ideal Dubai summer cut — clean, cool, and low-maintenance. Our barbers at Kopila can help you pick the right summer length."
+      },
+      {
+        type: "h2",
+        heading: "The 4 Enemies of Summer Hair (and How to Fight Each)",
+      },
+      {
+        type: "list",
+        heading: "",
+        items: [
+          "**☀️ UV Rays:** Break down hair protein, fade color, weaken strands. Fix: Wear a hat when outdoors 30+ minutes. Use a leave-in conditioner with UV filters. Get a keratin treatment — it adds a protective layer.",
+          "**🏊 Pool/Salt Water:** Chlorine strips natural oils and lifts hair cuticle. Salt water dehydrates. Fix: Rinse hair before swimming. Rinse immediately after. Weekly clarifying shampoo. Deep condition every 2 weeks.",
+          "**❄️ Air Conditioning:** 12+ hours daily in dry air dehydrates hair and scalp. Fix: Don't wash daily (every other day max). Use a humidifier at home if you can. Beard oil doubles as scalp moisturizer in a pinch.",
+          "**💧 Humidity:** When you step outside, moisture in the air makes your hair absorb water and expand = frizz. Fix: Anti-humidity styling products. Keratin treatment (creates a humidity barrier). Avoid water-based gels (they attract MORE moisture)."
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/service-hair-wash.jpg",
+        imageAlt: "Professional hair wash and care at Kopila Gents Salon — essential summer hair maintenance in Dubai"
+      },
+      {
+        type: "h2",
+        heading: "The Summer Switch-Up: What to Change Right Now",
+        text: "You can't use the same products in July that you used in January. Here's what to adjust:"
+      },
+      {
+        type: "step",
+        heading: "Summer Product Swap Cheat Sheet:",
+        items: [
+          "**Lighter hold products.** Heavy pomades and waxes melt in 45°C heat and slide off your hair. Switch to lighter clays, pastes, or matte creams. They hold without the weight.",
+          "**Anti-humidity spray.** A quick mist before you leave the house creates a barrier that humidity can't penetrate. Worth every dirham.",
+          "**Dry shampoo.** On days between washes, dry shampoo absorbs sweat and oil without stripping your hair. Keeps you looking fresh between proper washes.",
+          "**Sulfate-free everything.** In summer, your hair is already under assault. Sulfate shampoos make it worse. Switch if you haven't already (see our shampoo guide for specific recommendations).",
+          "**Leave-in conditioner with UV filter.** This is the one product most guys skip but most need. It's a lightweight cream you leave in after showering that protects from sun damage all day."
+        ]
+      },
+      {
+        type: "h2",
+        heading: "Post-Pool & Beach Reset Routine",
+        text: "Spent the day at the pool or beach? Here's your recovery routine so you don't look like a scarecrow tomorrow:"
+      },
+      {
+        type: "step",
+        heading: "The 5-Minute Beach/Pool Recovery:",
+        items: [
+          "**Step 1:** Rinse hair thoroughly with clean water immediately. Don't let chlorine or salt sit on your hair for hours.",
+          "**Step 2:** Wash with a clarifying shampoo (but only once a week max — it's strong stuff). Normal days, use your regular sulfate-free shampoo.",
+          "**Step 3:** Apply a deep conditioner or hair mask. Leave it in for 3-5 minutes while you finish your shower. Rinse with cool water.",
+          "**Step 4:** After towel-drying, apply a leave-in conditioner. Focus on the ends (or the whole head if your hair is short).",
+          "**Step 5:** Let your hair air-dry when possible. Blow-drying already-damaged hair makes things worse. If you must style, use the cool setting on your dryer."
+        ]
+      },
+      {
+        type: "tip",
+        heading: "Gym + Summer = Double Trouble",
+        text: "If you hit the gym daily in summer, you're sweating more and tempted to wash more. Don't. Rinse with water after the gym, shampoo every other day. Over-washing strips the oils your hair desperately needs in Dubai's dry AC environment. If your hair smells, you're not rinsing well enough — water alone removes sweat. Shampoo is for oil and product buildup."
+      },
+      {
+        type: "h2",
+        heading: "The One Summer Treatment Worth Getting",
+        text: "If you do ONE thing for your hair this summer, get a keratin treatment at the start of summer (June) and another mid-summer (August). Here's why: keratin creates a protective coating around each hair strand. It acts like sunscreen + humidity shield + damage barrier all in one. At AED 250 at Kopila, it's cheaper than replacing your entire product lineup — and it works better. We do them at all three branches: Karama (our flagship on Al Karama Street), Media City, and inside Ramee Royal Hotel in Bur Dubai."
+      },
+      {
+        type: "cta",
+        text: "Summer frying your hair? Come to any Kopila Gents Salon. We'll assess the damage and tell you honestly what your hair needs — maybe just a good cut, maybe a treatment, maybe just better products. No upselling. No gimmicks. Just honest barbers who've seen every type of summer hair disaster and know how to fix them. Open 8AM to midnight, 7 days a week. Walk in or WhatsApp us."
+      }
+    ]
   }
 ];
 
@@ -494,12 +878,12 @@ export const blogCategories = [
 
 // Map service slugs to relevant blog posts
 export const serviceBlogMap: Record<string, string[]> = {
-  "hair-cut": ["mens-hairstyle-guide-dubai-face-shapes"],
-  "beard-trim": ["mens-hairstyle-guide-dubai-face-shapes"],
-  "beard-styling": ["mens-hairstyle-guide-dubai-face-shapes"],
-  "hair-wash": ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men"],
-  "keratin-treatment": ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men"],
-  "protein-treatment": ["dubai-hair-loss-guide-men", "best-shampoo-for-men-hair-care-dubai"],
+  "hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "dubai-summer-hair-survival-guide-men"],
+  "beard-trim": ["mens-beard-grooming-guide-dubai", "mens-hairstyle-guide-dubai-face-shapes"],
+  "beard-styling": ["mens-beard-grooming-guide-dubai", "mens-hairstyle-guide-dubai-face-shapes"],
+  "hair-wash": ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men", "dubai-summer-hair-survival-guide-men"],
+  "keratin-treatment": ["keratin-vs-protein-treatment-dubai", "best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men"],
+  "protein-treatment": ["keratin-vs-protein-treatment-dubai", "dubai-hair-loss-guide-men"],
   "facial": ["best-shampoo-for-men-hair-care-dubai"],
-  "kid-hair-cut": ["mens-hairstyle-guide-dubai-face-shapes"],
+  "kid-hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "dubai-summer-hair-survival-guide-men"],
 };
