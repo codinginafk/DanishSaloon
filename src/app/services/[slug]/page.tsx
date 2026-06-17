@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { services, siteConfig } from "@/lib/siteConfig";
 import { SectionReveal } from "@/components/Motion";
 import WhatsAppCta from "@/components/WhatsAppCta";
@@ -44,8 +45,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
             </nav>
             <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_320px] lg:items-end">
               <div className="flex gap-6">
-                <div className="hidden aspect-square w-32 flex-none overflow-hidden rounded-2xl sm:block">
-                  <img src={service.image} alt={service.name} className="h-full w-full object-cover" />
+                <div className="relative hidden aspect-square w-32 flex-none overflow-hidden rounded-2xl bg-ink-100 dark:bg-charcoal-800 sm:block">
+                  <Image src={service.image} alt={service.name} fill sizes="128px" className="object-cover" />
                 </div>
                 <div>
                   <p className="eyebrow">{service.category.replace("_", " & ")}</p>
@@ -76,8 +77,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
           <SectionReveal>
             <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
               <div className="card p-6 sm:p-8">
-                <div className="img-raised mb-6 aspect-[21/9]">
-                  <img src={service.image} alt={service.name} className="h-full w-full object-cover" />
+                <div className="relative mb-6 aspect-[21/9] overflow-hidden rounded-xl bg-ink-100 dark:bg-charcoal-800">
+                  <Image src={service.image} alt={service.name} fill sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" priority />
                 </div>
                 <h2 className="heading-md text-ink-900 dark:text-white">What&apos;s included</h2>
                 <ul className="mt-6 space-y-3">
@@ -130,8 +131,8 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {related.map((r) => (
                   <Link key={r.id} href={`/services/${r.slug}`} className="card card-hover group overflow-hidden">
-                    <div className="aspect-[16/9] overflow-hidden">
-                      <img src={r.image} alt={r.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="relative aspect-[16/9] overflow-hidden bg-ink-100 dark:bg-charcoal-800">
+                      <Image src={r.image} alt={r.name} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="p-4">
                       <h3 className="font-semibold text-ink-900 dark:text-white">{r.name}</h3>

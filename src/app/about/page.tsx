@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, team, whyChooseUs } from "@/lib/siteConfig";
 import { SectionReveal, CountUp } from "@/components/Motion";
 import WhatsAppCta from "@/components/WhatsAppCta";
@@ -58,18 +59,12 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/images/shop-1.jpg"
-                  alt="Barber shop interior"
-                  className="aspect-[3/4] w-full rounded-2xl object-cover ring-1 ring-ink-900/10 dark:ring-white/10"
-                  loading="lazy"
-                />
-                <img
-                  src="/images/haircut-4.jpg"
-                  alt="Precision fade haircut"
-                  className="mt-12 aspect-[3/4] w-full rounded-2xl object-cover ring-1 ring-ink-900/10 dark:ring-white/10"
-                  loading="lazy"
-                />
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl ring-1 ring-ink-900/10 dark:ring-white/10">
+                  <Image src="/images/shop-1.jpg" alt="Barber shop interior" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                </div>
+                <div className="relative mt-12 aspect-[3/4] overflow-hidden rounded-2xl ring-1 ring-ink-900/10 dark:ring-white/10">
+                  <Image src="/images/haircut-4.jpg" alt="Precision fade haircut" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                </div>
               </div>
             </div>
           </SectionReveal>
@@ -153,8 +148,8 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
               {team.map((m) => (
                 <div key={m.name} className="text-center">
-                  <div className="mx-auto aspect-square w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 dark:ring-white/10">
-                    <img src={m.image} alt={m.name} className="h-full w-full object-cover" loading="lazy" />
+                  <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 dark:ring-white/10 bg-ink-100 dark:bg-charcoal-800">
+                    <Image src={m.image} alt={m.name} fill sizes="(max-width: 640px) 33vw, 16vw" className="object-cover" />
                   </div>
                   <p className="mt-3 text-sm font-semibold text-ink-900 dark:text-white">{m.name}</p>
                   <p className="text-xs text-ink-400 dark:text-white/55">{m.specialty}</p>

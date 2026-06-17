@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, featuredHaircuts } from "@/lib/siteConfig";
 import { SectionReveal } from "@/components/Motion";
 import WhatsAppCta from "@/components/WhatsAppCta";
@@ -33,11 +34,13 @@ export default function HaircutsPage() {
             {featuredHaircuts.map((cut, i) => (
               <SectionReveal key={cut.id} delay={i * 0.05}>
                 <article className="card card-hover group overflow-hidden">
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <img
+                  <div className="relative aspect-[4/5] overflow-hidden bg-ink-200 dark:bg-charcoal-800">
+                    <Image
                       src={cut.image}
                       alt={cut.name}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/20 to-transparent" />
                   </div>

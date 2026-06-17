@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { gallery } from "@/lib/siteConfig";
 
 export default function GallerySection() {
@@ -34,25 +35,27 @@ export default function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.04, duration: 0.35 }}
-              className={`img-raised group cursor-pointer overflow-hidden ${
+              className={`overflow-hidden rounded-xl shadow-sm ring-1 ring-ink-900/5 transition-shadow hover:shadow-md dark:ring-white/5 dark:hover:shadow-glow ${
                 i === 0 || i === 7 ? "row-span-2" : ""
               }`}
             >
-              <div className="relative h-full w-full">
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
-                      i === 0 || i === 7 ? "" : "aspect-square"
-                    }`}
-                  />
-                  {item.credits && (
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <p className="text-[10px] text-white/80">{item.credits}</p>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
+              <div className={`relative bg-ink-100 dark:bg-charcoal-800 group cursor-pointer h-full w-full ${
+                i === 0 || i === 7 ? "min-h-[400px]" : "aspect-square"
+              }`}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {item.credits && (
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-[10px] text-white/80">{item.credits}</p>
+                  </div>
+                )}
+              </div>
+            </motion.div>
           ))}
         </div>
 

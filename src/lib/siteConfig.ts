@@ -335,12 +335,6 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Kopila",
-    specialty: "Founder & Master Barber",
-    image: "/images/team-1.jpg",
-    bio: "Founder of Kopila Gents Salon. 15+ years mastering the craft of men's grooming across Dubai."
-  },
-  {
     name: "Rajan",
     specialty: "Fade Specialist",
     image: "/images/team-2.jpg",

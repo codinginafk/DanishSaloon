@@ -1,37 +1,78 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 type Props = {
   src: string;
   alt: string;
-  fallbackSrc?: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+  sizes?: string;
+  priority?: boolean;
   className?: string;
+  containerClassName?: string;
+  quality?: number;
 };
 
-const FALLBACK =
-  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80";
-
-export function SmartImage({ src, alt, fallbackSrc = FALLBACK, className = "" }: Props) {
-  const [current, setCurrent] = useState(src);
-  const [loaded, setLoaded] = useState(false);
+export function SmartImage({
+  src,
+  alt,
+  width,
+  height,
+  fill = false,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  priority = false,
+  className = "",
+  containerClassName = "",
+  quality = 85
+}: Props) {
   const [error, setError] = useState(false);
 
-  const handleError = () => {
-    if (current !== fallbackSrc) {
-      setCurrent(fallbackSrc);
-    }
-    setError(true);
-  };
+  const handleError = () => setError(true);
+
+  if (error) {
+    return (
+      <div className={`flex items-center justify-center bg-ink-100 dark:bg-charcoal-800 ${containerClassName}`}>
+        <div className="flex flex-col items-center gap-2 p-4 text-center">
+          <svg className="h-10 w-10 text-ink-300 dark:text-charcoal-600" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5z" />
+          </svg>
+          <span className="text-xs text-ink-400 dark:text-charcoal-500">{alt}</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (fill) {
+    return (
+      <div className={`relative ${containerClassName}`}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          quality={quality}
+          priority={priority}
+          onError={handleError}
+          className={`object-cover ${className}`}
+        />
+      </div>
+    );
+  }
 
   return (
-    <img
-      src={current}
+    <Image
+      src={src}
       alt={alt}
-      loading="lazy"
-      onLoad={() => setLoaded(true)}
+      width={width || 800}
+      height={height || 600}
+      sizes={sizes}
+      quality={quality}
+      priority={priority}
       onError={handleError}
-      className={`${className} ${loaded ? "opacity-100" : "opacity-0"} transition-opacity duration-300`}
+      className={className}
     />
   );
 }

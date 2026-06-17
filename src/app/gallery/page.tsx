@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import { gallery, siteConfig } from "@/lib/siteConfig";
 import { SectionReveal } from "@/components/Motion";
 import WhatsAppCta from "@/components/WhatsAppCta";
@@ -25,7 +26,7 @@ export default function GalleryPage() {
           <SectionReveal>
             <p className="eyebrow">Gallery</p>
             <h1 className="heading-lg mt-2 text-ink-900 dark:text-white">
-              Haircuts, beards & the shop.
+              Haircuts, beards &amp; the shop.
             </h1>
             <p className="mt-4 max-w-2xl text-ink-500 dark:text-white/70">
               A collection of cuts and styles from all three Kopila branches.
@@ -57,15 +58,19 @@ export default function GalleryPage() {
               <button
                 key={`${img.src}-${i}`}
                 onClick={() => setLightbox(i)}
-                className="group relative mb-3 w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 transition-shadow hover:shadow-md dark:ring-white/10 dark:hover:shadow-glow"
+                className="group relative mb-3 w-full overflow-hidden rounded-xl bg-ink-100 ring-1 ring-ink-900/10 transition-shadow hover:shadow-md dark:bg-charcoal-800 dark:ring-white/10 dark:hover:shadow-glow"
               >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  style={{ minHeight: "200px" }}
-                />
+                <div className="relative w-full" style={{ minHeight: "200px" }}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={600}
+                    height={800}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                    quality={80}
+                  />
+                </div>
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 p-2.5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   {img.credits && <p className="text-[9px] text-white/60">{img.credits}</p>}
@@ -96,11 +101,14 @@ export default function GalleryPage() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <div className="flex max-h-[90vh] max-w-[90vw] items-center justify-center">
-            <img
+          <div className="relative flex max-h-[90vh] max-w-[90vw] items-center justify-center">
+            <Image
               src={items[lightbox].src}
               alt={items[lightbox].alt}
+              width={1200}
+              height={1600}
               className="max-h-[88vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
+              quality={95}
             />
           </div>
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 space-y-0.5 rounded-full bg-black/50 px-5 py-2.5 text-center text-sm text-white/80 backdrop-blur-sm">
