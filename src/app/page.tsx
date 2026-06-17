@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/siteConfig";
+import { blogPosts } from "@/lib/blogData";
 import Hero from "@/components/Hero";
 import FeaturedHaircuts from "@/components/FeaturedHaircuts";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import GallerySection from "@/components/GallerySection";
+import BlogPreview from "@/components/BlogPreview";
 import ReviewsSection from "@/components/ReviewsSection";
 import TeamSection from "@/components/TeamSection";
 import LocationsSection from "@/components/LocationsSection";
@@ -15,7 +17,7 @@ import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 import AEO from "@/components/AEO";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — Premium Men's Grooming Across Dubai`,
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description: siteConfig.description,
   alternates: { canonical: siteConfig.url }
 };
@@ -30,6 +32,7 @@ export default function HomePage() {
       <ServicesSection />
       <WhyChooseUs />
       <GallerySection />
+      <BlogPreview posts={blogPosts.slice(0, 3)} />
       <ReviewsSection />
       <TeamSection />
       <LocationsSection />

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { services, siteConfig } from "@/lib/siteConfig";
+import { blogPosts, serviceBlogMap } from "@/lib/blogData";
 import { SectionReveal } from "@/components/Motion";
 import WhatsAppCta from "@/components/WhatsAppCta";
 
@@ -143,6 +144,31 @@ export default function ServiceDetailPage({ params }: { params: Params }) {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                         </svg>
                       </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
+      )}
+
+      {serviceBlogMap[params.slug] && blogPosts.filter(p => serviceBlogMap[params.slug].includes(p.slug)).length > 0 && (
+        <section className="section pt-0">
+          <div className="container-x">
+            <SectionReveal>
+              <h2 className="heading-md text-ink-900 dark:text-white">From Our Blog</h2>
+              <p className="mt-2 text-ink-500 dark:text-white/70">Read our barbers&apos; advice on {service.name.toLowerCase()} and hair care.</p>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {blogPosts.filter(p => serviceBlogMap[params.slug].includes(p.slug)).map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="card card-hover group overflow-hidden">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-ink-100 dark:bg-charcoal-800">
+                      <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4">
+                      <span className="text-xs text-emerald-600 dark:text-emerald-400">{post.readTime}</span>
+                      <h3 className="mt-1 font-semibold text-ink-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{post.title}</h3>
+                      <p className="mt-1 text-xs text-ink-400 dark:text-white/50">{post.publishedDate} · Updated {post.updatedDate}</p>
                     </div>
                   </Link>
                 ))}
