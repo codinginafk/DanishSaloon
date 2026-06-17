@@ -123,7 +123,7 @@ export const services: Service[] = [
     shortDescription: "Deep cleanse with a relaxing scalp massage. Pure refresh.",
     description: "A thorough shampoo and conditioning treatment using premium products. Paired with a relaxing scalp massage that relieves tension and promotes healthy hair growth. Clean towel finish. Perfect as an add-on or a quick midday refresh.",
     duration: "15 min", startingPrice: "AED 15",
-    image: "/images/hairwash-men-2.jpg",
+    image: "/images/hairwash-user.jpg",
     benefits: ["Premium shampoo & conditioner", "Stress-relieving scalp massage", "Clean towel finish", "Promotes healthy hair"]
   },
   {
@@ -155,7 +155,7 @@ export const services: Service[] = [
     shortDescription: "Rebuild strength, reduce breakage, restore natural shine.",
     description: "A reconstructive protein treatment that penetrates deep into the hair shaft. Strengthens damaged hair, reduces split ends, and restores natural shine. Ideal after coloring, heat styling, or chemical treatments. Your hair feels stronger and healthier from the first treatment.",
     duration: "45 min", startingPrice: "AED 150",
-    image: "/images/protein-new.jpg",
+    image: "/images/protein-user.jpg",
     benefits: ["Strengthens hair structure", "Reduces breakage & split ends", "Restores natural shine & softness", "Recommended post-color treatment"]
   },
   {
@@ -163,7 +163,7 @@ export const services: Service[] = [
     shortDescription: "Silky, frizz-free hair that lasts weeks. Dubai-proof smoothness.",
     description: "Our premium keratin smoothing treatment eliminates frizz, adds brilliant shine, and makes daily styling effortless. Applied by trained specialists using professional-grade formulas. Results last 4–6 weeks — perfect for Dubai's humidity. Wake up with smooth, manageable hair every day.",
     duration: "90–120 min", startingPrice: "AED 250",
-    image: "/images/service-keratin.jpg",
+    image: "/images/keratin-user.jpg",
     benefits: ["Eliminates frizz completely", "4–6 weeks of smoothness", "Brilliant mirror-like shine", "Dramatically easier daily styling"]
   }
 ];
@@ -200,7 +200,7 @@ export const featuredHaircuts: Haircut[] = [
     id: "crew-cut", slug: "crew-cut", name: "Crew Cut",
     description: "The boardroom standard. Polished, proportioned, and always camera-ready.",
     illustration: "crew-cut",
-    image: "/images/crewcut-search-2.jpg"
+    image: "/images/crewcut-user.jpg"
   },
   {
     id: "textured-crop", slug: "textured-crop", name: "Textured Crop",
