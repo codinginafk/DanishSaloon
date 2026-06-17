@@ -34,13 +34,13 @@ export default function TeamSection() {
               transition={{ delay: i * 0.05, duration: 0.4 }}
               className="card card-hover group overflow-hidden"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-ink-100 dark:bg-charcoal-800">
+              <div className="relative aspect-[3/4] overflow-hidden bg-ink-100 dark:bg-charcoal-800">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-[50%_25%] transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-5">

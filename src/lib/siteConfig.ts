@@ -262,10 +262,8 @@ export const gallery: GalleryItem[] = [
   { src: "/images/hairstyle-curly-high-top.jpg", alt: "Natural curly high-top with drop taper", category: "haircut" },
   { src: "/images/hairstyle-caesar-cut.jpg", alt: "Textured Caesar cut — short and sharp", category: "haircut" },
   { src: "/images/hairstyle-comb-over-taper.jpg", alt: "Comb-over taper — timeless office cut", category: "haircut" },
-  { src: "/images/hairstyle-high-tight.jpg", alt: "High and tight military-style crop", category: "haircut" },
   { src: "/images/hairstyle-side-part.jpg", alt: "Classic side part — traditional comb-over", category: "haircut" },
   { src: "/images/hairstyle-mid-fade-texture.jpg", alt: "Mid fade with textured twist", category: "haircut" },
-  { src: "/images/hairstyle-afro-taper-fade.jpg", alt: "Natural afro taper fade — geometric perimeter", category: "haircut" },
   { src: "/images/hairstyle-top-knot.jpg", alt: "Long hair top knot with clean undercut", category: "haircut" },
   { src: "/images/haircut-1.jpg", alt: "Clean fade haircut result", category: "haircut" },
   { src: "/images/haircut-2.jpg", alt: "Precision barber haircut detail", category: "haircut" },
@@ -274,9 +272,6 @@ export const gallery: GalleryItem[] = [
   { src: "/images/service-beard-style.jpg", alt: "Full beard scissor trim and sculpt", category: "beard" },
   { src: "/images/beard-scissor-trim.jpg", alt: "Thick beard freehand scissor trimming", category: "beard" },
   { src: "/images/hot-towel-shave.jpg", alt: "Classic hot towel and straight razor shave", category: "beard" },
-  { src: "/images/mustache-styling.jpg", alt: "Detailed mustache styling and alignment", category: "beard" },
-  { src: "/images/goatee-lineup.jpg", alt: "Sharp goatee detail and boxed beard", category: "beard" },
-  { src: "/images/razor-lineup.jpg", alt: "Straight razor cheek line-up close-up", category: "beard" },
   { src: "/images/beard-new-2.jpg", alt: "Styled beard with fade haircut combo", category: "beard" },
   // ---- SHOP ----
   { src: "/images/hero-shop.jpg", alt: "Premium barbershop interior — warm lighting, professional setup", category: "shop" },
@@ -286,10 +281,8 @@ export const gallery: GalleryItem[] = [
   { src: "/images/service-products.jpg", alt: "Professional men's grooming products display", category: "shop" },
   { src: "/images/hero-new-1.jpg", alt: "Stylish barbershop interior with gold accents", category: "shop" },
   // ---- TRANSFORMATIONS ----
-  { src: "/images/transformation-1.jpg", alt: "Before and after — precision cut transformation", category: "transformation" },
   { src: "/images/hairstyle-shaved-head.jpg", alt: "Bold transformation — clean shaved head look", category: "transformation" },
-  { src: "/images/hairstyle-platinum-crop.jpg", alt: "Dramatic platinum crop transformation", category: "transformation" },
-  { src: "/images/hairstyle-edgar-cut.jpg", alt: "Modern Edgar cut — sharp transformation", category: "transformation" }
+  { src: "/images/hairstyle-platinum-crop.jpg", alt: "Dramatic platinum crop transformation", category: "transformation" }
 ];
 
 // ----- Hero video -----

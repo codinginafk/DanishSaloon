@@ -148,8 +148,8 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-6">
               {team.map((m) => (
                 <div key={m.name} className="text-center">
-                  <div className="relative mx-auto aspect-square w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 dark:ring-white/10 bg-ink-100 dark:bg-charcoal-800">
-                    <Image src={m.image} alt={m.name} fill sizes="(max-width: 640px) 33vw, 16vw" className="object-cover" />
+                  <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-xl ring-1 ring-ink-900/10 dark:ring-white/10 bg-ink-100 dark:bg-charcoal-800">
+                    <Image src={m.image} alt={m.name} fill sizes="(max-width: 640px) 33vw, 16vw" className="object-cover object-[50%_20%]" />
                   </div>
                   <p className="mt-3 text-sm font-semibold text-ink-900 dark:text-white">{m.name}</p>
                   <p className="text-xs text-ink-400 dark:text-white/55">{m.specialty}</p>
