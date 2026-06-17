@@ -5,7 +5,7 @@
 // =============================================================
 
 const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
-const fallbackUrl = "https://danish-hanif-hair-lounge.vercel.app";
+const fallbackUrl = "https://danishsaloon.vercel.app";
 
 export const siteConfig = {
   name: "Kopila Gents Salon",
