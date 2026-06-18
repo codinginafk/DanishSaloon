@@ -864,6 +864,268 @@ export const blogPosts: BlogPost[] = [
         text: "Summer frying your hair? Come to any Kopila Gents Salon. We'll assess the damage and tell you honestly what your hair needs — maybe just a good cut, maybe a treatment, maybe just better products. No upselling. No gimmicks. Just honest barbers who've seen every type of summer hair disaster and know how to fix them. Open 8AM to midnight, 7 days a week. Walk in or WhatsApp us."
       }
     ]
+  },
+
+  // ===================================================================
+  // ARTICLE 7: Best Barber Karama
+  // ===================================================================
+  {
+    slug: "best-barber-karama-dubai-mens-salon",
+    title: "Best Barber in Karama Dubai: How to Spot a Great Men's Salon",
+    metaTitle: "Best Barber in Karama Dubai — What Makes a Great Gents Salon | Kopila",
+    metaDescription: "Looking for the best barber in Karama Dubai? We break down what actually matters: skill, hygiene, pricing, and how to tell a great salon from an average one. Written by barbers running the #1 gents salon on Al Karama Street.",
+    category: "lifestyle",
+    author: "Kopila Team",
+    publishedDate: "2026-06-18",
+    updatedDate: "2026-06-18",
+    readTime: "5 min read",
+    image: "/images/shop-new-1.jpg",
+    imageAlt: "Kopila Gents Salon Karama — the best barber shop for men in Karama Dubai",
+    summary: "Karama has more barbershops per square kilometer than almost anywhere in Dubai. So how do you find the one that's actually good? Here's what our barbers look for — and what we think actually matters.",
+    tags: ["best barber karama", "karama barber", "gents salon karama", "dubai barber", "kopila"],
+    relatedServices: ["hair-cut", "beard-trim"],
+    relatedPosts: ["mens-hairstyle-guide-dubai-face-shapes", "mens-beard-grooming-guide-dubai"],
+    content: [
+      {
+        type: "intro",
+        text: "Walk down any street in Karama and you'll spot at least three barbershops before you reach the next intersection. Some are great. Some are... fine. And some will give you a haircut that makes you want to wear a hat for two weeks. We should know — **Kopila Gents Salon** has been on Al Karama Street since 2014, and we've seen enough bad haircuts walk through our door (from other shops) to know exactly what separates a great barber from the rest."
+      },
+      {
+        type: "faq",
+        question: "How do I know if a barber is actually good?",
+        answer: "Watch them work for 2 minutes. A good barber is deliberate — every scissor stroke has a purpose. They check their work constantly (hand mirror, different angles). They don't rush the fade. They ask questions before they touch your hair. And the shop is clean — combs in barbicide, fresh cape for every customer, swept floor between cuts. If a shop isn't clean, the cuts probably aren't either."
+      },
+      {
+        type: "faq",
+        question: "What's a fair price for a men's haircut in Karama?",
+        answer: "Prices range from AED 5 (basic cut) to AED 50+ (premium salons). At Kopila, cuts start at AED 5 — but here's the thing: price doesn't equal quality in Karama. Some AED 40 shops rush through cuts because they're volume-focused. Some AED 5 shops (including ours) take their time because they're reputation-focused. The question isn't 'how much' — it's 'does the barber actually care about the result'."
+      },
+      {
+        type: "h2",
+        heading: "5 Things a Great Karama Barber Gets Right",
+      },
+      {
+        type: "list",
+        heading: "",
+        items: [
+          "**They ask questions first.** A good barber doesn't just say 'same as last time?' — they ask what you liked and didn't like about your last cut. At Kopila, we spend the first 30 seconds of every cut understanding what you actually want.",
+          "**The shop is spotless.** Combs in barbicide. Fresh towels. Cape changed between customers. Floor swept. If a shop looks like it hasn't been cleaned since morning, walk out. Hygiene isn't optional — it's the bare minimum.",
+          "**They know their tools.** Clippers shouldn't pull or snag. Scissors should be sharp enough to cut a single hair without bending it. A barber who maintains their tools respects their craft. A barber with dull, dirty tools doesn't respect you.",
+          "**They're consistent.** The true test of a barber isn't the one great cut — it's the 10th cut looking exactly like the first. Consistency comes from training + experience. Our barbers have done thousands of cuts each. You can't fake that.",
+          "**Walk-ins are genuinely welcome.** Some shops say 'walk-ins welcome' but make you feel like an inconvenience when you actually walk in. A great shop means it. At Kopila, we're open 8AM to midnight and walk-ins are truly welcome at all three branches."
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/shop-new-1.jpg",
+        imageAlt: "Bright, clean interior of Kopila Gents Salon — the best barber shop in Karama Dubai"
+      },
+      {
+        type: "h2",
+        heading: "Why Kopila Is Karama's Go-To Gents Salon Since 2014",
+        text: "We're not going to list our trophies. We're going to tell you what we actually do differently, and you can decide if it matters to you. We've been on Al Karama Street for over a decade. In that time, we've cut hair for Karama locals, Bur Dubai hotel guests, Media City professionals, and everyone in between. Here's what stays the same across all three branches:"
+      },
+      {
+        type: "list",
+        items: [
+          "**AED 5 haircuts** — and we take the same time on a AED 5 cut as a AED 50 cut. The price is about being accessible, not about rushing.",
+          "**Same-day service** — walk in without an appointment and you're in a chair within minutes on most days. Busy evenings? WhatsApp us and we'll save your spot.",
+          "**All services under one roof** — haircuts, beard trims, facials, keratin, protein, threading, kids' cuts. You don't need to go to three different places.",
+          "**Honest advice** — we'll tell you if a style won't work for your hair type or face shape. We'd rather you leave happy than sell you something that looks good for two days."
+        ]
+      },
+      {
+        type: "h2",
+        heading: "Where to Find Us in Karama",
+        text: "Our flagship branch is on Al Karama Street — the heart of the neighborhood. If you're in Karama, Bur Dubai, Oud Metha, or Mankhool, we're your closest option. Open 8AM to midnight every day, including weekends and public holidays. No appointments needed, but a WhatsApp message on busy evenings helps skip the queue."
+      },
+      {
+        type: "cta",
+        text: "Looking for the best barber experience in Karama? Walk into Kopila Gents Salon on Al Karama Street. We've been here since 2014, and we've cut thousands of heads of hair in this neighborhood. Haircuts from AED 5. Open 8AM to midnight. Walk in or WhatsApp us. Also visit our Media City and Bur Dubai (Ramee Royal Hotel) branches."
+      }
+    ]
+  },
+
+  // ===================================================================
+  // ARTICLE 8: How Often Haircut
+  // ===================================================================
+  {
+    slug: "how-often-should-men-get-haircut",
+    title: "How Often Should Men Get a Haircut? The No-Nonsense Guide",
+    metaTitle: "How Often Should Men Get a Haircut? By Style & Hair Type | Kopila Gents Salon",
+    metaDescription: "Every 2 weeks? Every 6 weeks? It depends on your style. Our barbers break down the ideal haircut frequency by cut type, hair growth speed, and budget. Real advice from Dubai's trusted men's barber.",
+    category: "haircut-styles",
+    author: "Kopila Team",
+    publishedDate: "2026-06-18",
+    updatedDate: "2026-06-18",
+    readTime: "4 min read",
+    image: "/images/service-haircut.jpg",
+    imageAlt: "Professional men's haircut timing and maintenance guide from Kopila Gents Salon Dubai",
+    summary: "Some guys stretch 8 weeks between cuts and look fine. Others look homeless after 10 days. Here's the honest formula for how often YOU should be in the chair — based on your cut, your hair, and your budget.",
+    tags: ["how often haircut", "haircut frequency", "hair maintenance", "barber visit", "men grooming schedule"],
+    relatedServices: ["hair-cut", "kids-hair-cut"],
+    relatedPosts: ["mens-hairstyle-guide-dubai-face-shapes", "best-barber-karama-dubai-mens-salon"],
+    content: [
+      {
+        type: "intro",
+        text: "The guy next to you got his last haircut in February and still looks sharp. You got yours two weeks ago and you already feel like a mess. What gives? At **Kopila Gents Salon**, we get this question constantly: 'How often should I come in?' The honest answer: it depends entirely on your haircut style. Here's the breakdown for every type of cut — so you know exactly when to book your next one."
+      },
+      {
+        type: "faq",
+        question: "How often should most men get a haircut?",
+        answer: "For the average man with a short-to-medium cut, every 3-4 weeks is the sweet spot. But this varies massively by style: skin fades need refresh every 1-2 weeks, buzz cuts every 2-3 weeks, classic side parts every 4-6 weeks, and longer styles every 6-8 weeks. The key is matching frequency to your specific cut, not following a generic rule."
+      },
+      {
+        type: "faq",
+        question: "Is it bad to wait too long between haircuts?",
+        answer: "Not 'bad' in a damaging way — but it makes your cut look messy faster, and when you finally go in, the barber has to take off more length to fix the shape. Regular trims actually preserve your style longer. Think of it like car maintenance: regular oil changes are cheaper than engine rebuilds. Same with hair — 3-week trims are cheaper and look better than 8-week overhauls."
+      },
+      {
+        type: "h2",
+        heading: "Haircut Frequency by Style — The Barber's Cheat Sheet",
+      },
+      {
+        type: "list",
+        heading: "",
+        items: [
+          "**Skin Fade / High Fade:** Every 1-2 weeks. Skin fades look crisp for about 5 days. By day 10, the gradient has blurred. If you want that razor-sharp fade line, you're in the chair often. This is the most maintenance-heavy cut — but it looks incredible when fresh.",
+          "**Taper Fade / Mid Fade:** Every 2-3 weeks. Taper fades are more forgiving than skin fades. The gradient grows out gracefully and you can stretch to 3 weeks before it looks noticeably shaggy.",
+          "**Buzz Cut:** Every 2-3 weeks. The buzz cut paradox: it's the lowest-maintenance style, but it needs the most frequent trims to stay looking intentional. At AED 5 at Kopila, a buzz cut refresh is cheaper than most lunches.",
+          "**Textured Crop / French Crop:** Every 3-4 weeks. The messy texture hides regrowth well, but the fringe starts falling into your eyes around week 3. A quick trim resets the shape.",
+          "**Classic Side Part / Comb-Over:** Every 4-5 weeks. Traditional cuts grow out elegantly. You can stretch to 5 weeks if you use product to manage the extra length. This is the best cut for guys who hate visiting the barber.",
+          "**Medium-Length / Long Styles:** Every 6-8 weeks. Longer hair doesn't need frequent trims — but it DOES need regular maintenance to prevent split ends and keep the shape. Don't confuse 'not cutting' with 'not maintaining.'"
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/service-fade.jpg",
+        imageAlt: "Fresh skin fade at Kopila Gents Salon — this cut needs refresh every 1-2 weeks for perfect shape"
+      },
+      {
+        type: "h2",
+        heading: "How Fast Does Hair Actually Grow?",
+        text: "On average, hair grows about 1.25 cm (half an inch) per month. But this varies person to person — some guys grow faster, some slower. By week 3, most cuts have visibly changed shape. By week 6, the original cut is barely recognizable. That's why the 'every 6 weeks' rule doesn't work for everyone — it's an average that ignores your specific style."
+      },
+      {
+        type: "h2",
+        heading: "The Budget Factor: How to Stretch Time Between Cuts",
+        text: "Look, we're a barbershop — we'd love to see you every week. But we also know life is expensive. Here's how to maximize time between visits without looking like you've given up:"
+      },
+      {
+        type: "list",
+        items: [
+          "**Get a taper fade instead of a skin fade.** Tapers grow out better and buy you an extra week between cuts.",
+          "**Ask for 'texture' on top.** Textured cuts look intentional even as they grow longer. Slick, uniform cuts show regrowth immediately.",
+          "**Use product strategically.** A matte clay or paste can reshape your hair as it grows, buying a few extra days between cuts.",
+          "**Maintain your neckline at home.** The neckline is the first thing that looks messy. A quick clean-up at home buys you a week. But don't touch your fade — that's how disasters happen.",
+          "**Come to Kopila.** At AED 5 for a basic cut, you can afford to come twice as often as you would at an AED 50 shop. More frequent trims = you always look fresh. Less frequent trims at a premium shop = you look good for 5 days and scruffy for 25."
+        ]
+      },
+      {
+        type: "tip",
+        heading: "The Barber's Rule of Thumb",
+        text: "If you can see your haircut losing its shape in the mirror, it's already been too long. The goal isn't to come in when it looks bad — it's to come in BEFORE it looks bad. Book your next appointment before you leave the chair. Future you will thank present you."
+      },
+      {
+        type: "cta",
+        text: "Not sure what your ideal haircut schedule is? Walk into any Kopila Gents Salon and ask. Our barbers will look at your hair type, growth speed, and preferred style, then give you a personalized maintenance schedule. From AED 5 per cut, you can afford to keep fresh. Visit us in Karama, Media City, or Bur Dubai (Ramee Royal Hotel). Open 8AM to midnight."
+      }
+    ]
+  },
+
+  // ===================================================================
+  // ARTICLE 9: Men's Facial Guide
+  // ===================================================================
+  {
+    slug: "mens-facial-guide-dubai-benefits",
+    title: "Men's Facial Guide Dubai: Why Every Guy Should Get One (And What Happens)",
+    metaTitle: "Men's Facial Guide Dubai: Benefits, Process & Why You Need One | Kopila",
+    metaDescription: "Never had a facial? Our barbers explain what happens during a men's facial in Dubai, why it matters (blackheads, sun damage, acne), and what to expect. No fluff — just honest advice from Dubai's best gents salon.",
+    category: "treatments",
+    author: "Kopila Team",
+    publishedDate: "2026-06-18",
+    updatedDate: "2026-06-18",
+    readTime: "5 min read",
+    image: "/images/service-facial.jpg",
+    imageAlt: "Professional men's facial treatment at Kopila Gents Salon Dubai",
+    summary: "Most men think facials are a 'spa thing' for women. They're wrong. A good facial clears blackheads, repairs sun damage, and makes your skin look 5 years younger. Here's what actually happens — and why your face needs one in Dubai.",
+    tags: ["men's facial", "facial dubai", "skin care men", "blackhead removal", "men grooming"],
+    relatedServices: ["facial", "hair-wash"],
+    relatedPosts: ["dubai-summer-hair-survival-guide-men", "best-shampoo-for-men-hair-care-dubai"],
+    content: [
+      {
+        type: "intro",
+        text: "Let's be real: most men think facials are for women. We hear this every day at **Kopila Gents Salon** — guys come in for a haircut, see 'Facial' on the service board, and immediately look away like it's not for them. Here's the thing: Dubai's sun, dust, and pollution are attacking your face every single day. A facial isn't pampering — it's maintenance. Same as getting a haircut or changing your car's oil. You don't skip those because they're 'girly.' Don't skip this either."
+      },
+      {
+        type: "faq",
+        question: "What actually happens during a men's facial?",
+        answer: "A proper facial has 5 steps: (1) Deep cleansing to remove dirt and oil from pores, (2) Exfoliation to remove dead skin cells (this is what makes your face glow), (3) Extraction of blackheads and whiteheads (the part everyone dreads but actually needs most), (4) A face massage to boost circulation and relax facial muscles, (5) A mask tailored to your skin type to hydrate and protect. At Kopila, the whole process takes about 45 minutes. You lie back, relax, and let the barber do the work."
+      },
+      {
+        type: "faq",
+        question: "Does a facial hurt?",
+        answer: "The extraction part can be mildly uncomfortable — especially if you have a lot of blackheads. But it's not painful. Most guys describe it as 'annoying but satisfying.' The face massage part is genuinely relaxing. And the result — clear, smooth, glowing skin — is worth 3 minutes of mild discomfort."
+      },
+      {
+        type: "faq",
+        question: "How often should men get a facial in Dubai?",
+        answer: "Every 4-6 weeks if you're exposed to sun and dust daily (which is basically everyone in Dubai). If you wear a helmet, work outdoors, or have oily/acne-prone skin, every 3-4 weeks. Think of it like a haircut schedule but for your face."
+      },
+      {
+        type: "h2",
+        heading: "Why Dubai Makes Facials Non-Negotiable for Men",
+      },
+      {
+        type: "list",
+        heading: "",
+        items: [
+          "**Sun damage is real.** UV rays break down collagen, cause dark spots, and age your skin faster than anything else. A facial helps repair and protect.",
+          "**Dust and pollution clog your pores.** Dubai's air isn't the cleanest, especially during construction season. Those blackheads on your nose? That's dirt + oil trapped in your pores. Extraction removes them properly.",
+          "**AC dries your skin 24/7.** Office AC, car AC, home AC — your face is in a dehydrator all day. Facials add back the moisture your skin is constantly losing.",
+          "**Shaving irritates your skin.** Daily shaving causes micro-cuts, ingrown hairs, and irritation. A facial calms that inflammation and helps your skin heal faster.",
+          "**You'll literally look younger.** Not in a creepy way. In a 'people ask if you've been sleeping better' way. Clear, hydrated skin makes everyone look healthier."
+        ]
+      },
+      {
+        type: "image",
+        image: "/images/service-facial.jpg",
+        imageAlt: "Professional men's facial treatment — deep cleansing and skin care at Kopila Gents Salon"
+      },
+      {
+        type: "h2",
+        heading: "What to Expect at Your First Facial",
+        text: "Never had one? Here's exactly what happens when you book a facial at Kopila, step by step:"
+      },
+      {
+        type: "step",
+        heading: "The Complete Process",
+        items: [
+          "**Step 1 — Skin Analysis (2 min):** Your barber looks at your skin type — oily, dry, combination, sensitive — and chooses products that match. No one-size-fits-all approach.",
+          "**Step 2 — Deep Cleanse (5 min):** A professional-grade cleanser removes dirt, oil, and any product buildup. This is NOT the same as washing your face at home. The difference is noticeable immediately.",
+          "**Step 3 — Steam (5-10 min):** Warm steam opens your pores. This is the relaxing part. It also softens blackheads so extraction is easier and less uncomfortable.",
+          "**Step 4 — Exfoliation (5 min):** A gentle scrub removes the layer of dead skin cells sitting on your face. This is why your skin glows afterward — you're revealing fresh skin underneath.",
+          "**Step 5 — Extraction (5-10 min):** Blackheads and whiteheads are removed manually. This is the part where most guys tense up, but our barbers are trained to do it quickly and cleanly.",
+          "**Step 6 — Face Massage (5-10 min):** A massage increases blood circulation to your face. It relaxes the muscles you've been tensing all day (jaw, forehead). This is honestly the best part.",
+          "**Step 7 — Mask (10-15 min):** A mask tailored to your skin sits while you relax. Clay masks for oily skin, hydrating masks for dry skin. It draws out remaining impurities and locks in moisture.",
+          "**Step 8 — Moisturizer + SPF (2 min):** The final layer of protection. Especially important in Dubai — your freshly-treated skin needs sun protection more than ever."
+        ]
+      },
+      {
+        type: "h2",
+        heading: "The Number One Excuse — And Why It's Wrong",
+        text: "'Facials are for women.' This is the cultural hang-up that keeps men from getting the skin care they need. Here's the reality: your face is the first thing people see. Interviews. Dates. Meetings. Client pitches. A facial doesn't make you less masculine — walking around with blackheads, dead skin, and sun damage while pretending you don't notice makes you look like you don't take care of yourself. Taking care of your skin is basic adult maintenance. Same as going to the gym or getting a haircut."
+      },
+      {
+        type: "tip",
+        heading: "After Your Facial — The 24-Hour Rule",
+        text: "Don't shave for 24 hours after a facial. Your skin has just been deep-cleansed and is more sensitive. Shaving immediately can cause razor burn. Also — wear sunscreen. Your fresh skin has zero protection against Dubai sun. If you skip SPF after a facial, you're undoing half the benefit."
+      },
+      {
+        type: "cta",
+        text: "Ready to try your first facial — or overdue for your next one? Walk into any Kopila Gents Salon. Our barbers are trained in men's skincare and will tailor the facial to YOUR skin type. No judgment. No weird spa music. Just clean, professional care for your face. Available at all three branches: Karama, Media City, and Bur Dubai (Ramee Royal Hotel). Open 8AM to midnight. Walk in or WhatsApp us."
+      }
+    ]
   }
 ];
 
@@ -878,12 +1140,12 @@ export const blogCategories = [
 
 // Map service slugs to relevant blog posts
 export const serviceBlogMap: Record<string, string[]> = {
-  "hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "dubai-summer-hair-survival-guide-men"],
+  "hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "how-often-should-men-get-haircut", "best-barber-karama-dubai-mens-salon"],
   "beard-trim": ["mens-beard-grooming-guide-dubai", "mens-hairstyle-guide-dubai-face-shapes"],
   "beard-styling": ["mens-beard-grooming-guide-dubai", "mens-hairstyle-guide-dubai-face-shapes"],
   "hair-wash": ["best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men", "dubai-summer-hair-survival-guide-men"],
-  "keratin-treatment": ["keratin-vs-protein-treatment-dubai", "best-shampoo-for-men-hair-care-dubai", "dubai-hair-loss-guide-men"],
+  "keratin-treatment": ["keratin-vs-protein-treatment-dubai", "best-shampoo-for-men-hair-care-dubai"],
   "protein-treatment": ["keratin-vs-protein-treatment-dubai", "dubai-hair-loss-guide-men"],
-  "facial": ["best-shampoo-for-men-hair-care-dubai"],
-  "kid-hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "dubai-summer-hair-survival-guide-men"],
+  "facial": ["mens-facial-guide-dubai-benefits", "best-shampoo-for-men-hair-care-dubai"],
+  "kid-hair-cut": ["mens-hairstyle-guide-dubai-face-shapes", "how-often-should-men-get-haircut"],
 };

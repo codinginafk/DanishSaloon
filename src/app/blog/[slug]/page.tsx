@@ -5,6 +5,9 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/siteConfig";
 import { blogPosts, blogCategories } from "@/lib/blogData";
 import { SectionReveal } from "@/components/Motion";
+import ReadingProgress from "@/components/ReadingProgress";
+import TableOfContents from "@/components/TableOfContents";
+import ShareButtons from "@/components/ShareButtons";
 import WhatsAppCta from "@/components/WhatsAppCta";
 
 type Params = { slug: string };
@@ -43,7 +46,7 @@ function renderContent(post: typeof blogPosts[0]) {
         );
       case "h2":
         return (
-          <div key={i} className="mt-12 mb-4">
+          <div key={i} id={block.heading!.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")} className="mt-12 mb-4 scroll-mt-24">
             <h2 className="heading-md text-ink-900 dark:text-white">{block.heading}</h2>
             {block.text && <p className="mt-3 text-ink-600 dark:text-white/75 leading-relaxed">{block.text}</p>}
           </div>
@@ -186,6 +189,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
 
   return (
     <>
+      <ReadingProgress />
       {/* Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -195,7 +199,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
         <div className="absolute inset-0 -z-10 bg-grid-fade opacity-50" aria-hidden />
         <div className="container-x max-w-3xl">
           {/* Breadcrumb */}
-          <nav className="mb-6 text-sm text-ink-400 dark:text-white/50">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm text-ink-400 dark:text-white/50">
             <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-300">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/blog" className="hover:text-emerald-600 dark:hover:text-emerald-300">Blog</Link>
@@ -217,6 +221,7 @@ export default function BlogPostPage({ params }: { params: Params }) {
               <span>Written: {post.publishedDate}</span>
               <span>Updated: {post.updatedDate}</span>
               <span>By {post.author}</span>
+              <span className="ml-auto rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-medium text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400">Recently Updated</span>
             </div>
           </SectionReveal>
 
@@ -225,13 +230,21 @@ export default function BlogPostPage({ params }: { params: Params }) {
             <Image src={post.image} alt={post.imageAlt} fill priority sizes="768px" className="object-cover" />
           </div>
 
+          {/* Table of Contents */}
+          <div className="mt-8">
+            <TableOfContents content={post.content} />
+          </div>
+
           {/* Article Body */}
-          <div className="mt-10">
+          <div className="mt-6">
             {renderContent(post)}
           </div>
 
+          {/* Share Buttons */}
+          <ShareButtons title={post.title} slug={post.slug} />
+
           {/* Tags */}
-          <div className="mt-12 flex flex-wrap gap-2 border-t border-ink-100 pt-8 dark:border-white/10">
+          <div className="mt-6 flex flex-wrap gap-2 border-t border-ink-100 pt-8 dark:border-white/10">
             {post.tags.map((tag) => (
               <span key={tag} className="rounded-full bg-ink-100 px-3 py-1 text-xs text-ink-500 dark:bg-white/5 dark:text-white/50">{tag}</span>
             ))}
